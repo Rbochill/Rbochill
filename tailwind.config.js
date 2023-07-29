@@ -3,6 +3,7 @@ module.exports = {
 	content: ['./client/**/*.html'],
 	theme: {
 		extend: {},
+
 		colors: {
 			black: '#000000',
 			secondary: '#bd76ff',
