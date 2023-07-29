@@ -6,12 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
 		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="./js/main.js" type="module"></script>
+		<script src="/js/main.js" type="module"></script>
 
 		<title>project</title>
 	</head>
 	<body>
-		<!-- <header></header> -->
+		<header></header>
 		<!-- 메인 -->
 		<main>
 			<!-- 가운데 레퍼 -->
@@ -19,7 +19,7 @@
 				<!-- 상품 기본 정보 -->
 				<div class="mt-[40px] flex justify-between">
 					<!-- 왼쪽 이미지 -->
-					<img class="h-[514px] w-[400px]" alt="탱탱쫄면 이미지" src="./../../assets/images/product/soba/thumbnail.jpg" />
+					<img class="h-[514px] w-[400px]" alt="탱탱쫄면 이미지" src="./../../assets/images/product/FrozenPork/thumbnail.jpg" />
 					<!-- 오른쪽 정보 -->
 					<div class="w-[560px]">
 						<!-- 제목 -->
@@ -121,7 +121,7 @@
 							상품설명
 						</button>
 					</div>
-					<div class="bot w-full">
+					<div class="w-full">
 						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="상세정보">상세정보</button>
 					</div>
 					<div class="w-full">
@@ -168,45 +168,51 @@
 				</section>
 
 				<!-- 후기 -->
-				<section>
+				<section class="flex flex-col gap-[56px]">
+					<!-- 상품 후기 &버튼 -->
 					<h2 class="sr-only">상품후기</h2>
-					<div>
-						<p>상품후기</p>
-						<p>글후기 50원 적립금 혜택이 있어요.</p>
-						<ul>
-							<li>퍼플, 더퍼플은 2배 적립 (100원) / 주간 베스트 후기로 선정 시 5,000원 추가 적립</li>
+					<div class="relative">
+						<p class="text-xl font-bold">상품후기</p>
+						<p class="mt-[24px] font-semibold text-content">글후기 50원 적립금 혜택이 있어요.</p>
+						<ol class="ml-[10px] list-inside list-disc text-sm text-gray/500">
+							<li class="">퍼플, 더퍼플은 2배 적립 (100원) / 주간 베스트 후기로 선정 시 5,000원 추가 적립</li>
 							<li>작성은 배송완료일로부터 30일 이내 가능합니다.</li>
 							<li>작성하신 후기는 확인 후 적립금이 지급됩니다. (영업일 기준 평균 1~2일 소요)</li>
-						</ul>
-						<button type="button" aria-label="후기 작성하 버튼">후기 작성하기</button>
+						</ol>
+						<button class="absolute right-0 top-0 h-[44px] w-[155px] rounded-sm bg-primary font-semibold text-white" type="button" aria-label="후기 작성하 버튼">후기 작성하기</button>
 					</div>
 
-					<div>
-						<div>
-							<p>총 n개</p>
-							<div>
-								<button type="button" aria-label="후기 작성하기">추천순</button>
+					<div class="flex flex-col gap-[16px]">
+						<!-- 필터 -->
+						<div class="flex justify-between">
+							<p class="text-sm font-semibold text-content">총 n개</p>
+							<div class="font-semibold text-gray/300">
+								<button class="text-content" type="button" aria-label="후기 작성하기">추천순</button>
 								<span> | </span>
 								<button type="button" aria-label="후기 작성하기">최근등록순</button>
 							</div>
 						</div>
+						<!-- 공지 -->
 
-						<div>
-							<div>
-								<span>공지</span>
-								<p>금주의 베스트 후기 안내</p>
+						<div class="border-t-[1px]">
+							<div class="flex h-[58px] items-center border-b-[1px] border-gray/100 px-[20px]">
+								<p class="font-semibold"><span class="mr-[20px] rounded-xs bg-gray/100 px-[8px] text-sm">공지</span>금주의 베스트 후기 안내</p>
 							</div>
-							<div>
-								<span>베스트</span><span>퍼플</span><span>홍길동</span>
-								<div>
-									<p>[풀무원] 탱탱쫄면 (4개입)</p>
-									<p>너무 맛있어여면이 쫄깃하고 양념도 짱맛나요!!</p>
-									<time datetime="2022-11-10T20:00:00">2022.11.10</time>
+							<div class="flex gap-[82px] border-b-[1px] border-gray/100 p-[20px]">
+								<div class="flex h-[18px] flex-row flex-wrap gap-[8px]">
+									<span class="rounded-xs bg-secondary px-[8px] text-sm font-semibold text-white">베스트</span>
+									<span class="rounded-xs border-[1px] px-[8px] text-sm font-semibold text-primary">퍼플</span>
+									<span class="text-sm font-semibold">홍길동</span>
+								</div>
+								<div class="flex flex-col gap-[20px]">
+									<p class="text-sm font-semibold text-gray/400">[풀무원] 탱탱쫄면 (4개입)</p>
+									<p class="text-sm">너무 맛있어여면이 쫄깃하고 양념도 짱맛나요!!</p>
+									<time class="text-sm font-semibold text-gray/400" datetime="2022-11-10T20:00:00">2022.11.10</time>
 								</div>
 							</div>
 						</div>
-
-						<div>
+						<!-- 버튼 -->
+						<div class="mx-auto">
 							<button class="h-[56px] w-[56px] place-content-center rounded-sm border-[1px] border-solid border-gray/100" type="button" aria-label="관심품목">
 								<img alt="이전" class="mx-auto" src="/assets/images/product-detail/arrow-left.svg" />
 							</button>
@@ -218,29 +224,30 @@
 				</section>
 
 				<!-- 문의 -->
-				<section>
+				<section class="flex flex-col gap-[56px]">
 					<h2 class="sr-only">상품문의</h2>
-					<div>
-						<p>상품문의</p>
-						<p>
-							상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.<br />
-							배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 1:1 문의에 남겨주세요.
-						</p>
+					<!-- 상품문의 & 버튼 -->
+					<div class="relative">
+						<p class="text-xl font-bold">상품문의</p>
+						<ol class="ml-[10px] mt-[24px] list-inside list-disc text-sm text-gray/500">
+							<li>상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.</li>
+							<li>배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 1:1 문의에 남겨주세요.</li>
+						</ol>
 
-						<button type="button" aria-label="문의하기 버튼">문의하기</button>
+						<button class="absolute right-0 top-0 h-[44px] w-[155px] rounded-sm bg-primary font-semibold text-white" type="button" aria-label="문의하기 버튼">문의하기</button>
 					</div>
 					<div>
-						<div>
-							<p>제목</p>
-							<p>작성자</p>
-							<p>작성일</p>
-							<p>답변상태</p>
+						<div class="felx-row flex h-[58px] items-center justify-between border-b-[1px] border-t-[2px] font-semibold">
+							<p class="grow text-center">제목</p>
+							<p class="w-[100px] text-center">작성일</p>
+							<p class="w-[100px] text-center">작성자</p>
+							<p class="w-[100px] text-center">답변상태</p>
 						</div>
-						<div>
-							<span>공지</span>
-							<p>칼리</p>
-							<time datetime="2022-11-10T20:00:00">2022.11.10</time>
-							<p>-</p>
+						<div class="felx-row flex h-[58px] items-center justify-between border-b-[1px] border-t-[2px] font-semibold">
+							<p class="grow font-semibold"><span class="mr-[20px] rounded-xs bg-gray/100 px-[8px] text-sm">공지</span>판매(일시)중단 제품 안내 (22.11.10 업데이트)</p>
+							<p class="w-[100px] text-center">칼리</p>
+							<time class="w-[100px] text-center" datetime="2022-11-10T20:00:00">2022.11.10</time>
+							<p class="w-[100px] text-center">-</p>
 						</div>
 					</div>
 				</section>
