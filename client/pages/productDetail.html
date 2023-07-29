@@ -69,7 +69,7 @@
 
 							<dl class="flex border-b-[1px] border-solid border-gray/100 py-[16px]">
 								<dt class="basis-[128px] text-sm font-semibold text-gray/500">알레르기정보</dt>
-								<dd class="basis-[432px] bg-secondary text-sm font-semibold text-gray/500">
+								<dd class="basis-[432px] text-sm font-semibold text-gray/500">
 									<p>-대두, 밀, 쇠고기 함유</p>
 									<p>-계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조</p>
 								</dd>
@@ -88,14 +88,26 @@
 									</div>
 								</dd>
 							</dl>
-							<div class="">
-								<p class="">총 상품금액:<span>4,980</span>원</p>
-								<p><span>적립아이콘</span>로그인 후, 적립 혜택 제공</p>
+							<div class="py-[28px] text-right">
+								<p class="font-semibold">총 상품금액<span class="pl-[17px] text-xl text-content">4,980</span>원</p>
+								<p class="font-semibold"><span class="mr-[6px] rounded-xl bg-accent/yellow px-[8px] py-[4px] text-sm text-white">적립</span>로그인 후, 적립 혜택 제공</p>
 							</div>
-							div>
-							<button type="button" aria-label="관심품목"><span>하트 아이콘</span></button>
-							<button type="button" aria-label="알림설정"><span>종 아이콘</span></button>
-							<button type="button" aria-label="장바구니담기"><span>장바구니 담기</span></button>
+
+							<div class="flex flex-row gap-[12px]">
+								<button class="h-[56px] w-[56px] place-content-center rounded-sm border-[1px] border-solid border-gray/100" type="button" aria-label="관심품목">
+									<img
+										class="mx-auto"
+										src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yNS44MDcgNy44NjNhNS43NzcgNS43NzcgMCAwIDAtOC4xNzIgMEwxNiA5LjQ5N2wtMS42MzUtMS42MzRhNS43NzkgNS43NzkgMCAxIDAtOC4xNzMgOC4xNzJsMS42MzQgMS42MzQgNy40NjYgNy40NjdhMSAxIDAgMCAwIDEuNDE1IDBzMCAwIDAgMGw3LjQ2Ni03LjQ2N2gwbDEuNjM0LTEuNjM0YTUuNzc3IDUuNzc3IDAgMCAwIDAtOC4xNzJ6IiBzdHJva2U9IiM1RjAwODAiIHN0cm9rZS13aWR0aD0iMS42IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K"
+									/>
+								</button>
+								<button class="h-[56px] w-[56px] place-content-center rounded-sm border-[1px] border-solid border-gray/100" type="button" aria-label="알림설정">
+									<img
+										class="mx-auto"
+										src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0NDQyIgc3Ryb2tlLXdpZHRoPSIxLjYiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEyLjY2NiAyM2EzLjMzMyAzLjMzMyAwIDEgMCA2LjY2NiAwIi8+CiAgICAgICAgPHBhdGggZD0iTTI1Ljk5OCAyMi43MzhINmwuMDEzLS4wM2MuMDc2LS4xMzUuNDcxLS43MDQgMS4xODYtMS43MDlsLjc1LTEuMDV2LTYuNjM1YzAtNC40ODUgMy40MzgtOC4xNCA3Ljc0MS04LjMwOEwxNiA1YzQuNDQ2IDAgOC4wNSAzLjcyMiA4LjA1IDguMzE0djYuNjM0bDEuNzA3IDIuNDExYy4xNzMuMjUzLjI1NC4zOC4yNDIuMzh6IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+									/>
+								</button>
+								<button class="h-[56px] grow place-content-center rounded-sm bg-primary font-semibold text-white" type="button" aria-label="장바구니담기">장바구니 담기</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -103,7 +115,7 @@
 				<!-- 네비게이션 -->
 				<div class="mx-auto mt-[48px] flex w-[1050px] justify-between">
 					<div class="w-full">
-						<button class="font-base text-indigo-500 h-[54px] w-full content-center border-x-[1px] border-t-[1px] border-solid border-gray/100 font-semibold" type="button" aria-label="상품설명">
+						<button class="font-base h-[54px] w-full content-center border-x-[1px] border-t-[1px] border-solid border-gray/100 font-semibold text-primary" type="button" aria-label="상품설명">
 							상품설명
 						</button>
 					</div>
@@ -111,7 +123,9 @@
 						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="상세정보">상세정보</button>
 					</div>
 					<div class="w-full">
-						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="후기">후기</button>
+						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="후기">
+							후기 <span class="text-sm">(1,000)</span>
+						</button>
 					</div>
 					<div class="w-full">
 						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="문의">문의</button>
@@ -130,7 +144,7 @@
 
 				<!-- 후기 -->
 				<section>
-					<h2>상품후기<span>(1,000)</span></h2>
+					<h2>상품후기</h2>
 				</section>
 
 				<!-- 문의 -->
