@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
+		<link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/main.js" type="module"></script>
+
+		<title>회원가입</title>
+	</head>
+	<body>
+		<header></header>
+
+		<h1 class="signUp">회원가입</h1>
+		<div class="necessary">
+			<span class="star">*</span>
+			필수입력사항
+		</div>
+		<form action="/">
+			<fieldset>
+				<legend>회원가입 폼</legend>
+				<div class="idWrapper">
+					<!-- 이메일 조건 : 최소 @, . 포함 -->
+					<label class="labelId" for="id">아이디<span class="star">*</span></label>
+					<input class="inputId" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+					<button class="buttonId" type="button">중복확인</button>
+				</div>
+
+				<div class="passwordWrapper1">
+					<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자 -->
+					<label class="labelPw1" for="password1">비밀번호<span class="star">*</span></label>
+					<input class="labelPw1" type="password" name="password" id="password1" placeholder="비밀번호를 입력해주세요" />
+				</div>
+
+				<div class="passwordWrapper2">
+					<label class="labelPw2" for="password2">비밀번호 확인<span class="star">*</span></label>
+					<input class="inputPw2" type="password" name="password" id="password2" placeholder="비밀번호를 한번 더 입력해주세요" />
+				</div>
+
+				<div class="nameWrapper">
+					<label class="labelName" for="name">이름<span class="star">*</span></label>
+					<input class="inputName" type="text" name="name" id="name" placeholder="이름을 입력해주세요" />
+				</div>
+
+				<div class="emailWrapper">
+					<label class="labelEmail" for="email">이메일<span class="star">*</span></label>
+					<input class="inputEmail" type="text" name="email" id="email" placeholder="예) marketkarly@karly.com" />
+					<button class="buttonEmail" type="button">중복확인</button>
+				</div>
+
+				<div class="phoneWrapper">
+					<label class="labelPhone" for="phone">휴대폰<span class="star">*</span></label>
+					<input class="inputPhone" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." />
+					<button class="buttonPhone" type="button">인증번호 받기</button>
+				</div>
+
+				<div class="addressWrapper">
+					<label class="labelAddress" for="address">주소<span class="star">*</span></label>
+					<input class="inputAdderess" type="button" id="address" value="주소 검색" />
+					<span class="deliveryNotice">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+				</div>
+
+				<div class="genderWrapper">
+					<label class="gender">성별</label>
+					<input class="inputM" type="radio" value="남성" name="gender" />
+					<span class="spanM">남자</span>
+					<input class="inputF" type="radio" value="여성" name="gender" />
+					<span class="spanF">여자</span>
+					<input class="inputN" type="radio" value="선택안함" name="gender" />
+					<span class="spanN">선택안함</span>
+				</div>
+
+				<div class="birthdayWrapper">
+					<label class="labelYear" for="year">생년월일</label>
+					<input class="inputYear" type="text" id="year" placeholder="YYYY" />
+					<span class="spanS">/</span>
+					<label class="labelMonth" for="month"></label>
+					<input class="inputMonth" type="text" id="month" placeholder="MM" />
+					<span class="spanS">/</span>
+					<label class="labelDay" for="day"></label>
+					<input class="inputDay" type="text" id="day" placeholder="DD" />
+				</div>
+
+				<div>
+					<span>추가입력 사항</span>
+					<input type="radio" value="친구초대 추천인 아이디" name="option" />
+					<span>친구초대 추천인 아이디</span>
+					<input type="radio" value="참여 이벤트명" name="option" />
+					<span>참여 이벤트명</span>
+				</div>
+			</fieldset>
+
+			<div>
+				<fieldset>
+					<span>이용약관동의</span>
+					<span>*</span>
+					<ul>
+						<li>
+							<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+							<input type="checkbox" />전체 동의합니다.
+							<span>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
+						</li>
+						<li>
+							<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+							<input type="checkbox" />이용약관 동의 (필수)
+							<span>약관보기<img src="/assets/images/product-detail/arrow-right.svg" alt="" /> </span>
+						</li>
+						<li>
+							<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+							<input type="checkbox" />개인정보 수집 · 이용 동의 (필수)
+							<span>약관보기<img src="/assets/images/product-detail/arrow-right.svg" alt="" /> </span>
+						</li>
+						<li>
+							<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+							<input type="checkbox" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
+							<span>약관보기<img src="/assets/images/product-detail/arrow-right.svg" alt="" /> </span>
+						</li>
+						<li>
+							<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+							<input type="checkbox" />본인은 만 14세 이상입니다. (필수)
+							<span>약관보기<img src="/assets/images/product-detail/arrow-right.svg" alt="" /> </span>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			<button type="submit">가입하기</button>
+		</form>
+
+		<footer></footer>
+	</body>
+</html>
