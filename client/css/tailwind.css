@@ -4,3 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/*% 화면자체의 최대크기 설정 */
+.fullWidth {
+	max-width: 1920px;
+}
+
+/*% 메인페이지의 중요 섹션들을 위한 최대크기 설정 */
+.innerWidth {
+	max-width: 1050px;
+}
+
+/*% 메인페이지 상품명 */
+.itemName {
+	font-weight: 400;
+	font-size: 1rem;
+	color: #333;
+}
+
+/*% 섹션 위아래 간격주기 */
+.interval {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/*% 메인페이지 가격 */
+.itemPrice {
+	font-size: 1.332rem;
+	font-weight: 600;
+}
+
+/*% 최근 본 상품 (스크롤바) */
+.recentlyItem {
+	position: absolute;
+	right: 39px;
+	top: 193px;
+	box-sizing: content-box;
+	height: 207px;
+	width: 60px;
+	border: 1px solid #c4c4c4;
+	padding: 2px;
+}
