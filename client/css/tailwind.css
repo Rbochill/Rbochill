@@ -19,10 +19,37 @@
   background: #d9d9d9;
 }
 
-/* #뷰티칼리 N마크 : 헤더 메인 로고 영역의 뷰티칼리 */
+/* #뷰티칼리 new마크 */
 .beautyLink::after{
   content: url('/assets/images/header/new.svg');
   position:relative;
   top: -18px;
   left: 5px
+}
+
+/* #검색 디폴트 ver */
+.SearchForm{
+  position: absolute;
+  left: 330px;
+  top: -11px; 
+  height: 60px;
+  border: 1px solid #5f0080;
+  border-radius: 4px;
+}
+.searchFormInput{
+  /* margin-right: 7rem; */
+  width: 290px;
+  font-size: 21.328px;
+}
+
+/* #검색 스크롤 ver */
+.searchFormInputScroll{
+  font-size: 12.003px;
+  margin-right: 0px;
+  
+}
+
+/* #nav */
+nav{
+  box-shadow: 1px 15px 24px -4px rgba(186,186,186,0.1);
 }

@@ -580,32 +580,28 @@ video {
   border-width: 0;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
-.bottom-1 {
-  bottom: 0.25rem;
+.sticky {
+  position: sticky;
 }
 
 .bottom-\[2px\] {
   bottom: 2px;
 }
 
-.left-\[330px\] {
-  left: 330px;
+.top-0 {
+  top: 0px;
 }
 
-.top-\[11px\] {
-  top: 11px;
+.z-50 {
+  z-index: 50;
 }
 
-.top-\[-11px\] {
-  top: -11px;
+.z-\[100\] {
+  z-index: 100;
 }
 
 .order-first {
@@ -621,72 +617,48 @@ video {
   margin-right: auto;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
 }
 
-.mr-32 {
-  margin-right: 8rem;
-}
-
-.mr-28 {
-  margin-right: 7rem;
-}
-
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
   display: flex;
 }
 
-.h-\[50px\] {
-  height: 50px;
-}
-
 .h-\[5\.6px\] {
   height: 5.6px;
 }
 
-.h-\[60px\] {
-  height: 60px;
-}
-
-.w-\[1050px\] {
-  width: 1050px;
-}
-
-.w-full {
-  width: 100%;
+.h-\[50px\] {
+  height: 50px;
 }
 
 .w-2 {
   width: 0.5rem;
 }
 
-.w-\[2px\] {
-  width: 2px;
+.w-\[1050px\] {
+  width: 1050px;
 }
 
-.w-\[400px\] {
-  width: 400px;
+.w-\[600px\] {
+  width: 600px;
 }
 
-.w-\[190px\] {
-  width: 190px;
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[1920\] {
@@ -713,12 +685,20 @@ video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-sm {
@@ -733,28 +713,13 @@ video {
   border-style: solid;
 }
 
-.border-\[color\:var\(--primary\2c \#5F0080\)\] {
-  border-color: var(--primary,#5F0080);
+.border-\[\#5f0080\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(95 0 128 / var(--tw-border-opacity));
 }
 
-.bg-\[green\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 128 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[orange\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 165 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[yellow\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 0 / var(--tw-bg-opacity));
-}
-
-.bg-blue\/300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(102 163 255 / var(--tw-bg-opacity));
+.border-\[color\:var\(--gray-300\2c \#A6A6A6\)\] {
+  border-color: var(--gray-300,#A6A6A6);
 }
 
 .bg-primary {
@@ -762,26 +727,8 @@ video {
   background-color: rgb(95 0 128 / var(--tw-bg-opacity));
 }
 
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(189 118 255 / var(--tw-bg-opacity));
-}
-
-.bg-accent\/yellow {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 98 47 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\/assets\/images\/header\/Location\.svg\'\)\] {
-  background-image: url('/assets/images/header/Location.svg');
-}
-
-.bg-\[url\(\/assets\/images\/header\/Location\.svg\)\] {
-  background-image: url(/assets/images/header/Location.svg);
 }
 
 .bg-clip-text {
@@ -789,9 +736,9 @@ video {
           background-clip: text;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-5 {
@@ -799,9 +746,14 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-3 {
@@ -828,8 +780,16 @@ video {
   font-weight: 900;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .text-content {
@@ -840,6 +800,11 @@ video {
 .text-gray\/400 {
   --tw-text-opacity: 1;
   color: rgb(137 137 137 / var(--tw-text-opacity));
+}
+
+.text-gray\/500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 107 107 / var(--tw-text-opacity));
 }
 
 .text-primary {
@@ -873,7 +838,7 @@ video {
   background: #d9d9d9;
 }
 
-/* #뷰티칼리 N마크 : 헤더 메인 로고 영역의 뷰티칼리 */
+/* #뷰티칼리 new마크 */
 
 .beautyLink::after{
   content: url('/assets/images/header/new.svg');
@@ -882,6 +847,32 @@ video {
   left: 5px
 }
 
-.test {
-  align-self: flex-end;
+/* #검색 디폴트 ver */
+
+.SearchForm{
+  position: absolute;
+  left: 330px;
+  top: -11px;
+  height: 60px;
+  border: 1px solid #5f0080;
+  border-radius: 4px;
+}
+
+.searchFormInput{
+  /* margin-right: 7rem; */
+  width: 290px;
+  font-size: 21.328px;
+}
+
+/* #검색 스크롤 ver */
+
+.searchFormInputScroll{
+  font-size: 12.003px;
+  margin-right: 0px;
+}
+
+/* #nav */
+
+nav{
+  box-shadow: 1px 15px 24px -4px rgba(186,186,186,0.1);
 }

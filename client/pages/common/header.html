@@ -22,16 +22,17 @@
 						<a href="#" class="beautyLink text-lg font-semibold text-gray/400">뷰티칼리</a>
 					</div>
 					<!-- 헤더 검색폼 영역 -->
-					<form
-						action="#"
-						class="SearchForm py-3bg-[yellow] absolute left-[330px] top-[-11px] flex h-[60px] items-center rounded-sm border border-solid border-[color:var(--primary,#5F0080)] px-5 py-3"
-					>
-						<fieldset class="searchFormGroup flex w-full items-center">
-							<legend class="sr-only">검색</legend>
-							<label for="search" class="searchFormInputLabel sr-only">검색어</label>
-							<input type="search" required placeholder="검색어를 입력해주세요" name="search" id="search" class="searchFormInput mr-28 text-lg" />
-							<button type="submit" class="searchFormButton"><img src="/assets/images/header/Search.svg" alt="검색" /></button>
-						</fieldset>
+					<form action="#">
+						<div class="SearchForm flex items-center rounded-sm border border-solid border-[#5f0080] font-normal">
+							<fieldset>
+								<legend class="sr-only">검색</legend>
+								<div class="searchInputGroup flex w-full items-center px-5">
+									<label for="search" class="searchFormInputLabel sr-only">검색어</label>
+									<input type="search" required placeholder="검색어를 입력해주세요" name="search" id="search" class="searchFormInput" />
+									<button type="submit" class="searchFormButton"><img src="/assets/images/header/Search.svg" alt="검색" /></button>
+								</div>
+							</fieldset>
+						</div>
 					</form>
 					<!-- 헤더 카트 영역 -->
 					<div class="headerPrivate flex items-center gap-5">
