@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
+		<link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/main.js" type="module"></script>
+
+		<title>로그인</title>
+	</head>
+	<body>
+		<header></header>
+
+		<h1 class="login">로그인</h1>
+		<form action="/">
+			<fieldset>
+				<legend>로그인 폼</legend>
+				<div class="loginForm">
+					<!-- 이메일 조건 : 최소 @, . 포함 -->
+					<label class="labelId" for="id">아이디</label>
+					<input class="inputId" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+					<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자  -->
+					<label class="labelPw" for="password">비밀번호</label>
+					<input class="inputPw" type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" />
+					<span class="wrongIdPw">아이디 또는 비밀번호가 일치하지 않습니다.</span>
+				</div>
+				<div class="findIdPw">
+					<span class="findId">아이디 찾기</span>
+					<span>|</span>
+					<span class="findPw">비밀번호 찾기</span>
+				</div>
+				<div class="loginButtons">
+					<!-- addEventListener 이용해서 메인페이지로 이동하기-->
+					<button class="buttonLogin" type="submit">로그인</button>
+					<!-- addEventListener 이용해서 회원가입 페이지로 이동하기-->
+					<button class="buttonSignUp" type="button">회원가입</button>
+				</div>
+			</fieldset>
+		</form>
+
+		<footer></footer>
+	</body>
+</html>
