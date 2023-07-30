@@ -5,17 +5,207 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
-		<link rel="stylesheet" href="./css/main.css" />
-		<script src="./js/main.js" type="module"></script>
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/main.js" type="module"></script>
 
-		<title>project</title>
+		<title>칼리 - 마켓칼리/뷰티칼리</title>
 	</head>
 	<body>
 		<header></header>
-		<nav></nav>
+		<!-- 네비게이션 오리지널 ver -->
+		<nav class="sticky top-0 z-[100] bg-white">
+			<div class="navWrapper mx-auto mt-5 flex w-[1050px] items-center justify-between py-4 font-semibold text-content">
+				<!-- 카테고리 -->
+				<button type="button" class="categoryButton flex items-center gap-3"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" />카테고리</button>
+				<!-- 네비게이션 리스트 -->
+				<ul class="navList flex w-[600px] justify-around">
+					<li><a href="#">신상품</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">알뜰쇼핑</a></li>
+					<li><a href="#">특가/혜택</a></li>
+				</ul>
+				<!-- 배송안내 -->
+				<a href="#" class="deliveryLink rounded-2xl border border-solid border-[color:var(--gray-300,#A6A6A6)] px-3 py-1 text-center align-middle text-sm font-normal leading-6 text-gray/500"
+					><span class="text-primary">샛별·낮</span> 배송안내</a
+				>
+			</div>
+		</nav>
+		<!-- 네비게이션 스크롤 ver -->
+		<nav class="sticky top-0 z-[100] hidden bg-white">
+			<div class="navWrapper mx-auto mt-5 flex w-[1050px] justify-between py-4 font-semibold text-content">
+				<!-- 카테고리 -->
+				<button type="button" class="categoryButton flex items-center gap-3"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" />카테고리</button>
+				<!-- 네비게이션 리스트 -->
+				<ul class="navList flex w-[600px] items-center justify-around">
+					<li><a href="#">신상품</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">알뜰쇼핑</a></li>
+					<li><a href="#">특가/혜택</a></li>
+				</ul>
+				<!-- nav 검색폼 영역 -->
+				<form action="#">
+					<div class="SearchFormScroll flex items-center rounded-sm border border-solid border-[#5f0080] font-normal">
+						<fieldset>
+							<legend class="sr-only">검색</legend>
+							<div class="searchInputGroup flex w-full items-center px-5">
+								<label for="search" class="sr-only">검색어</label>
+								<input type="search" required placeholder="검색어를 입력해주세요" name="search" id="search" class="searchFormInputScroll focus:outline-none" />
+								<button type="submit" class="searchFormButton"><img src="/assets/images/header/Search.svg" alt="검색" /></button>
+							</div>
+						</fieldset>
+					</div>
+				</form>
+				<!-- nav 카트 영역 -->
+				<div class="headerPrivate ml-2 flex items-center gap-5">
+					<button type="button" class="headerAddressButton"><img src="/assets/images/header/Location.svg" alt="배송지 변경" /></button>
+					<a href="#"><img src="/assets/images/header/Heart.svg" alt="찜한 상품" /></a>
+					<a href="#"><img src="/assets/images/header/Cart.svg" alt="장바구니" /></a>
+				</div>
+			</div>
+		</nav>
 
-		<h1 class="from-cyan-500 to-indigo-700 text-7xl text-transparent mx-auto bg-gradient-to-r bg-clip-text font-black drop-shadow-lg">Javascript project</h1>
-		<div class="container"></div>
+		<article class="fullWidth mx-auto font-bold text-content">
+			<img src="/assets/images/main/banner01.jpg" alt="배너 1" class="w-full" />
+			<!-- <img src="/assets/images/main/banner02.jpg" alt="배너 2" />
+				<img src="/assets/images/main/banner03.jpg" alt="배너 3" />
+				<img src="/assets/images/main/banner04.jpg" alt="배너 4" /> -->
+		</article>
+		<main class="fullWidth relative mx-auto">
+			<div class="innerWidth mx-auto">
+				<!--& 추천 상품 -->
+				<section class="interval">
+					<h2 class="mb-7 p-2 text-center text-xl font-bold">이 상품 어때요?</h2>
+					<ul class="flex gap-4">
+						<li>
+							<a href="">
+								<img src="/assets/images/product/tangtang/thumbnail.jpg" alt="탱탱 쫄면" class="pb-4" />
+								<dl>
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">[풀무원] 탱탱쫄면 (4개입)</dd>
+									<dt class="sr-only">가격</dt>
+									<dd class="itemPrice">4,980 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/FrozenPork/thumbnail.jpg" alt="냉동 삼겹살" class="pb-4" />
+								<dl>
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">[하이포크] 냉동삼겹살 (600g)</dd>
+									<dt class="sr-only">가격</dt>
+									<dd class="itemPrice">17,650 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/Pineapple/thumbnail.jpg" alt="파인애플 슬라이스" class="pb-4" />
+								<dl>
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">[Dole] 스위티오 파인애플 슬라이스</dd>
+									<dt class="sr-only">가격</dt>
+									<dd class="itemPrice">8,950 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/Cake/thumbnail.jpg" alt="초코 케이크" class="pb-4" />
+								<dl>
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">[베키] 시그니처 체커스 초크 케이크</dd>
+									<dt class="sr-only">가격</dt>
+									<dd class="itemPrice">39,900 원</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<!--& 중간 라인 광고 배너 -->
+				<section class="interval">
+					<a href=""><img src="/assets/images/main/line-banner.svg" alt="컬리 퍼플 위크" /></a>
+				</section>
+
+				<!--& 할인 상품 -->
+				<section class="interval pb-2">
+					<h2 class="mb-7 p-2 text-center text-xl font-bold">놓치면 후회할 가격</h2>
+					<ul class="flex gap-4">
+						<li class="relative">
+							<a href="">
+								<img src="/assets/images/product/Salad/thumbnail.jpg" alt="오늘의 샐러드 6종" class="pb-4" />
+								<dl class="relative">
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">[스윗밸런스] 오늘의 샐러드 6종</dd>
+									<dt class="sr-only">정상가격</dt>
+									<dd class="absolute -bottom-6"><s>5,000 원</s></dd>
+									<dt class="sr-only">할인율</dt>
+									<dd class="inline text-lg text-accent/yellow">98%</dd>
+									<dt class="sr-only">할인가격</dt>
+									<dd class="itemPrice ml-2 inline">100 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/soba/thumbnail.jpg" alt="메밀소바 5입" class="pb-4" />
+								<dl class="relative">
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName">[농심] 메밀소바 5입</dd>
+									<dt class="sr-only">정상가격</dt>
+									<dd class="absolute -bottom-6"><s>10,000 원</s></dd>
+									<dt class="sr-only">할인율</dt>
+									<dd class="inline text-lg text-accent/yellow">99%</dd>
+									<dt class="sr-only">할인가격</dt>
+									<dd class="itemPrice ml-2 inline">100 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/ubuho/thumbnail.jpg" alt="통통 왕군만두" class="pb-4" />
+								<dl class="relative">
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName">[창화당] 통통 왕군만두</dd>
+									<dt class="sr-only">정상가격</dt>
+									<dd class="absolute -bottom-6"><s>100,000 원</s></dd>
+									<dt class="sr-only">할인율</dt>
+									<dd class="inline text-lg text-accent/yellow">99%</dd>
+									<dt class="sr-only">할인가격</dt>
+									<dd class="itemPrice ml-2 inline">1,000 원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/assets/images/product/filter/thumbnail.jpg" alt="멀티필터 샤워기" class="pb-4" />
+								<dl class="relative">
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName">[대림바스] 멀티필터 샤워기 (5개입)</dd>
+									<dt class="sr-only">정상가격</dt>
+									<dd class="absolute -bottom-6"><s>500,000 원</s></dd>
+									<dt class="sr-only">할인율</dt>
+									<dd class="inline text-lg text-accent/yellow">20%</dd>
+									<dt class="sr-only">할인가격</dt>
+									<dd class="itemPrice ml-2 inline">400,000 원</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="recentlyItem flex flex-col">
+				<button class="mx-auto h-[18px] w-[18px]"><img src="/assets/images/product-list/ic-arrow-up.svg" alt="최근 본 상품 위로 올리기" class="w-[100%]" /></button>
+				<span class="text-sm font-semibold">최근 본 상품</span>
+				<div class="flex flex-col">
+					<a href="" class="mx-auto">첫번째</a>
+					<a href="" class="mx-auto">두번째</a>
+					<a href="" class="mx-auto">세번째</a>
+				</div>
+				<button class="mx-auto h-[18px] w-[18px]"><img src="/assets/images/product-list/ic-arrow-down.svg" alt="최근 본 상품 아래로 내리기" class="w-[100%]" /></button>
+			</div>
+		</main>
 
 		<footer></footer>
 	</body>
