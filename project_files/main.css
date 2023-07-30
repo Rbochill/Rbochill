@@ -534,6 +534,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -546,32 +580,12 @@ video {
   border-width: 0;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
-.-bottom-6 {
-  bottom: -1.5rem;
-}
-
 .bottom-\[2px\] {
   bottom: 2px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.z-\[100\] {
-  z-index: 100;
 }
 
 .order-first {
@@ -587,18 +601,6 @@ video {
   margin-right: auto;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-7 {
-  margin-bottom: 1.75rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -611,20 +613,8 @@ video {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
-}
-
-.h-\[18px\] {
-  height: 18px;
 }
 
 .h-\[5\.6px\] {
@@ -639,16 +629,8 @@ video {
   width: 0.5rem;
 }
 
-.w-\[100\%\] {
-  width: 100%;
-}
-
 .w-\[1050px\] {
   width: 1050px;
-}
-
-.w-\[18px\] {
-  width: 18px;
 }
 
 .w-\[600px\] {
@@ -691,10 +673,6 @@ video {
   gap: 0.75rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-5 {
   gap: 1.25rem;
 }
@@ -715,13 +693,28 @@ video {
   border-style: solid;
 }
 
+.border-\[color\:var\(--gray-300\2c \#A6A6A6\)\] {
+  border-color: var(--gray-300,#A6A6A6);
+}
+
 .border-\[\#5f0080\] {
   --tw-border-opacity: 1;
   border-color: rgb(95 0 128 / var(--tw-border-opacity));
 }
 
-.border-\[color\:var\(--gray-300\2c \#A6A6A6\)\] {
-  border-color: var(--gray-300,#A6A6A6);
+.bg-accent\/yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 98 47 / var(--tw-bg-opacity));
+}
+
+.bg-blue\/400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 133 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray\/300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(166 166 166 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -729,23 +722,23 @@ video {
   background-color: rgb(95 0 128 / var(--tw-bg-opacity));
 }
 
-.bg-white {
+.bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(189 118 255 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .py-1 {
@@ -755,14 +748,6 @@ video {
 
 .py-4 {
   padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-4 {
   padding-bottom: 1rem;
 }
 
@@ -786,12 +771,8 @@ video {
   font-size: 0.7501875162124634rem;
 }
 
-.text-xl {
-  font-size: 1.7768750190734863rem;
-}
-
-.font-bold {
-  font-weight: 700;
+.font-black {
+  font-weight: 900;
 }
 
 .font-normal {
@@ -804,11 +785,6 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
-}
-
-.text-accent\/yellow {
-  --tw-text-opacity: 1;
-  color: rgb(250 98 47 / var(--tw-text-opacity));
 }
 
 .text-content {
@@ -836,6 +812,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 /* #숨기기 with JS : 상단배너 */
 
 .top-banner-hidden {
@@ -852,7 +833,7 @@ video {
   background: #d9d9d9;
 }
 
-/* #뷰티칼리 new마크 */
+/* #뷰티칼리 N마크 : 헤더 메인 로고 영역의 뷰티칼리 */
 
 .beautyLink::after{
   content: url('/assets/images/header/new.svg');
@@ -861,7 +842,7 @@ video {
   left: 5px
 }
 
-/* #검색 디폴트 ver */
+/* #검색 디폴트 ver. */
 
 .SearchForm{
   position: absolute;
@@ -870,87 +851,23 @@ video {
   height: 60px;
   border: 1px solid #5f0080;
   border-radius: 4px;
+  padding: 12px 20px;
 }
 
 .searchFormInput{
-  /* margin-right: 7rem; */
-  width: 290px;
+  margin-right: 7rem;
   font-size: 21.328px;
 }
 
-/* #검색 스크롤 ver */
+/* #검색스크롤 ver. */
 
-.searchFormInputScroll{
+.SearchFormScroll{
   font-size: 12.003px;
-  margin-right: 0px;
 }
 
-/* #nav */
-
-nav{
-  box-shadow: 1px 15px 24px -4px rgba(186,186,186,0.3);
-}
-
-/* #header, nav 호버 효과 */
-
-.headerPrivate img:hover, .navList a:hover, .categoryButton:hover {
-  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-}
-
-.navList a:hover{
-  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-  text-decoration-line: underline;
-  text-underline-offset: 3px;
-}
-
-/*% 화면자체의 최대크기 설정 */
-
-.fullWidth {
-  max-width: 1920px;
-}
-
-/*% 메인페이지의 중요 섹션들을 위한 최대크기 설정 */
-
-.innerWidth {
-  max-width: 1050px;
-}
-
-/*% 메인페이지 상품명 */
-
-.itemName {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #333;
-}
-
-/*% 섹션 위아래 간격주기 */
-
-.interval {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-/*% 메인페이지 가격 */
-
-.itemPrice {
-  font-size: 1.332rem;
-  font-weight: 600;
-}
-
-/*% 최근 본 상품 (스크롤바) */
-
-.recentlyItem {
-  position: absolute;
-  right: 39px;
-  top: 193px;
-  box-sizing: content-box;
-  height: 207px;
-  width: 60px;
-  border: 1px solid #c4c4c4;
-  padding: 2px;
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.test {
+  border-radius: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--gray-300,#A6A6A6);
 }
