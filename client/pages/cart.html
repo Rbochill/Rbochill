@@ -36,12 +36,20 @@
 						<h4 class="cartCategory"><img src="/assets/images/cart/ic-cold.svg" aria-hidden="true" alt="" />냉장 식품</h4>
 						<button class="cartListbutton"></button>
 					</div>
+
 					<!-- 상품 리스트 -->
 					<ul>
 						<li class="flex h-[115px] justify-between border-b-2 border-gray/100">
 							<dl class="cartItemList">
 								<dt class="cartItemName">초코 케이크</dt>
 								<dd class="cartItemImageWrapper"><img src="/assets/images/product/Cake/thumbnail.jpg" alt="초코케이크" class="cartItemImage h-[79px] w-16" /></dd>
+								<dt class="sr-only">삭제할 아이템 선택</dt>
+								<dd class="cartCheck flex items-center">
+									<div class="cartCheckAll">
+										<input type="checkbox" class="cartChecAllkbox" id="cartCheckboxList" name="cartCheckboxList" />
+										<label for="cartCheckboxList" class="cartCheckBoxlable"> <span class="checkIcon"></span></label>
+									</div>
+								</dd>
 								<dt class="sr-only">상품 수량</dt>
 								<dd class="cartItemCount rounded-sm border border-gray/100">
 									<button type="button" aria-label="수량 내리기" class="cartCountDown w-[25px] text-center">–</button>

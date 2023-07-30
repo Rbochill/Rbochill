@@ -34,8 +34,9 @@
 .cartCheckAll {
   position: relative;
   font-weight: 600;
+  margin-left: 4px;
 }
-.cartChecAllkbox {
+.cartChecAllkbox, .cartCheckboxList {
   position: absolute;
   width: 23px;
   height: 23px;
@@ -53,7 +54,8 @@
   width: 23px;
   height: 23px;
 }
-.cartChecAllkbox:checked + .cartCheckBoxlable .checkIcon {
+.cartChecAllkbox:checked + .cartCheckBoxlable .checkIcon,
+.cartCheckboxList:checked + .cartCheckBoxlable .checkIcon {
   background-image: url(/assets/images/cart/ic-checked-true.svg);
 }
 
@@ -89,37 +91,37 @@
 .cartItemList{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns:  45px 0.7fr 3fr 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
 }
 .cartItemName{
-  grid-area: name;
-  grid-column: 2 / 3;
+  grid-column: 3 / 4;
   grid-row: 1 / 3;
 }
 .cartItemImageWrapper{
-  grid-area: image;
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
   grid-row: 1 / 3;
-  justify-self: center;
+  justify-self: start;
+}
+.cartCheck{
+  grid-column: 1 / 2;
+  grid-row: 1 /3;
+  justify-self: start;
 }
 .cartItemCount{
-  grid-area: count;
-  grid-column: 3 / 4;
+  grid-column: 4 / 5;
   grid-row: 1 / 3;
   justify-self: center;
 }
 .cartItemPrice{
-  grid-area: price;
-  grid-column: 4 / 5;
+  grid-column: 5 / 6;
   grid-row: 1 / 3;
   justify-self: end;
   margin-top: 50px;
 }
 .cartItemDiscount{
-  grid-area: discount;
-  grid-column: 4 / 5;
+  grid-column: 5 / 6;
   grid-row: 1 / 3;
   justify-self: end;
 }
