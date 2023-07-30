@@ -22,6 +22,7 @@ function pwReg(text) {
 const inputId = getNode('.inputId');
 const inputPw = getNode('.inputPw');
 const buttonLogin = getNode('.buttonLogin');
+const buttonSignUp = getNode('.buttonSignUp');
 
 let emailPass = false;
 let pwPass = false;
@@ -64,6 +65,11 @@ function handleLogin(e) {
 	}
 }
 
+function handleMove() {
+	window.location.href = '/pages/common/signUp.html';
+}
+
 inputId.addEventListener('input', handleCheckId);
 inputPw.addEventListener('input', handleCheckPw);
 buttonLogin.addEventListener('click', handleLogin);
+buttonSignUp.addEventListener('click', handleMove);
