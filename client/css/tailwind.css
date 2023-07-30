@@ -4,14 +4,157 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
 
+/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
 .divisionLine {
   width: 1px;
   height: 13px;
   background: #d9d9d9;
 }
 
-.test{
-    @apply bg-[url(/client/assets/images/cart/ic-checked-false.svg)];
+/* #Cart 페이지 전체 영역 그리드 레이아웃 */
+.cart{
+  display: grid;
+  grid-template-areas: 
+    "title title"
+    "list order";
+    justify-content: space-between;
+}
+.cartTitle{
+  grid-area: title;
+}
+.cartList{
+  grid-area: list;
+}
+.cartOrder{
+  grid-area: order;
+}
+
+/* #Cart 전체선택 체크 박스 */
+.cartCheckAll {
+  position: relative;
+  font-weight: 600;
+}
+.cartChecAllkbox {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  appearance: none;
+}
+.cartCheckBoxlable {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+}
+.cartCheckBoxlable .checkIcon {
+  background: url(/assets/images/cart/ic-checked-false.svg) no-repeat 0 0 / 100%;
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+.cartChecAllkbox:checked + .cartCheckBoxlable .checkIcon {
+  background-image: url(/assets/images/cart/ic-checked-true.svg);
+}
+
+
+/* #Cart에 냉장, 냉동, 상온 식품 구분 CSS */
+.cartCategoryWrapper{
+  width: 742px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--black, #000);
+  font-weight: 600;
+  padding: 16px 0;
+}
+.cartCategory{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* #Cart 냉장, 냉동, 상온 목록 토글 버튼 */
+.cartListbutton{
+  width: 30px;
+  height: 30px;
+  background: url(/assets/images/common/ic-vector-bottom.svg) no-repeat;
+  background-position: 50%;
+}
+.cartListbutton .isClicked{
+  background: url(/assets/images/common/ic-vector-top.svg) no-repeat;
+  background-position: 50%;
+}
+
+/* #Cart 상품별 Grid 레이아웃 */
+.cartItemList{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+.cartItemName{
+  grid-area: name;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+.cartItemImageWrapper{
+  grid-area: image;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  justify-self: center;
+}
+.cartItemCount{
+  grid-area: count;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  justify-self: center;
+}
+.cartItemPrice{
+  grid-area: price;
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  justify-self: end;
+  margin-top: 50px;
+}
+.cartItemDiscount{
+  grid-area: discount;
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  justify-self: end;
+}
+
+/* #Cart 금액 영역 Grid 레이아웃 / 폰트 weight / input 디자인 */
+.cartPriceList{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 42px 42px 50px 64px;
+  font-weight: 400;
+}
+.cartPriceList dd{
+  justify-self: end;
+}
+.cartPriceList dt:nth-child(7){
+  place-self: center start;
+}
+.cartPayment{
+  place-self: center end;
+}
+.cartPoint{
+  grid-column: 1 / -1;
+}
+.cartTotalPrice{
+  background: transparent;
+}
+
+/* #Cart 수량 input(숫자 타입) 버튼 없애기 */
+/* Chrome, Safari, Edge, Opera */
+#cartItemCountInput::-webkit-outer-spin-button,
+#cartItemCountInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin : 0;
+}
+/* Firefox  */
+#cartItemCountInput {
+  -moz-appearance: textfield;
 }
