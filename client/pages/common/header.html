@@ -1,6 +1,58 @@
 <!doctype html>
 <html lang="ko">
 	<body>
-		<h1>안녕하세요. 헤더입니다.</h1>
+		<aside class="top-banner h-[50px] max-w-[1920] bg-primary py-1 text-white">
+			<a href="#" class="top-banner-wrapper mx-auto flex w-[1050px] items-center">
+				<p class="w-full text-center" href="#">지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
+				<button type="button" class="top-banner-button float-left">
+					<img src="/assets/images/common/ic-close.svg" alt="배너 닫기" />
+				</button>
+			</a>
+		</aside>
+
+		<header>
+			<div class="headerWrapper mx-auto flex w-[1050px] flex-col flex-nowrap text-content">
+				<!-- 헤더 가운데 -->
+				<div class="headerMain relative mt-8 flex justify-between">
+					<!-- 헤더 로고 영역 -->
+					<div class="headerTitles relative flex items-center gap-3">
+						<h1><a href="#" class="karlyLink text-lg font-semibold text-primary">마켓칼리</a></h1>
+						<div class="divisionLine"></div>
+						<a href="#" class="order-first"><img src="/assets/images/header/logo-kurly.svg" alt="컬리" /></a>
+						<a href="#" class="beautyLink text-lg font-semibold text-gray/400">뷰티칼리</a>
+					</div>
+					<!-- 헤더 검색폼 영역 -->
+					<form action="#">
+						<div class="SearchForm flex items-center rounded-sm border border-solid border-[#5f0080] font-normal">
+							<fieldset>
+								<legend class="sr-only">검색</legend>
+								<div class="searchInputGroup flex w-full items-center px-5">
+									<label for="search" class="searchFormInputLabel sr-only">검색어</label>
+									<input type="search" required placeholder="검색어를 입력해주세요" name="search" id="search" class="searchFormInput focus:outline-none" />
+									<button type="submit" class="searchFormButton"><img src="/assets/images/header/Search.svg" alt="검색" /></button>
+								</div>
+							</fieldset>
+						</div>
+					</form>
+					<!-- 헤더 카트 영역 -->
+					<div class="headerPrivate flex items-center gap-5">
+						<button type="button" class="headerAddressButton"><img src="/assets/images/header/Location.svg" alt="배송지 변경" /></button>
+						<a href="#"><img src="/assets/images/header/Heart.svg" alt="찜한 상품" /></a>
+						<a href="#"><img src="/assets/images/header/Cart.svg" alt="장바구니" /></a>
+					</div>
+				</div>
+				<!-- 헤더 로그인, 회원가입, 고객센터 -->
+				<ul class="memberOnly order-first flex items-center justify-end gap-3 pt-3 text-sm">
+					<li><a href="#" class="joinLink text-primary">회원가입</a></li>
+					<div class="divisionLine"></div>
+					<li><a href="#" class="loginLink">로그인</a></li>
+					<div class="divisionLine"></div>
+					<li>
+						<a href="#" class="serviceLink">고객센터</a>
+						<img src="/assets/images/header/down.svg" aria-hidden="true" alt="" class="relative bottom-[2px] inline-block h-[5.6px] w-2" />
+					</li>
+				</ul>
+			</div>
+		</header>
 	</body>
 </html>
