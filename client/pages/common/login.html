@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
+		<link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/main.js" type="module"></script>
+
+		<title>로그인</title>
+	</head>
+	<body>
+		<header></header>
+
+		<main>
+			<div class="mx-auto w-[1050px]">
+				<h2 class="py-11 text-center text-lg">로그인</h2>
+				<form action="/">
+					<fieldset>
+						<legend class="sr-only">로그인 폼</legend>
+						<div class="flex flex-col items-center gap-3">
+							<!-- 이메일 조건 : 최소 @, . 포함 -->
+							<label class="sr-only" for="id">아이디</label>
+							<input class="inputId h-[50px] w-[340px] rounded-sm border border-gray/300 pl-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+							<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자  -->
+							<label class="sr-only" for="password">비밀번호</label>
+							<input class="inputPw h-[50px] w-[340px] rounded-sm border border-gray/300 pl-5" type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" />
+							<span class="error-message text-red-500 hidden">아이디 또는 비밀번호가 일치하지 않습니다.</span>
+							<div class="w-[340px] pb-7 text-right text-sm">
+								<span class="findId" tabindex="0">아이디 찾기</span>
+								<span>|</span>
+								<span class="findPw" tabindex="0">비밀번호 찾기</span>
+							</div>
+						</div>
+						<div class="flex flex-col items-center gap-3">
+							<!-- addEventListener 이용해서 메인페이지로 이동하기-->
+							<button class="buttonLogin h-[54px] w-[340px] rounded-sm border border-primary bg-primary text-white" type="submit">로그인</button>
+							<!-- addEventListener 이용해서 회원가입 페이지로 이동하기-->
+							<button class="buttonSignUp h-[54px] w-[340px] rounded-sm border border-primary text-primary" type="button">회원가입</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+
+		<footer></footer>
+	</body>
+</html>
