@@ -4,3 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
+
+.divisionLine {
+  width: 1px;
+  height: 13px;
+  background: #d9d9d9;
+}
+
+.test{
+    @apply bg-[url(/client/assets/images/cart/ic-checked-false.svg)];
+}

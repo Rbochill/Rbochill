@@ -568,13 +568,102 @@ video {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
+.mb-11 {
+  margin-bottom: 2.75rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[23px\] {
+  height: 23px;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.w-\[1050px\] {
+  width: 1050px;
+}
+
+.w-\[23px\] {
+  width: 23px;
+}
+
+.w-\[284px\] {
+  width: 284px;
+}
+
+.w-\[742px\] {
+  width: 742px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-\[orange\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 165 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[yellowgreen\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 205 50 / var(--tw-bg-opacity));
+}
+
+.bg-gray\/300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(166 166 166 / var(--tw-bg-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(189 118 255 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\/client\/assets\/images\/cart\/ic-checked-false\.svg\)\] {
+  background-image: url(/client/assets/images/cart/ic-checked-false.svg);
+}
+
+.bg-\[url\(\/assets\/images\/cart\/ic-checked-false\.svg\)\] {
+  background-image: url(/assets/images/cart/ic-checked-false.svg);
 }
 
 .bg-clip-text {
@@ -582,13 +671,30 @@ video {
           background-clip: text;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: 1.3329999446868896rem;
+}
+
 .font-black {
   font-weight: 900;
 }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(95 0 128 / var(--tw-text-opacity));
+.font-semibold {
+  font-weight: 600;
 }
 
 .drop-shadow-lg {
@@ -596,3 +702,14 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
+
+.divisionLine {
+  width: 1px;
+  height: 13px;
+  background: #d9d9d9;
+}
+
+.test{
+  background-image: url(/client/assets/images/cart/ic-checked-false.svg);
+}

@@ -14,8 +14,39 @@
 		<header></header>
 
 		<main>
-			<div class="cartWrapper">
-				<h2>장바구니</h2>
+			<div class="cart mx-auto w-[1050px] bg-gray/300 py-20">
+				<h2 class="mb-11 bg-secondary text-center text-lg font-semibold">장바구니</h2>
+				<div class="flex">
+					<section class="h-[500px] w-[742px] bg-[yellowgreen]">
+						<h3 class="sr-only">장바구니 상품 목록</h3>
+
+						<!-- 전체 삭제 영역 -->
+						<form action="#">
+							<div class="selectAll flex items-center py-4">
+								<fieldset>
+									<legend class="sr-only">담겨있는 상품 목록을 모두 선택합니다.</legend>
+									<input type="checkbox" class="selectAllCheckBox" id="selectAllcheckTop" name="select" />
+									<label for="selectAllcheckTop" class="selectAllLable">
+										<span class="icon-check inline-block h-[23px] w-[23px] bg-[url(/assets/images/cart/ic-checked-false.svg)]"></span>
+										전체선택 <span class="selectAllCount">(3/3)</span>
+									</label>
+								</fieldset>
+								<div class="divisionLine mx-2"></div>
+								<button type="submit">선택삭제</button>
+							</div>
+						</form>
+
+						<!-- 상품 목록 영역 -->
+						<dl>
+							<dt>냉장 식품</dt>
+							<dt>냉동 식품</dt>
+							<dt>상온 식품</dt>
+						</dl>
+					</section>
+					<section class="w-[284px] bg-[orange]">
+						<h3>주문 정보</h3>
+					</section>
+				</div>
 			</div>
 		</main>
 
