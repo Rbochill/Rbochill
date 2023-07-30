@@ -818,6 +818,12 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+/* #isActive */
+
+.isActive{
+  display: none;
+}
+
 /* #숨기기 with JS : 상단배너 */
 
 .top-banner-hidden {
