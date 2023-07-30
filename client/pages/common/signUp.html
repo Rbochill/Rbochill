@@ -136,86 +136,93 @@
 					</div>
 
 					<!-- 이용약관동의 -->
-					<div class="mx-auto flex w-[640px] flex-row border-y-2 border-gray/200 py-5">
+					<div class="mx-auto flex w-[640px] flex-row border-y-2 border-gray/200 py-4">
 						<label class="inline-block h-[216px] w-[131px] p-1">이용약관동의<sup class="text-[#F03F40]">*</sup></label>
-						<fieldset>
-							<ul>
-								<!-- 전체 동의합니다. -->
-								<li>
-									<div class="flex flex-row gap-2">
-										<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
-										<label for="allAgree"></label>
-										<input class="hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
-									</div>
-									<p class="w-[429px] text-right text-sm text-gray/400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
-								</li>
-
-								<!-- 이용약관 동의 (필수) -->
-								<li class="flex flex-row justify-between py-3">
-									<div class="flex flex-row items-center gap-2">
-										<div>
-											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+						<div class="w-[450px]">
+							<fieldset>
+								<ul>
+									<!-- 전체 동의합니다. -->
+									<li>
+										<div class="flex flex-row gap-2">
+											<span tabindex="0">
+												<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+											</span>
+											<label for="allAgree"></label>
+											<input class="hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
 										</div>
-										<label for="use"></label>
-										<input class="hidden" type="checkbox" id="use" />이용약관 동의 (필수)
-									</div>
-									<div class="flex flex-row items-center text-sm">
-										<span class="text-primary">약관보기</span>
-										<div>
+										<p class="pl-10 text-sm text-gray/400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+									</li>
+
+									<!-- 이용약관 동의 (필수) -->
+									<li class="flex flex-row justify-between py-3">
+										<div class="flex flex-row items-center gap-2">
+											<div>
+												<span tabindex="0">
+													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												</span>
+											</div>
+											<label for="use"></label>
+											<input class="hidden" type="checkbox" id="use" />이용약관 동의 (필수)
+										</div>
+										<div class="flex flex-row items-center text-sm" tabindex="0">
+											<span class="text-primary">약관보기</span>
 											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
 										</div>
-									</div>
-								</li>
+									</li>
 
-								<!-- 개인정보 수집 · 이용 동의 (필수) -->
-								<li class="flex flex-row justify-between py-3">
-									<div class="flex flex-row items-center gap-2">
-										<div>
-											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+									<!-- 개인정보 수집 · 이용 동의 (필수) -->
+									<li class="flex flex-row justify-between py-3">
+										<div class="flex flex-row items-center gap-2">
+											<div>
+												<span tabindex="0">
+													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												</span>
+											</div>
+											<label for="priavacy"></label>
+											<input class="hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
 										</div>
-										<label for="priavacy"></label>
-										<input class="hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
-									</div>
-									<div class="flex flex-row items-center text-sm">
-										<span class="text-primary">약관보기</span>
-										<div></div>
-										<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
-									</div>
-								</li>
+										<div class="flex flex-row items-center text-sm" tabindex="0">
+											<span class="text-primary">약관보기</span>
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+										</div>
+									</li>
 
-								<!-- 무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택) -->
-								<li class="flex flex-row justify-between py-3">
-									<div class="flex flex-row items-center gap-2">
-										<div>
-											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+									<!-- 무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택) -->
+									<li class="flex flex-row justify-between py-3">
+										<div class="flex flex-row items-center gap-2">
+											<div>
+												<span tabindex="0">
+													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												</span>
+											</div>
+											<label for="promote"></label>
+											<input class="hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
 										</div>
-										<label for="promote"></label>
-										<input class="hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
-									</div>
-									<div class="flex flex-row items-center text-sm">
-										<span class="text-primary">약관보기</span>
-										<div></div>
-										<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
-									</div>
-								</li>
+										<div class="flex flex-row items-center text-sm" tabindex="0">
+											<span class="text-primary">약관보기</span>
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+										</div>
+									</li>
 
-								<!-- 본인은 만 14세 이상입니다. (필수) -->
-								<li class="flex flex-row justify-between py-3">
-									<div class="flex flex-row items-center gap-2">
-										<div>
-											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+									<!-- 본인은 만 14세 이상입니다. (필수) -->
+									<li class="flex flex-row justify-between py-3">
+										<div class="flex flex-row items-center gap-2">
+											<div>
+												<span tabindex="0">
+													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												</span>
+											</div>
+											<label for="age"></label>
+											<input class="hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
 										</div>
-										<label for="age"></label>
-										<input class="hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
-									</div>
-									<div class="flex flex-row items-center text-sm">
-										<span class="text-primary">약관보기</span>
-										<div></div>
-										<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
-									</div>
-								</li>
-							</ul>
-						</fieldset>
+										<div class="flex flex-row items-center text-sm" tabindex="0">
+											<span class="text-primary">약관보기</span>
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</div>
 					</div>
 
 					<!-- 가입하기 -->
