@@ -16,7 +16,7 @@
 
 		<main>
 			<div class="mx-auto w-[1050px]">
-				<h1 class="pt-20 text-center text-lg">회원가입</h1>
+				<h2 class="pt-20 text-center text-lg">회원가입</h2>
 				<div class="text-12 mx-auto h-[44px] w-[640px] p-4 text-right text-content">
 					<sup class="text-[#F03F40]">*</sup>
 					필수입력사항
@@ -84,15 +84,18 @@
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">성별</label>
 								<div class="m-0 flex h-[44px] w-[333px] flex-row justify-between px-5 leading-[36px]">
 									<div>
-										<input class="inputM" type="radio" value="남성" name="gender" />
+										<label for="male"></label>
+										<input class="inputM" type="radio" value="남성" name="gender" id="male" />
 										<span class="spanM">남자</span>
 									</div>
 									<div>
-										<input class="inputF" type="radio" value="여성" name="gender" />
+										<label for="female"></label>
+										<input class="inputF" type="radio" value="여성" name="gender" id="female" />
 										<span class="spanF">여자</span>
 									</div>
 									<div>
-										<input class="inputN" type="radio" value="선택안함" name="gender" />
+										<label for="none"></label>
+										<input class="inputN" type="radio" value="선택안함" name="gender" id="none" />
 										<span class="spanN">선택안함</span>
 									</div>
 								</div>
@@ -100,8 +103,9 @@
 
 							<!-- 생년월일 -->
 							<div class="flex w-[480px] flex-row justify-between py-4">
-								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="year">생년월일</label>
+								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">생년월일</label>
 								<div class="m-0 flex h-[44px] w-[333px] items-center justify-center rounded-sm border border-gray/300 px-5">
+									<label for="year"></label>
 									<input class="inputYear w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
 									<span class="px-1">/</span>
 									<label class="labelMonth" for="month"></label>
@@ -117,11 +121,13 @@
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">추가입력 사항</label>
 								<div class="flex w-[333px] flex-row items-center justify-between">
 									<div>
-										<input type="radio" value="친구초대 추천인 아이디" name="option" />
+										<label for="recommand"></label>
+										<input type="radio" value="친구초대 추천인 아이디" name="option" id="recommand" />
 										<span>친구초대 추천인 아이디</span>
 									</div>
 									<div>
-										<input type="radio" value="참여 이벤트명" name="option" />
+										<label for="event"></label>
+										<input type="radio" value="참여 이벤트명" name="option" id="event" />
 										<span>참여 이벤트명</span>
 									</div>
 								</div>
@@ -138,7 +144,8 @@
 								<li>
 									<div class="flex flex-row gap-2">
 										<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
-										<input class="hidden text-lg" type="checkbox" />전체 동의합니다.
+										<label for="allAgree"></label>
+										<input class="hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
 									</div>
 									<p class="w-[429px] text-right text-sm text-gray/400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
 								</li>
@@ -149,7 +156,8 @@
 										<div>
 											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 										</div>
-										<input class="hidden" type="checkbox" />이용약관 동의 (필수)
+										<label for="use"></label>
+										<input class="hidden" type="checkbox" id="use" />이용약관 동의 (필수)
 									</div>
 									<div class="flex flex-row items-center text-sm">
 										<span class="text-primary">약관보기</span>
@@ -165,7 +173,8 @@
 										<div>
 											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 										</div>
-										<input class="hidden" type="checkbox" />개인정보 수집 · 이용 동의 (필수)
+										<label for="priavacy"></label>
+										<input class="hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
 									</div>
 									<div class="flex flex-row items-center text-sm">
 										<span class="text-primary">약관보기</span>
@@ -180,7 +189,8 @@
 										<div>
 											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 										</div>
-										<input class="hidden" type="checkbox" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
+										<label for="promote"></label>
+										<input class="hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
 									</div>
 									<div class="flex flex-row items-center text-sm">
 										<span class="text-primary">약관보기</span>
@@ -195,7 +205,8 @@
 										<div>
 											<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 										</div>
-										<input class="hidden" type="checkbox" />본인은 만 14세 이상입니다. (필수)
+										<label for="age"></label>
+										<input class="hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
 									</div>
 									<div class="flex flex-row items-center text-sm">
 										<span class="text-primary">약관보기</span>
