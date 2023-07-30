@@ -1,6 +1,14 @@
 import {headerFooter} from './common/index.js';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 
+fetch('/pages/common/header.html')
+	.then((res) => res.text())
+	.then((data) => (header.innerHTML = data));
+
+fetch('/pages/common/footer.html')
+	.then((res) => res.text())
+	.then((data) => (footer.innerHTML = data));
+
 // # swiper article
 const swiperMain = new Swiper('.swiper', {
 	// Optional parameters
