@@ -9,5 +9,3 @@ fetch('/pages/common/header.html')
 fetch('/pages/common/footer.html')
 	.then((res) => res.text())
 	.then((data) => (footer.innerHTML = data));
-
-  console.log(123);
