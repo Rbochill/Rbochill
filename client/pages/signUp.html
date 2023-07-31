@@ -30,43 +30,52 @@
 							<div class="flex flex-row justify-between py-4">
 								<!-- 이메일 조건 : 최소 @, . 포함 -->
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="id">아이디<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputId m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+								<input class="inputId m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" required />
 								<button class="buttonId h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
+							<p class="errorMessage1 text-center text-Info/Error" hidden>이메일 형식으로 입력해주세요</p>
 
 							<!-- 비밀번호 -->
 							<div class="flex flex-row justify-between py-4">
 								<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자 -->
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password1">비밀번호<sup class="text-[#F03F40]">*</sup></label>
-								<input class="labelPw1 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password1" placeholder="비밀번호를 입력해주세요" />
+								<input class="inputPw1 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password1" placeholder="비밀번호를 입력해주세요" required />
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
+							<p class="errorMessage2 text-center text-Info/Error" hidden>특수 문자와 숫자 포함 6~16 글자로 작성해주세요</p>
 
 							<!-- 비밀번호 확인 -->
 							<div class="flex flex-row justify-between py-4">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password2">비밀번호 확인<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPw2 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password2" placeholder="비밀번호를 한번 더 입력해주세요" />
+								<input
+									class="inputPw2 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="password"
+									name="password"
+									id="password2"
+									placeholder="비밀번호를 한번 더 입력해주세요"
+									required
+								/>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 
 							<!-- 이름 -->
 							<div class="flex flex-row justify-between py-4">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="name">이름<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputName m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" />
+								<input class="inputName m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" required />
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 
 							<!-- 이메일 -->
 							<div class="flex flex-row justify-between py-4">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="email">이메일<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputEmail m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="email" id="email" placeholder="예) marketkarly@karly.com" />
+								<input class="inputEmail m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="email" id="email" placeholder="예) marketkarly@karly.com" required />
 								<button class="buttonEmail h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
 
 							<!-- 휴대폰 -->
 							<div class="flex flex-row justify-between py-4">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="phone">휴대폰<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPhone m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." />
+								<input class="inputPhone m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." required />
 								<button class="buttonPhone h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">인증번호 받기</button>
 							</div>
 
@@ -86,17 +95,17 @@
 								<div class="m-0 flex h-[44px] w-[333px] flex-row justify-between px-5 leading-[36px]">
 									<div>
 										<label for="male"></label>
-										<input class="inputM" type="radio" value="남성" name="gender" id="male" />
+										<input class="inputGender" type="radio" value="남성" name="gender" id="male" />
 										<span class="spanM">남자</span>
 									</div>
 									<div>
 										<label for="female"></label>
-										<input class="inputF" type="radio" value="여성" name="gender" id="female" />
+										<input class="inputGender" type="radio" value="여성" name="gender" id="female" />
 										<span class="spanF">여자</span>
 									</div>
 									<div>
 										<label for="none"></label>
-										<input class="inputN" type="radio" value="선택안함" name="gender" id="none" />
+										<input class="inputGender" type="radio" value="선택안함" name="gender" id="none" />
 										<span class="spanN">선택안함</span>
 									</div>
 								</div>
@@ -109,10 +118,10 @@
 									<label for="year"></label>
 									<input class="inputYear w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
 									<span class="px-1">/</span>
-									<label class="labelMonth" for="month"></label>
+									<label for="month"></label>
 									<input class="inputMonth w-[80px] text-center" type="text" id="month" placeholder="MM" />
 									<span class="px-1">/</span>
-									<label class="labelDay" for="day"></label>
+									<label for="day"></label>
 									<input class="inputDay w-[80px] text-center" type="text" id="day" placeholder="DD" />
 								</div>
 							</div>
