@@ -112,7 +112,7 @@ function createProductDetail({
 	// id = '',
 	name = '상품이름',
 	description = '상품설명',
-	price = '가격',
+	// price = '가격',
 	image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
 	// saleRatio =  0.25,
 	// salePrice = 3375,
@@ -147,9 +147,9 @@ function createProductDetail({
 }
 function createProductInfo({
 	// id = '',
-	name = '상품이름',
-	description = '상품설명',
-	price = '가격',
+	// name = '상품이름',
+	// description = '상품설명',
+	// price = '가격',
 	image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
 	// saleRatio =  0.25,
 	// salePrice = 3375,
@@ -163,9 +163,9 @@ function createProductInfo({
 function createProductReview({
 	// id = '',
 	name = '상품이름',
-	description = '상품설명',
-	price = '가격',
-	image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
+	// description = '상품설명',
+	// price = '가격',
+	// image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
 	// saleRatio =  0.25,
 	// salePrice = 3375,
 }) {
@@ -201,15 +201,17 @@ function createProductReview({
 
 	return template;
 }
-function createProductQna({
-	// id = '',
-	name = '상품이름',
-	description = '상품설명',
-	price = '가격',
-	image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
-	// saleRatio =  0.25,
-	// salePrice = 3375,
-}) {
+function createProductQna(
+	{
+		// id = '',
+		// name = '상품이름',
+		// description = '상품설명',
+		// price = '가격',
+		// image = {thumbnail: 'FrozenPork/thumbnail.jpg', view: 'FrozenPork/detail_view.jpg', banner: 'FrozenPork/detail_banner.jpg', info: 'FrozenPork/detail_info.jpg', alt: '한돈 급냉 삼겹살 600g'},
+		// saleRatio =  0.25,
+		// salePrice = 3375,
+	},
+) {
 	const template = /* html */ `
   	<!-- 상품문의 & 버튼 -->
 		<div class="relative">

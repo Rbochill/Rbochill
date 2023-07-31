@@ -1,3 +1,5 @@
+import {} from '/js/common/index.js';
+
 import {
 	// attr,
 	tiger,
@@ -15,18 +17,30 @@ const productDetail = $('.productDetail');
 const productReview = $('.productReview');
 const productQna = $('.productQna');
 
+const Url = 'http://localhost:3000/';
+
 const productCartButton = $('#productCartButton');
 // const moveInfo = $('#moveInfo');
 
 // # 페이지 렌더링 함수
-async function renderProductList(targetId) {
+async function renderProductPage() {
 	try {
 		await delayP();
 
-		const response = await tiger.get('http://localhost:3000/products');
-		const productData = response.data;
+		const responseData = await tiger.get(Url + 'products');
+		const productData = responseData.data;
 
-		const targetIndex = productData.findIndex((item) => item.id === targetId);
+		console.log(productData);
+
+		const responseId = await tiger.get(Url + 'users');
+		const productId = responseId.data[0].recently;
+		console.log(productId[productId.length - 1]);
+		// const responseId = await tiger.get(Url + 'users');
+		// const productId = Object.values(responseId.data[0].recently);
+		// console.log(productId);
+		// console.log(productId);
+
+		const targetIndex = productData.findIndex((item) => item.id === productId[productId.length - 1]);
 
 		renderDataProductPage(productDetail, 'detail', productData[targetIndex]);
 		renderDataProductPage(productInfo, 'info', productData[targetIndex]);
@@ -42,14 +56,14 @@ async function renderProductList(targetId) {
 }
 
 // # 페이지 렌더링 실행
-renderProductList('kxwg0rtj');
+renderProductPage();
 
 // # 장바구니 클릭이벤트
 productCartButton.addEventListener('click', () => {
-	console.log(productCartButton);
+	// tiger.post(Url + 'pageNow', {now: 'asdasd'});
 });
 
-// # movePage 함수
+// # scrollPage 네비게이션 고정
 window.addEventListener('scroll', () => {
 	const moveButtonGroup = $('.moveButtonGroup');
 
