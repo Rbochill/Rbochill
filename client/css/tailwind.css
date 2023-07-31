@@ -6,62 +6,63 @@
 
 /* #숨기기 with JS : 상단배너 */
 .top-banner-hidden {
-  transition: 1s;
-  transform: translateY(-100px);
-  display: none;
+	transition: 1s;
+	transform: translateY(-100px);
+	display: none;
 }
 
 /* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역 */
 
 .divisionLine {
-  width: 1px;
-  height: 13px;
-  background: #d9d9d9;
+	width: 1px;
+	height: 13px;
+	background: #d9d9d9;
 }
 
 /* #뷰티칼리 new마크 */
-.beautyLink::after{
-  content: url('/assets/images/header/new.svg');
-  position:relative;
-  top: -18px;
-  left: 5px
+.beautyLink::after {
+	content: url('/assets/images/header/new.svg');
+	position: relative;
+	top: -18px;
+	left: 5px;
 }
 
 /* #검색 디폴트 ver */
-.SearchForm{
-  position: absolute;
-  left: 330px;
-  top: -11px; 
-  height: 60px;
-  border: 1px solid #5f0080;
-  border-radius: 4px;
+.SearchForm {
+	position: absolute;
+	left: 330px;
+	top: -11px;
+	height: 60px;
+	border: 1px solid #5f0080;
+	border-radius: 4px;
 }
-.searchFormInput{
-  /* margin-right: 7rem; */
-  width: 290px;
-  font-size: 21.328px;
+.searchFormInput {
+	/* margin-right: 7rem; */
+	width: 290px;
+	font-size: 21.328px;
 }
 
 /* #검색 스크롤 ver */
-.searchFormInputScroll{
-  font-size: 12.003px;
-  margin-right: 0px;
-  
+.searchFormInputScroll {
+	font-size: 12.003px;
+	margin-right: 0px;
 }
 
 /* #nav */
-nav{
-  box-shadow: 1px 15px 24px -4px rgba(186,186,186,0.3);
+nav {
+	box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0.3);
 }
 
 /* #header, nav 호버 효과 */
-.headerPrivate img:hover, .navList a:hover, .categoryButton:hover {
-  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
+.headerPrivate img:hover,
+.navList a:hover,
+.categoryButton:hover {
+	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
 }
-.navList a:hover{
-  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-  text-decoration-line: underline;
-  text-underline-offset: 3px;
+.navList a:hover {
+	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
+	text-decoration-line: underline;
+	text-underline-offset: 3px;
 }
 
 /*% 화면자체의 최대크기 설정 */
@@ -103,4 +104,20 @@ nav{
 	width: 60px;
 	border: 1px solid #c4c4c4;
 	padding: 2px;
+}
+
+/* % 페이지 이동버튼 상단 고정 */
+.sticky {
+	position: -webkit-sticky;
+	top: 0;
+	background: #8a4baf;
+}
+
+.moveButtonGroup {
+	position: sticky;
+	top: 0;
+	color: white;
+	background-color: white;
+	cursor: pointer;
+	z-index: 100;
 }

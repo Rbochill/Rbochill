@@ -2,20 +2,23 @@ import {
 	// attr,
 	tiger,
 	delayP,
-	getNode,
+	getNode as $,
 	// changeColor,
 	// clearContents,
 	renderDataProductPage,
 	renderEmptyProductPage,
 } from '../lib/index.js';
 
-const productBase = getNode('.productBase');
-const productInfo = getNode('.productInfo');
-const productDetail = getNode('.productDetail');
-const productReview = getNode('.productReview');
-const productQna = getNode('.productQna');
-const productCartButton = getNode('#productCartButton');
+const productBase = $('.productBase');
+const productInfo = $('.productInfo');
+const productDetail = $('.productDetail');
+const productReview = $('.productReview');
+const productQna = $('.productQna');
 
+const productCartButton = $('#productCartButton');
+// const moveInfo = $('#moveInfo');
+
+// # 페이지 렌더링 함수
 async function renderProductList(targetId) {
 	try {
 		await delayP();
@@ -25,15 +28,12 @@ async function renderProductList(targetId) {
 
 		const targetIndex = productData.findIndex((item) => item.id === targetId);
 
-		console.log(targetIndex);
-
-		console.log(productData);
-		renderDataProductPage(productBase, 'base', productData[targetIndex]);
 		renderDataProductPage(productDetail, 'detail', productData[targetIndex]);
 		renderDataProductPage(productInfo, 'info', productData[targetIndex]);
 		renderDataProductPage(productReview, 'review', productData[targetIndex]);
 		renderDataProductPage(productQna, 'qna', productData[targetIndex]);
-		window.scroll(0, 0);
+		renderDataProductPage(productBase, 'base', productData[targetIndex]);
+		// window.scroll(0, 0);
 	} catch (err) {
 		console.log(err);
 		renderEmptyProductPage(productBase);
@@ -41,10 +41,21 @@ async function renderProductList(targetId) {
 	}
 }
 
-console.log(productCartButton);
+// # 페이지 렌더링 실행
+renderProductList('kxwg0rtj');
 
-renderProductList('y7jn2m4j');
-
+// # 장바구니 클릭이벤트
 productCartButton.addEventListener('click', () => {
 	console.log(productCartButton);
+});
+
+// # movePage 함수
+window.addEventListener('scroll', () => {
+	const moveButtonGroup = $('.moveButtonGroup');
+
+	if (window.pageYOffset > moveButtonGroup.offsetTop) {
+		moveButtonGroup.classList.add('sticky');
+	} else {
+		moveButtonGroup.classList.remove('sticky');
+	}
 });
