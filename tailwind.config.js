@@ -3,7 +3,6 @@ module.exports = {
 	content: ['./client/**/*.html'],
 	theme: {
 		extend: {},
-
 		colors: {
 			black: '#000000',
 			secondary: '#bd76ff',
@@ -33,12 +32,12 @@ module.exports = {
 			'Info/Error': '#f03f40',
 		},
 		fontSize: {
-			sm: '0.7501875162124634rem',
-			base: '1rem',
-			lg: '1.3329999446868896rem',
-			xl: '1.7768750190734863rem',
-			'2xl': '2.3685624599456787rem',
-			'3xl': '3.1573123931884766rem',
+			sm: '0.7501875162124634rem', // 12px
+			base: '1rem', // 16px
+			lg: '1.3329999446868896rem', // 21px
+			xl: '1.7768750190734863rem', // 28px
+			'2xl': '2.3685624599456787rem', // 37px
+			'3xl': '3.1573123931884766rem', // 50px
 		},
 		fontFamily: {
 			pretendard: 'Pretendard',
