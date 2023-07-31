@@ -221,12 +221,21 @@ function handleCartCount(e) {
 	const findListPrice = findGrand.children[7];
 	const listPrice = findListPrice.innerText;
 	let firstPrice = listPrice;
-	changeListPrice(firstPrice);
+	// changeListPrice(firstPrice, resultCount, findListPrice, findButton(target));
 }
 
-const changeListPrice = (first) => {
-	let previousPrice = first.slice(0, -1);
-	console.dir(previousPrice);
-};
+// const changeListPrice = (firstPrice, resultCount, findListPrice, findButton) => {
+// 	// 랜더링된 값 가져오기
+// 	let previousPrice = firstPrice.slice(0, -1);
+// 	previousPrice = parseInt(previousPrice.replace(/,/g, ''));
+// 	console.log(previousPrice);
+
+// 	if (hasClassName(findButton, 'cartCountUp')) {
+// 		previousPrice += previousPrice;
+// 	} else if (hasClassName(findButton, 'cartCountDown') && previousPrice > 0) {
+// 		previousPrice -= previousPrice;
+// 	}
+// 	findListPrice.innerText = `${changePriceLocale(previousPrice)}원`;
+// };
 
 bindEvent(cartList, 'click', handleCartCount);
