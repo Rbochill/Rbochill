@@ -66,7 +66,7 @@ function handleLogin(e) {
 }
 
 function handleMove() {
-	window.location.href = '/pages/common/signUp.html';
+	window.location.href = '/pages/signUp.html';
 }
 
 inputId.addEventListener('input', handleCheckId);
