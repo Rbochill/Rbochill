@@ -6,11 +6,11 @@ const {localStorage: storage} = globalThis;
 
 // # 랜덤한 문자 생성
 function handleRandom() {
-	const userId = Math.random().toString(36).substring(2, 11);
+	const uniqueId = Math.random().toString(36).substring(2, 11);
 
-	storage.setItem('uniqueId', userId);
+	storage.setItem('uniqueId', uniqueId);
 	// tiger post 통신을 통해서 userId를 보낸다.
-	tiger.post(URL, {uniqueId: userId});
+	tiger.post(URL, {uniqueId: uniqueId});
 }
 
 buttonSignUp.addEventListener('click', handleRandom);
