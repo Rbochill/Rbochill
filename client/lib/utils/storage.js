@@ -38,6 +38,8 @@ const albums = [
 // serialize()
 // deserialize()
 
+albums;
+
 export function saveStorage(key, value) {
 	return new Promise((resolve, reject) => {
 		if (isString(key)) {

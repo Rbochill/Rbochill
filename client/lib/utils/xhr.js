@@ -176,7 +176,9 @@ export function xhrPromise(options = {}) {
 
 	const {method, url, body, headers} = Object.assign({}, defaultOptions, options);
 
-	if (!url) typeError('서버와 통신할 url 인자는 반드시 필요합니다.');
+	if (!url) {
+		typeError('서버와 통신할 url 인자는 반드시 필요합니다.');
+	}
 
 	xhr.open(method, url);
 

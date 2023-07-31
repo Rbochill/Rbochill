@@ -71,6 +71,7 @@ module.exports = {
 		//   {
 		//     ignoreComments: false,
 		//   },
-		// ],
+		// ],j
+		'no-useless-escape': 'off',
 	},
 };
