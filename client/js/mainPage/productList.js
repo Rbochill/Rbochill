@@ -4,7 +4,7 @@ import {insertLast} from '../../lib/index.js';
 function createRecomandProduct({id = '', name = '', price = '', image = ''}) {
 	const template = /* html */ `
 	<li class='swiper-slide' data-id='${id}'>
-		<a href="localhost:5500/pages/productDetail.html">
+		<a href="http://localhost:5500/pages/productDetail.html">
 			<figure class="relative">
 				<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" />
 				<img src="/assets/images/main/ic-add-cart.svg" alt="장바구니에 상품 추가" class="absolute bottom-[33px] right-[15px]" />
@@ -33,7 +33,7 @@ export function renderRecomandProduct(target, data) {
 function createDiscountProduct({id = '', name = '', price = '', image = '', saleRatio = ''}) {
 	const template = /* html */ `
 		<li class="swiper-slide" data-id='${id}'>
-			<a href="localhost:5500/pages/productDetail.html">
+			<a href="http://localhost:5500/pages/productDetail.html">
 				<figure class="relative">
 					<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" /><img
 						src="/assets/images/main/ic-add-cart.svg"

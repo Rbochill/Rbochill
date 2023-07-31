@@ -288,3 +288,19 @@ nav {
 .swiper-button-next:hover {
 	background-color: #c270c7;
 }
+
+/* % 페이지 이동버튼 상단 고정 */
+.sticky {
+	position: -webkit-sticky;
+	top: 0;
+	background: #8a4baf;
+}
+
+.moveButtonGroup {
+	position: sticky;
+	top: 0;
+	color: white;
+	background-color: white;
+	cursor: pointer;
+	z-index: 100;
+}
