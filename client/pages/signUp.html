@@ -57,6 +57,7 @@
 								/>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
+							<p class="errorMessage3 text-center text-Info/Error" hidden>비밀번호가 일치하지 않습니다.</p>
 
 							<!-- 이름 -->
 							<div class="flex flex-row justify-between py-4">
@@ -78,12 +79,11 @@
 								<input class="inputPhone m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." required />
 								<button class="buttonPhone h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">인증번호 받기</button>
 							</div>
-
 							<!-- 주소 -->
 							<div class="flex flex-row items-center justify-between py-4">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="address">주소<sup class="text-[#F03F40]">*</sup></label>
 								<div>
-									<input class="inputAdderess m-0 h-[44px] w-[333px] rounded-sm border border-primary px-5 text-primary" type="button" id="address" value="주소 검색" />
+									<button class="inputAdderess m-0 h-[44px] w-[333px] rounded-sm border border-primary px-5 text-primary" type="button" id="address" value="주소 검색">주소 검색</button>
 									<p class="text-sm">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
 								</div>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
@@ -155,10 +155,10 @@
 									<li>
 										<div class="flex flex-row gap-2">
 											<span tabindex="0">
-												<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												<img class="check" src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 											</span>
 											<label for="allAgree"></label>
-											<input class="hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
+											<input class="allcheck hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
 										</div>
 										<p class="pl-10 text-sm text-gray/400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
 									</li>
@@ -172,7 +172,7 @@
 												</span>
 											</div>
 											<label for="use"></label>
-											<input class="hidden" type="checkbox" id="use" />이용약관 동의 (필수)
+											<input class="checkbox hidden" type="checkbox" id="use" />이용약관 동의 (필수)
 										</div>
 										<div class="flex flex-row items-center text-sm" tabindex="0">
 											<span class="text-primary">약관보기</span>
@@ -185,15 +185,15 @@
 										<div class="flex flex-row items-center gap-2">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="check" src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 												</span>
 											</div>
 											<label for="priavacy"></label>
-											<input class="hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
+											<input class="checkbox hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
 										</div>
 										<div class="flex flex-row items-center text-sm" tabindex="0">
 											<span class="text-primary">약관보기</span>
-											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+											<img class="check" src="/assets/images/product-detail/arrow-right.svg" alt="" />
 										</div>
 									</li>
 
@@ -202,11 +202,11 @@
 										<div class="flex flex-row items-center gap-2">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="check" src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 												</span>
 											</div>
 											<label for="promote"></label>
-											<input class="hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
+											<input class="checkbox hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
 										</div>
 										<div class="flex flex-row items-center text-sm" tabindex="0">
 											<span class="text-primary">약관보기</span>
@@ -219,11 +219,11 @@
 										<div class="flex flex-row items-center gap-2">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="check" src="/assets/images/product-list/ic-unchecked.svg" alt="" />
 												</span>
 											</div>
 											<label for="age"></label>
-											<input class="hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
+											<input class="checkbox hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
 										</div>
 										<div class="flex flex-row items-center text-sm" tabindex="0">
 											<span class="text-primary">약관보기</span>
