@@ -9,7 +9,7 @@ import {insertLast} from './insert.js';
 // 	// saleRatio =  0.25,
 // 	// salePrice = 3375,
 // };
-
+// # 렌더링 HTML 코드
 function createProductBase({
 	// id = '',
 	name = '상품이름',
@@ -34,7 +34,7 @@ function createProductBase({
 							<p class="text-gray/400">${description}</p>
 						</div>
 						<strong class="order-first text-xl text-gray/500">샛별배송</strong>
-						<h3 class="text-xl font-semibold">${price}<span class="text-base">원</span></h3>
+						<h3 class="text-xl font-semibold">${price.toLocaleString()}<span class="text-base">원</span></h3>
 						<!-- <p>10,500원</p> -->
 						<p class="text-base font-semibold text-primary">로그인후 적립혜택이 제공 됩니다.</p>
 					</div>
@@ -201,7 +201,6 @@ function createProductReview({
 
 	return template;
 }
-
 function createProductQna({
 	// id = '',
 	name = '상품이름',
@@ -252,6 +251,7 @@ export function createEmptyProductPage(errorMessage = '알 수 없는 에러가 
   `;
 }
 
+// # 페이지 렌더러
 export function renderDataProductPage(target, swich, data) {
 	switch (swich) {
 		case 'base':
