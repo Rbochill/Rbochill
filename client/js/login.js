@@ -1,23 +1,11 @@
+// import {} from '/js/common/index.js';
 import {getNode} from '/lib/index.js';
+import {emailReg, pwReg} from '/js/common/function.js';
 
 const user = {
 	id: 'asd@naver.com',
 	pw: 'spdlqj123!@',
 };
-
-// # 아이디(@ 와 . 기호 포함 2글자 이상)
-function emailReg(text) {
-	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	return re.test(String(text).toLowerCase());
-}
-
-// # 비밀번호(최소 6 최대 16 글자, 0~9숫자 1개 이상 포함, 특수기호 1개 이상 포함)
-function pwReg(text) {
-	const re = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^*+=-]).{6,16}$/;
-
-	return re.test(String(text).toLowerCase());
-}
 
 const inputId = getNode('.inputId');
 const inputPw = getNode('.inputPw');
@@ -30,11 +18,14 @@ let pwPass = false;
 // # 아이디 확인
 function handleCheckId() {
 	const value = this.value;
+
 	if (emailReg(value)) {
 		emailPass = true;
 	} else {
 		emailPass = false;
 	}
+
+	return emailPass;
 }
 
 // # 비밀번호 확인
@@ -45,6 +36,8 @@ function handleCheckPw() {
 	} else {
 		pwPass = false;
 	}
+
+	return pwPass;
 }
 
 // # 로그인
