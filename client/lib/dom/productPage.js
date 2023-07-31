@@ -14,6 +14,7 @@ function createProductPage({
   <div class=" mt-[40px] flex justify-between">
     <img class="h-[514px] w-[400px]" alt="상품 이미지" src="/assets/images/product/${image.thumbnail}" />
     <!-- 오른쪽 정보 -->
+
     <div class="w-[560px]">
       <!-- 제목 -->
       <div class="flex flex-col gap-[16px] pb-[20px]">
