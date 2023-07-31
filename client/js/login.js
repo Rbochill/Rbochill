@@ -2,10 +2,10 @@
 import {getNode} from '/lib/index.js';
 import {emailReg, pwReg} from '/js/common/function.js';
 
-const user = {
-	id: 'asd@naver.com',
-	pw: 'spdlqj123!@',
-};
+// const user = {
+// 	id: 'asd@naver.com',
+// 	pw: 'spdlqj123!@',
+// };
 
 const inputId = getNode('.inputId');
 const inputPw = getNode('.inputPw');
@@ -41,18 +41,22 @@ function handleCheckPw() {
 }
 
 // # 로그인
+let user = {};
+
+let response = await fetch('http://localhost:3000/users');
+user = await response.json();
+
 function handleLogin(e) {
 	e.preventDefault();
-	if (emailPass && pwPass) {
-		const id = inputId.value;
-		const pw = inputPw.value;
-		const getUserId = user.id;
-		const getUserPw = user.pw;
-		if (id === getUserId && pw === getUserPw) {
-			window.location.href = '/index.html';
-		} else {
-			alert('정확한 아이디와 비밀번호를 입력해 주세요.');
-		}
+
+	const id = inputId.value;
+	const pw = inputPw.value;
+	let getUserId = user[0].userId;
+	let getUserPw = user[0].password;
+	if (id === getUserId && pw === getUserPw) {
+		alert(user[0].uniqeId);
+
+		window.location.href = '/index.html';
 	} else {
 		alert('정확한 아이디와 비밀번호를 입력해 주세요.');
 	}
