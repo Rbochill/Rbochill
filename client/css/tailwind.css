@@ -437,7 +437,7 @@ nav {
 	font-size: '0.7501875162124634rem';
 	font-weight: 600;
 	color: #6b6b6b;
-	width: 128px;
+	min-width: 128px;
 }
 
 /* # 프로덕트페이지 상품 간단 정보 */
