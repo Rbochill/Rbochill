@@ -36,22 +36,7 @@ function handleCheckPw() {
 }
 
 // # 로그인
-let users = {
-	// id: '0',
-	// userId: 'abocill@gmail.com',
-	// password: '123456789!',
-	// uniqueId: '640b0d0d44',
-	// name: '알보칠',
-	// phoneNum: '010123456',
-	// address: '서울특별시 종로구 종로3길 17 D타워, 16-17층',
-	// gender: 'Non',
-	// birthDate: '2023-07-28',
-};
-let usersIndex = 0;
-
-// let usersIndex = users.length - 1;
-// console.log(users);
-// console.log(users.length - 1);
+let users = {};
 
 async function handleLogin(e) {
 	const {localStorage: storage} = globalThis;
@@ -59,45 +44,37 @@ async function handleLogin(e) {
 
 	let response = await fetch('http://localhost:3000/users');
 	users = await response.json();
-	// 서버에서 가져온 데이터
+	// 서버에서 가져온 데이터 (data.json에 있는 users는 배열이다. -> find를 이용해 배열 안을 찾는다.)
 	const usersInform = users.find((item) => {
-		// console.log(item.userId); // 객체가 나옴
+		// console.log(item); // 객체가 나옴
+		// console.log(item.userId); // 아이디가 나옴
 		return item.userId === inputId.value;
 	});
 
-	console.log(usersInform);
+	console.log(usersInform); // 사용자가 입력한 정보가 객체로 나타남
 
 	//  사용자가 입력한 데이터
 	const id = inputId.value;
 	const pw = inputPw.value;
 
 	//  서버에서 가져온 데이터
-	let getUserId = usersInform.userId; // userInform.userId 이렇게 찾기
+	let getUserId = usersInform.userId; // 객체니까 userInform.userId 이렇게 찾기
 	let getUserPw = usersInform.password;
 
 	if (id === getUserId && pw === getUserPw) {
 		// 서버의 데이터를 로컬 스토리지에 저장
-		const serverUserId = users[usersIndex].userId;
-		const serverPw = users[usersIndex].password;
-		const serverUniqueId = users[usersIndex].uniqueId;
-		const serverName = users[usersIndex].name;
-		const serverPhoneNum = users[usersIndex].phoneNum;
-		const serverGender = users[usersIndex].gender;
-		const serverBirthDate = users[usersIndex].birthDate;
-
-		storage.setItem('userId', serverUserId);
-		storage.setItem('password', serverPw);
-		storage.setItem('uniqueId', serverUniqueId);
-		storage.setItem('name', serverName);
-		storage.setItem('phoneNum', serverPhoneNum);
-		storage.setItem('gender', serverGender);
-		storage.setItem('birthDate', serverBirthDate);
+		storage.setItem('userId', usersInform.userId);
+		storage.setItem('password', usersInform.password);
+		storage.setItem('uniqueId', usersInform.uniqueId);
+		storage.setItem('name', usersInform.name);
+		storage.setItem('phoneNum', usersInform.phoneNum);
+		storage.setItem('gender', usersInform.gender);
+		storage.setItem('birthDate', usersInform.birthDate);
 
 		// 로컬 스토리지의 유니크 아이디 가져오기
 		const localUniqueId = storage.getItem('uniqueId');
 
-		if (serverUniqueId === localUniqueId) {
-			alert('성공');
+		if (usersInform.uniqueId === localUniqueId) {
 			window.location.href = '/index.html';
 		}
 	} else {
