@@ -1,4 +1,4 @@
-// import {} from '/js/common/index.js';
+import {} from '/js/common/index.js';
 import {getNode, tiger, getNodes} from '/lib/index.js';
 import {emailReg, pwReg} from '/js/common/function.js';
 
@@ -13,28 +13,13 @@ const inputYear = getNode('.inputYear');
 const inputMonth = getNode('.inputMonth');
 const inputDay = getNode('.inputDay');
 const inputGender = getNodes('.inputGender');
-
-// const allCheck = getNode('.allCheck');
-// const use = getNode('#use');
-// const privacy = getNode('#privacy');
-// const promote = getNode('#promote');
-// const age = getNode('#age');
-// const check = getNode('.check');
-// const checkbox = getNodes('.checkbox');
-
+const checkImgs = getNodes('.checkImg');
 const buttonSignUp = getNode('.buttonSignUp');
-const errorMessage1 = getNode('.errorMessage1');
-const errorMessage2 = getNode('.errorMessage2');
-const errorMessage3 = getNode('.errorMessage3');
-const {localStorage: storage} = globalThis;
-const URL = 'http://localhost:3000/users';
-
-errorMessage1.hidden = true;
-errorMessage2.hidden = true;
-errorMessage3.hidden = true;
 
 // # 아이디 입력
-function handleCheckId() {
+function handleInputId() {
+	const errorMessage1 = getNode('.errorMessage1');
+	errorMessage1.hidden = true;
 	const value = this.value;
 	if (!emailReg(value) && value.length !== 0) {
 		errorMessage1.hidden = false;
@@ -46,9 +31,8 @@ function handleCheckId() {
 }
 
 // # 아이디 중복 확인
-function handleCheckDuplication() {
+function handleCheckId() {
 	const value = inputId.value.trim();
-
 	if (value === '') {
 		alert('아이디를 입력해주세요');
 
@@ -63,7 +47,9 @@ function handleCheckDuplication() {
 }
 
 // # 비밀번호 입력
-function handleCheckPw() {
+function handleInputPw() {
+	const errorMessage2 = getNode('.errorMessage2');
+	errorMessage2.hidden = true;
 	const value = this.value;
 	if (!pwReg(value) && value.length !== 0) {
 		errorMessage2.hidden = false;
@@ -74,8 +60,10 @@ function handleCheckPw() {
 	}
 }
 
-// # 비밀번호 일치
-function handleCheckPws() {
+// # 비밀번호 확인
+function handleCheckPw() {
+	const errorMessage3 = getNode('.errorMessage3');
+	errorMessage3.hidden = true;
 	if (inputPw1.value !== inputPw2.value && inputPw2.value !== '') {
 		errorMessage3.hidden = false;
 	} else {
@@ -111,8 +99,25 @@ function handleDate(event) {
 	this.value = this.value.replace(/[^0-9.]/g, '');
 }
 
+// # 이용 약관 동의
+checkImgs.forEach((img) => {
+	img.addEventListener('click', function () {
+		const checkbox = this.closest('li').querySelector('.checkbox');
+
+		if (checkbox) {
+			checkbox.checked = !checkbox.checked;
+			if (checkbox.checked) {
+				img.src = '/assets/images/product-list/ic-checked.svg';
+			} else {
+				img.src = '/assets/images/product-list/ic-unchecked.svg';
+			}
+		}
+	});
+});
+
 // # 가입하기
 function handlesignUp(e) {
+	const {localStorage: storage} = globalThis;
 	e.preventDefault();
 
 	if (inputId.value !== '' && inputPw1.value !== '' && inputPw2.value !== '' && inputName.value !== '' && inputEmail.value !== '' && inputPhone.value !== '') {
@@ -130,7 +135,8 @@ function handlesignUp(e) {
 		window.location.href = '/pages/login.html';
 
 		// 유저 정보 전송
-		tiger.post(URL, {
+		tiger.post('http://localhost:3000/users', {
+			id: '',
 			userId: inputId.value,
 			password: inputPw1.value,
 			uniqueId: uniqueId,
@@ -144,10 +150,10 @@ function handlesignUp(e) {
 	}
 }
 
-inputId.addEventListener('input', handleCheckId);
-buttonId.addEventListener('click', handleCheckDuplication);
-inputPw1.addEventListener('input', handleCheckPw);
-inputPw2.addEventListener('input', handleCheckPws);
+inputId.addEventListener('input', handleInputId);
+buttonId.addEventListener('click', handleCheckId);
+inputPw1.addEventListener('input', handleInputPw);
+inputPw2.addEventListener('input', handleCheckPw);
 inputPhone.addEventListener('input', handlePhone);
 inputYear.addEventListener('input', handleYear);
 inputMonth.addEventListener('input', handleDate);

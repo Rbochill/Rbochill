@@ -1,4 +1,4 @@
-// import {} from '/js/common/index.js';
+import {} from '/js/common/index.js';
 import {getNode} from '/lib/index.js';
 import {emailReg, pwReg} from '/js/common/function.js';
 
@@ -6,7 +6,6 @@ const inputId = getNode('.inputId');
 const inputPw = getNode('.inputPw');
 const buttonLogin = getNode('.buttonLogin');
 const buttonSignUp = getNode('.buttonSignUp');
-const {localStorage: storage} = globalThis;
 
 let emailPass = false;
 let pwPass = false;
@@ -46,6 +45,7 @@ console.log('id :', user[0].userId);
 console.log(('pw :', user[0].password));
 
 function handleLogin(e) {
+	const {localStorage: storage} = globalThis;
 	e.preventDefault();
 	//  사용자가 입력한 데이터
 	const id = inputId.value;
@@ -61,12 +61,11 @@ function handleLogin(e) {
 
 		// 로컬 스토리지의 데이터 유니크 아이디 가져오기
 		const localUniqueId = storage.getItem('uniqueId');
-
 		console.log('localUniqueId :', localUniqueId);
-		console.log('uniqeId :', user[0].uniqueId);
+		console.log('uniqueId :', user[0].uniqueId);
 
 		if (serverUniqueId === localUniqueId) {
-			// console.log('성공');
+			alert('성공');
 			window.location.href = '/index.html';
 		}
 	} else {
@@ -74,11 +73,12 @@ function handleLogin(e) {
 	}
 }
 
-function handleMove() {
+// # 회원가입 페이지로 이동
+function handletoSignUp() {
 	window.location.href = '/pages/signUp.html';
 }
 
 inputId.addEventListener('input', handleCheckId);
 inputPw.addEventListener('input', handleCheckPw);
 buttonLogin.addEventListener('click', handleLogin);
-buttonSignUp.addEventListener('click', handleMove);
+buttonSignUp.addEventListener('click', handletoSignUp);
