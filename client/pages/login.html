@@ -15,30 +15,31 @@
 	<body>
 		<header></header>
 
-		<main>
-			<div class="mx-auto w-[1050px]">
-				<h2 class="py-11 text-center text-lg">로그인</h2>
+		<main id="main">
+			<div class="mx-auto w-[1050px] py-20">
+				<h2 class="pb-11 text-center text-lg">로그인</h2>
 				<form>
 					<fieldset>
 						<legend class="sr-only">로그인 폼</legend>
-						<div class="flex flex-col items-center gap-3">
+						<div class="loginSection">
 							<!-- 이메일 조건 : 최소 @, . 포함 -->
 							<label class="sr-only" for="id">아이디</label>
-							<input class="inputId h-[50px] w-[340px] rounded-sm border border-gray/300 pl-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+							<input class="inputId loginInput" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
 							<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자  -->
 							<label class="sr-only" for="password">비밀번호</label>
-							<input class="inputPw h-[50px] w-[340px] rounded-sm border border-gray/300 pl-5" type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" />
+							<input class="inputPw loginInput" type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" />
 							<div class="w-[340px] pb-7 text-right text-sm">
 								<span class="findId cursor-pointer" tabindex="0">아이디 찾기</span>
 								<span>|</span>
 								<span class="findPw cursor-pointer" tabindex="0">비밀번호 찾기</span>
 							</div>
 						</div>
-						<div class="flex flex-col items-center gap-3">
+
+						<div class="loginSection">
 							<!-- addEventListener 이용해서 메인페이지로 이동하기-->
-							<button class="buttonLogin h-[54px] w-[340px] rounded-sm border border-primary bg-primary text-white" type="submit">로그인</button>
+							<button class="buttonLogin loginButton bg-primary text-white" type="submit">로그인</button>
 							<!-- addEventListener 이용해서 회원가입 페이지로 이동하기-->
-							<button class="buttonSignUp h-[54px] w-[340px] rounded-sm border border-primary text-primary" type="button">회원가입</button>
+							<button class="buttonSignUp loginButton text-primary" type="button">회원가입</button>
 						</div>
 					</fieldset>
 				</form>

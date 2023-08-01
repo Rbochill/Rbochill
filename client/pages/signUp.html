@@ -15,110 +15,133 @@
 	<body>
 		<header></header>
 
-		<main>
+		<main id="main">
 			<div class="mx-auto w-[1050px]">
 				<h2 class="pt-20 text-center text-lg">회원가입</h2>
 				<div class="text-12 mx-auto h-[44px] w-[640px] p-4 text-right text-content">
 					<sup class="text-[#F03F40]">*</sup>
 					필수입력사항
 				</div>
-				<form action="#">
+				<form>
 					<div class="mx-auto w-[640px] border-t-2">
 						<fieldset>
 							<legend class="sr-only">회원가입 폼</legend>
 							<!-- 아이디 -->
-							<div class="flex flex-row justify-between py-4">
-								<!-- 이메일 조건 : 최소 @, . 포함 -->
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="id">아이디<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputId m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" />
+								<input class="inputId inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" required />
 								<button class="buttonId h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
+							<p class="errorMessage1 text-center text-Info/Error" hidden>이메일 형식으로 입력해주세요</p>
 
 							<!-- 비밀번호 -->
-							<div class="flex flex-row justify-between py-4">
-								<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자 -->
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password1">비밀번호<sup class="text-[#F03F40]">*</sup></label>
-								<input class="labelPw1 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password1" placeholder="비밀번호를 입력해주세요" />
+								<input
+									class="inputPw1 inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="password"
+									name="password"
+									id="password1"
+									placeholder="비밀번호를 입력해주세요"
+									required
+								/>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
+							<p class="errorMessage2 text-center text-Info/Error" hidden>특수 문자와 숫자 포함 6~16 글자로 작성해주세요</p>
 
 							<!-- 비밀번호 확인 -->
-							<div class="flex flex-row justify-between py-4">
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password2">비밀번호 확인<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPw2 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password2" placeholder="비밀번호를 한번 더 입력해주세요" />
+								<input
+									class="inputPw2 inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="password"
+									name="password"
+									id="password2"
+									placeholder="비밀번호를 한번 더 입력해주세요"
+									required
+								/>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
+							<p class="errorMessage3 text-center text-Info/Error" hidden>비밀번호가 일치하지 않습니다.</p>
 
 							<!-- 이름 -->
-							<div class="flex flex-row justify-between py-4">
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="name">이름<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputName m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" />
+								<input class="inputName inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" required />
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 
 							<!-- 이메일 -->
-							<div class="flex flex-row justify-between py-4">
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="email">이메일<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputEmail m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="email" id="email" placeholder="예) marketkarly@karly.com" />
+								<input
+									class="inputEmail inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="text"
+									name="email"
+									id="email"
+									placeholder="예) marketkarly@karly.com"
+									required
+								/>
 								<button class="buttonEmail h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
+							<p class="errorMessage4 text-center text-Info/Error" hidden>이메일 형식으로 입력해주세요</p>
 
 							<!-- 휴대폰 -->
-							<div class="flex flex-row justify-between py-4">
+							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="phone">휴대폰<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPhone m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." />
+								<input class="inputPhone inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." required />
 								<button class="buttonPhone h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">인증번호 받기</button>
 							</div>
 
 							<!-- 주소 -->
-							<div class="flex flex-row items-center justify-between py-4">
+							<div class="informList items-center">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="address">주소<sup class="text-[#F03F40]">*</sup></label>
 								<div>
-									<input class="inputAdderess m-0 h-[44px] w-[333px] rounded-sm border border-primary px-5 text-primary" type="button" id="address" value="주소 검색" />
+									<button class="inputAdderess m-0 h-[44px] w-[333px] rounded-sm border border-primary px-5 text-primary" type="button" id="address" value="주소 검색">주소 검색</button>
 									<p class="text-sm">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
 								</div>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 
 							<!-- 성별 -->
-							<div class="flex w-[480px] flex-row justify-between py-4">
+							<div class="informList w-[480px]">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">성별</label>
 								<div class="m-0 flex h-[44px] w-[333px] flex-row justify-between px-5 leading-[36px]">
 									<div>
 										<label for="male"></label>
-										<input class="inputM" type="radio" value="남성" name="gender" id="male" />
+										<input class="inputGender" type="radio" value="남성" name="gender" id="male" />
 										<span class="spanM">남자</span>
 									</div>
 									<div>
 										<label for="female"></label>
-										<input class="inputF" type="radio" value="여성" name="gender" id="female" />
+										<input class="inputGender" type="radio" value="여성" name="gender" id="female" />
 										<span class="spanF">여자</span>
 									</div>
 									<div>
 										<label for="none"></label>
-										<input class="inputN" type="radio" value="선택안함" name="gender" id="none" />
+										<input class="inputGender" type="radio" value="선택안함" name="gender" id="none" />
 										<span class="spanN">선택안함</span>
 									</div>
 								</div>
 							</div>
 
 							<!-- 생년월일 -->
-							<div class="flex w-[480px] flex-row justify-between py-4">
+							<div class="informList w-[480px]">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">생년월일</label>
 								<div class="m-0 flex h-[44px] w-[333px] items-center justify-center rounded-sm border border-gray/300 px-5">
 									<label for="year"></label>
-									<input class="inputYear w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
+									<input class="inputYear inputFocus w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
 									<span class="px-1">/</span>
-									<label class="labelMonth" for="month"></label>
-									<input class="inputMonth w-[80px] text-center" type="text" id="month" placeholder="MM" />
+									<label for="month"></label>
+									<input class="inputMonth inputFocus w-[80px] text-center" type="text" id="month" placeholder="MM" />
 									<span class="px-1">/</span>
-									<label class="labelDay" for="day"></label>
-									<input class="inputDay w-[80px] text-center" type="text" id="day" placeholder="DD" />
+									<label for="day"></label>
+									<input class="inputDay inputFocus w-[80px] text-center" type="text" id="day" placeholder="DD" />
 								</div>
 							</div>
 
 							<!-- 추가입력 사항 -->
-							<div class="flex w-[480px] flex-row justify-between py-4">
+							<div class="informList w-[480px]">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">추가입력 사항</label>
 								<div class="flex w-[333px] flex-row items-center justify-between">
 									<div>
@@ -146,79 +169,79 @@
 									<li>
 										<div class="flex flex-row gap-2">
 											<span tabindex="0">
-												<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+												<img class="checkImg" src="/assets/images/product-list/ic-unchecked.svg" alt="체크" aria-hidden="true" />
 											</span>
 											<label for="allAgree"></label>
-											<input class="hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
+											<input class="checkbox hidden text-lg" type="checkbox" id="allAgree" />전체 동의합니다.
 										</div>
 										<p class="pl-10 text-sm text-gray/400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
 									</li>
 
 									<!-- 이용약관 동의 (필수) -->
-									<li class="flex flex-row justify-between py-3">
-										<div class="flex flex-row items-center gap-2">
+									<li class="agreeList">
+										<div class="agreeListInner">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="checkImg" src="/assets/images/product-list/ic-unchecked.svg" alt="체크" aria-hidden="true" />
 												</span>
 											</div>
 											<label for="use"></label>
-											<input class="hidden" type="checkbox" id="use" />이용약관 동의 (필수)
+											<input class="checkbox hidden" type="checkbox" id="use" />이용약관 동의 (필수)
 										</div>
-										<div class="flex flex-row items-center text-sm" tabindex="0">
+										<div class="agreeListDocs" tabindex="0">
 											<span class="text-primary">약관보기</span>
-											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="자세히 보기" aria-hidden="true" />
 										</div>
 									</li>
 
 									<!-- 개인정보 수집 · 이용 동의 (필수) -->
-									<li class="flex flex-row justify-between py-3">
-										<div class="flex flex-row items-center gap-2">
+									<li class="agreeList">
+										<div class="agreeListInner">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="checkImg" src="/assets/images/product-list/ic-unchecked.svg" alt="체크" aria-hidden="true" />
 												</span>
 											</div>
 											<label for="priavacy"></label>
-											<input class="hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
+											<input class="checkbox hidden" type="checkbox" id="priavacy" />개인정보 수집 · 이용 동의 (필수)
 										</div>
-										<div class="flex flex-row items-center text-sm" tabindex="0">
+										<div class="agreeListDocs" tabindex="0">
 											<span class="text-primary">약관보기</span>
-											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="자세히 보기" aria-hidden="true" />
 										</div>
 									</li>
 
 									<!-- 무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택) -->
-									<li class="flex flex-row justify-between py-3">
-										<div class="flex flex-row items-center gap-2">
+									<li class="agreeList">
+										<div class="agreeListInner">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="checkImg" src="/assets/images/product-list/ic-unchecked.svg" alt="체크" aria-hidden="true" />
 												</span>
 											</div>
 											<label for="promote"></label>
-											<input class="hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
+											<input class="checkbox hidden" type="checkbox" id="promote" />무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
 										</div>
-										<div class="flex flex-row items-center text-sm" tabindex="0">
+										<div class="agreeListDocs" tabindex="0">
 											<span class="text-primary">약관보기</span>
-											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="자세히 보기" aria-hidden="true" />
 										</div>
 									</li>
 
 									<!-- 본인은 만 14세 이상입니다. (필수) -->
-									<li class="flex flex-row justify-between py-3">
-										<div class="flex flex-row items-center gap-2">
+									<li class="agreeList">
+										<div class="agreeListInner">
 											<div>
 												<span tabindex="0">
-													<img src="/assets/images/product-list/ic-unchecked.svg" alt="" />
+													<img class="checkImg" src="/assets/images/product-list/ic-unchecked.svg" alt="체크" aria-hidden="true" />
 												</span>
 											</div>
 											<label for="age"></label>
-											<input class="hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
+											<input class="checkbox hidden" type="checkbox" id="age" />본인은 만 14세 이상입니다. (필수)
 										</div>
-										<div class="flex flex-row items-center text-sm" tabindex="0">
+										<div class="agreeListDocs" tabindex="0">
 											<span class="text-primary">약관보기</span>
-											<img src="/assets/images/product-detail/arrow-right.svg" alt="" />
+											<img src="/assets/images/product-detail/arrow-right.svg" alt="자세히 보기" aria-hidden="true" />
 										</div>
 									</li>
 								</ul>
