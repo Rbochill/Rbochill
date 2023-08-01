@@ -239,8 +239,6 @@ function renderCartPrice() {
 	const sumBigPrice = getListPrice(bigPrice);
 	const sumSmallPrice = getListPrice(smallPrice);
 	const balancePrice = sumBigPrice - sumSmallPrice;
-	console.log(balancePrice);
-	// const balancePrice =
 
 	// 할인가 랜더링
 	const cartDiscountPrice = document.querySelector('.cartDiscountPrice');
