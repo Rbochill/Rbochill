@@ -51,11 +51,17 @@ productCartButton.addEventListener('click', () => {});
 // # scrollPage 네비게이션 고정
 window.addEventListener('scroll', () => {
 	const moveButtonGroup = $('.moveButtonGroup');
+	const stickyPosition = 55.991; // 위에서 고정될 위치를 설정합니다 (70픽셀).
+	const rect = moveButtonGroup.getBoundingClientRect();
+
 	changeButtonColor();
-	if (window.pageYOffset > moveButtonGroup.offsetTop) {
+
+	if (rect.top <= stickyPosition) {
 		moveButtonGroup.classList.add('sticky');
+		moveButtonGroup.style.top = `${stickyPosition}px`;
 	} else {
 		moveButtonGroup.classList.remove('sticky');
+		moveButtonGroup.style.top = 'auto';
 	}
 });
 
