@@ -10,19 +10,19 @@
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
-	/* 1 */
-	border-width: 0;
-	/* 2 */
-	border-style: solid;
-	/* 2 */
-	border-color: currentColor;
-	/* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
 }
 
 ::before,
 ::after {
-	--tw-content: '';
+  --tw-content: '';
 }
 
 /*
@@ -35,35 +35,21 @@
 */
 
 html {
-	line-height: 1.5;
-	/* 1 */
-	-webkit-text-size-adjust: 100%;
-	/* 2 */
-	-moz-tab-size: 4;
-	/* 3 */
-	-o-tab-size: 4;
-	tab-size: 4;
-	/* 3 */
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		Arial,
-		'Noto Sans',
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
-	/* 4 */
-	font-feature-settings: normal;
-	/* 5 */
-	font-variation-settings: normal;
-	/* 6 */
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
 }
 
 /*
@@ -72,10 +58,10 @@ html {
 */
 
 body {
-	margin: 0;
-	/* 1 */
-	line-height: inherit;
-	/* 2 */
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
 }
 
 /*
@@ -85,12 +71,12 @@ body {
 */
 
 hr {
-	height: 0;
-	/* 1 */
-	color: inherit;
-	/* 2 */
-	border-top-width: 1px;
-	/* 3 */
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
 }
 
 /*
@@ -98,8 +84,8 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
-	-webkit-text-decoration: underline dotted;
-	text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -112,8 +98,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-size: inherit;
-	font-weight: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /*
@@ -121,8 +107,8 @@ Reset links to optimize for opt-in styling instead of opt-out.
 */
 
 a {
-	color: inherit;
-	text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 /*
@@ -131,7 +117,7 @@ Add the correct font weight in Edge and Safari.
 
 b,
 strong {
-	font-weight: bolder;
+  font-weight: bolder;
 }
 
 /*
@@ -143,10 +129,10 @@ code,
 kbd,
 samp,
 pre {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-	/* 1 */
-	font-size: 1em;
-	/* 2 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /*
@@ -154,7 +140,7 @@ Add the correct font size in all browsers.
 */
 
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
 /*
@@ -163,18 +149,18 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 
 /*
@@ -184,12 +170,12 @@ sup {
 */
 
 table {
-	text-indent: 0;
-	/* 1 */
-	border-color: inherit;
-	/* 2 */
-	border-collapse: collapse;
-	/* 3 */
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
 }
 
 /*
@@ -203,24 +189,24 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	/* 1 */
-	font-feature-settings: inherit;
-	/* 1 */
-	font-variation-settings: inherit;
-	/* 1 */
-	font-size: 100%;
-	/* 1 */
-	font-weight: inherit;
-	/* 1 */
-	line-height: inherit;
-	/* 1 */
-	color: inherit;
-	/* 1 */
-	margin: 0;
-	/* 2 */
-	padding: 0;
-	/* 3 */
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
 }
 
 /*
@@ -229,7 +215,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 
 button,
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
 /*
@@ -241,12 +227,12 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-	-webkit-appearance: button;
-	/* 1 */
-	background-color: transparent;
-	/* 2 */
-	background-image: none;
-	/* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
 }
 
 /*
@@ -254,7 +240,7 @@ Use the modern Firefox focus style for all focusable elements.
 */
 
 :-moz-focusring {
-	outline: auto;
+  outline: auto;
 }
 
 /*
@@ -262,7 +248,7 @@ Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/
 */
 
 :-moz-ui-invalid {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 /*
@@ -270,7 +256,7 @@ Add the correct vertical alignment in Chrome and Firefox.
 */
 
 progress {
-	vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 /*
@@ -279,7 +265,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-	height: auto;
+  height: auto;
 }
 
 /*
@@ -288,10 +274,10 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-	-webkit-appearance: textfield;
-	/* 1 */
-	outline-offset: -2px;
-	/* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /*
@@ -299,7 +285,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /*
@@ -308,10 +294,10 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	/* 1 */
-	font: inherit;
-	/* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /*
@@ -319,7 +305,7 @@ Add the correct display in Chrome and Safari.
 */
 
 summary {
-	display: list-item;
+  display: list-item;
 }
 
 /*
@@ -339,24 +325,24 @@ hr,
 figure,
 p,
 pre {
-	margin: 0;
+  margin: 0;
 }
 
 fieldset {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 legend {
-	padding: 0;
+  padding: 0;
 }
 
 ol,
 ul,
 menu {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -364,7 +350,7 @@ Reset default styling for dialogs.
 */
 
 dialog {
-	padding: 0;
+  padding: 0;
 }
 
 /*
@@ -372,7 +358,7 @@ Prevent resizing textareas horizontally by default.
 */
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 /*
@@ -380,20 +366,19 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-	opacity: 1;
-	/* 1 */
-	color: #9ca3af;
-	/* 2 */
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
 }
 
 input::placeholder,
 textarea::placeholder {
-	opacity: 1;
-	/* 1 */
-	color: #9ca3af;
-	/* 2 */
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
 }
 
 /*
@@ -401,8 +386,8 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
-	cursor: pointer;
+[role="button"] {
+  cursor: pointer;
 }
 
 /*
@@ -410,7 +395,7 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 
 :disabled {
-	cursor: default;
+  cursor: default;
 }
 
 /*
@@ -427,10 +412,10 @@ audio,
 iframe,
 embed,
 object {
-	display: block;
-	/* 1 */
-	vertical-align: middle;
-	/* 2 */
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
 }
 
 /*
@@ -439,783 +424,1291 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 img,
 video {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
 [hidden] {
-	display: none;
+  display: none;
 }
 
-*,
-::before,
-::after {
-	--tw-border-spacing-x: 0;
-	--tw-border-spacing-y: 0;
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	--tw-pan-x:  ;
-	--tw-pan-y:  ;
-	--tw-pinch-zoom:  ;
-	--tw-scroll-snap-strictness: proximity;
-	--tw-gradient-from-position:  ;
-	--tw-gradient-via-position:  ;
-	--tw-gradient-to-position:  ;
-	--tw-ordinal:  ;
-	--tw-slashed-zero:  ;
-	--tw-numeric-figure:  ;
-	--tw-numeric-spacing:  ;
-	--tw-numeric-fraction:  ;
-	--tw-ring-inset:  ;
-	--tw-ring-offset-width: 0px;
-	--tw-ring-offset-color: #fff;
-	--tw-ring-color: rgb(59 130 246 / 0.5);
-	--tw-ring-offset-shadow: 0 0 #0000;
-	--tw-ring-shadow: 0 0 #0000;
-	--tw-shadow: 0 0 #0000;
-	--tw-shadow-colored: 0 0 #0000;
-	--tw-blur:  ;
-	--tw-brightness:  ;
-	--tw-contrast:  ;
-	--tw-grayscale:  ;
-	--tw-hue-rotate:  ;
-	--tw-invert:  ;
-	--tw-saturate:  ;
-	--tw-sepia:  ;
-	--tw-drop-shadow:  ;
-	--tw-backdrop-blur:  ;
-	--tw-backdrop-brightness:  ;
-	--tw-backdrop-contrast:  ;
-	--tw-backdrop-grayscale:  ;
-	--tw-backdrop-hue-rotate:  ;
-	--tw-backdrop-invert:  ;
-	--tw-backdrop-opacity:  ;
-	--tw-backdrop-saturate:  ;
-	--tw-backdrop-sepia:  ;
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 ::backdrop {
-	--tw-border-spacing-x: 0;
-	--tw-border-spacing-y: 0;
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	--tw-pan-x:  ;
-	--tw-pan-y:  ;
-	--tw-pinch-zoom:  ;
-	--tw-scroll-snap-strictness: proximity;
-	--tw-gradient-from-position:  ;
-	--tw-gradient-via-position:  ;
-	--tw-gradient-to-position:  ;
-	--tw-ordinal:  ;
-	--tw-slashed-zero:  ;
-	--tw-numeric-figure:  ;
-	--tw-numeric-spacing:  ;
-	--tw-numeric-fraction:  ;
-	--tw-ring-inset:  ;
-	--tw-ring-offset-width: 0px;
-	--tw-ring-offset-color: #fff;
-	--tw-ring-color: rgb(59 130 246 / 0.5);
-	--tw-ring-offset-shadow: 0 0 #0000;
-	--tw-ring-shadow: 0 0 #0000;
-	--tw-shadow: 0 0 #0000;
-	--tw-shadow-colored: 0 0 #0000;
-	--tw-blur:  ;
-	--tw-brightness:  ;
-	--tw-contrast:  ;
-	--tw-grayscale:  ;
-	--tw-hue-rotate:  ;
-	--tw-invert:  ;
-	--tw-saturate:  ;
-	--tw-sepia:  ;
-	--tw-drop-shadow:  ;
-	--tw-backdrop-blur:  ;
-	--tw-backdrop-brightness:  ;
-	--tw-backdrop-contrast:  ;
-	--tw-backdrop-grayscale:  ;
-	--tw-backdrop-hue-rotate:  ;
-	--tw-backdrop-invert:  ;
-	--tw-backdrop-opacity:  ;
-	--tw-backdrop-saturate:  ;
-	--tw-backdrop-sepia:  ;
-}
-
-.container {
-	width: 100%;
-}
-
-@media (min-width: 640px) {
-	.container {
-		max-width: 640px;
-	}
-}
-
-@media (min-width: 768px) {
-	.container {
-		max-width: 768px;
-	}
-}
-
-@media (min-width: 1024px) {
-	.container {
-		max-width: 1024px;
-	}
-}
-
-@media (min-width: 1280px) {
-	.container {
-		max-width: 1280px;
-	}
-}
-
-@media (min-width: 1536px) {
-	.container {
-		max-width: 1536px;
-	}
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.-bottom-6 {
+  bottom: -1.5rem;
+}
+
+.bottom-\[2px\] {
+  bottom: 2px;
+}
+
+.bottom-\[33px\] {
+  bottom: 33px;
+}
+
+.right-\[15px\] {
+  right: 15px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-\[0px\] {
+  top: 0px;
+}
+
+.z-\[100\] {
+  z-index: 100;
+}
+
+.z-\[999\] {
+  z-index: 999;
+}
+
+.order-first {
+  order: -9999;
+}
+
+.float-left {
+  float: left;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .mx-2 {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-	.absolute {
-		position: absolute;
-	}
-
-	.relative {
-		position: relative;
-	}
-
-	.sticky {
-		position: sticky;
-	}
-
-	.-bottom-6 {
-		bottom: -1.5rem;
-	}
-
-	.bottom-\[2px\] {
-		bottom: 2px;
-	}
-
-	.bottom-\[33px\] {
-		bottom: 33px;
-	}
-
-	.right-\[15px\] {
-		right: 15px;
-	}
-
-	.top-0 {
-		top: 0px;
-	}
-
-	.z-\[100\] {
-		z-index: 100;
-	}
-
-	.order-first {
-		order: -9999;
-	}
-
-	.float-left {
-		float: left;
-	}
-
-	.mx-auto {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.mb-11 {
-		margin-bottom: 2.75rem;
-	}
-
-	.block {
-		display: block;
-		.mb-2 {
-			margin-bottom: 0.5rem;
-		}
-
-		.mb-7 {
-			margin-bottom: 1.75rem;
-		}
-
-		.ml-2 {
-			margin-left: 0.5rem;
-		}
-
-		.mt-5 {
-			margin-top: 1.25rem;
-		}
-
-		.mt-8 {
-			margin-top: 2rem;
-		}
-
-		.inline-block {
-			display: inline-block;
-		}
-
-		.inline {
-			display: inline;
-		}
-
-		.flex {
-			display: flex;
-		}
-
-		.h-\[23px\] {
-			height: 23px;
-		}
-
-		.h-\[500px\] {
-			height: 500px;
-			.hidden {
-				display: none;
-			}
-
-			.h-\[18px\] {
-				height: 18px;
-			}
-
-			.h-\[30px\] {
-				height: 30px;
-			}
-
-			.h-\[34px\] {
-				height: 34px;
-			}
-
-			.h-\[40px\] {
-				height: 40px;
-			}
-
-			.h-\[430px\] {
-				height: 430px;
-			}
-
-			.h-\[5\.6px\] {
-				height: 5.6px;
-			}
-
-			.h-\[50px\] {
-				height: 50px;
-			}
-
-			.h-full {
-				height: 100%;
-			}
-
-			.w-2 {
-				width: 0.5rem;
-			}
-
-			.w-\[100\%\] {
-				width: 100%;
-			}
-
-			.w-\[102px\] {
-				width: 102px;
-			}
-
-			.w-\[1050px\] {
-				width: 1050px;
-			}
-
-			.w-\[23px\] {
-				width: 23px;
-			}
-
-			.w-\[284px\] {
-				width: 284px;
-			}
-
-			.w-\[742px\] {
-				width: 742px;
-				.w-\[140px\] {
-					width: 140px;
-				}
-
-				.w-\[160px\] {
-					width: 160px;
-				}
-
-				.w-\[175px\] {
-					width: 175px;
-				}
-
-				.w-\[180px\] {
-					width: 180px;
-				}
-
-				.w-\[18px\] {
-					width: 18px;
-				}
-
-				.w-\[241px\] {
-					width: 241px;
-				}
-
-				.w-\[30px\] {
-					width: 30px;
-				}
-
-				.w-\[34px\] {
-					width: 34px;
-				}
-
-				.w-\[600px\] {
-					width: 600px;
-				}
-
-				.w-full {
-					width: 100%;
-				}
-
-				.max-w-\[1920\] {
-					max-width: 1920;
-				}
-
-				.flex-row {
-					flex-direction: row;
-				}
-
-				.flex-col {
-					flex-direction: column;
-				}
-
-				.flex-nowrap {
-					flex-wrap: nowrap;
-				}
-
-				.items-center {
-					align-items: center;
-				}
-
-				.bg-\[orange\] {
-					--tw-bg-opacity: 1;
-					background-color: rgb(255 165 0 / var(--tw-bg-opacity));
-				}
-
-				.bg-\[yellowgreen\] {
-					--tw-bg-opacity: 1;
-					background-color: rgb(154 205 50 / var(--tw-bg-opacity));
-				}
-
-				.bg-gray\/300 {
-					--tw-bg-opacity: 1;
-					background-color: rgb(166 166 166 / var(--tw-bg-opacity));
-				}
-
-				.bg-secondary {
-					--tw-bg-opacity: 1;
-					background-color: rgb(189 118 255 / var(--tw-bg-opacity));
-					.justify-end {
-						justify-content: flex-end;
-					}
-
-					.justify-between {
-						justify-content: space-between;
-					}
-
-					.justify-around {
-						justify-content: space-around;
-					}
-
-					.gap-3 {
-						gap: 0.75rem;
-					}
-
-					.gap-5 {
-						gap: 1.25rem;
-					}
-
-					.gap-\[16px\] {
-						gap: 16px;
-					}
-
-					.gap-\[20px\] {
-						gap: 20px;
-					}
-
-					.gap-\[28px\] {
-						gap: 28px;
-					}
-
-					.gap-\[8px\] {
-						gap: 8px;
-					}
-
-					.overflow-hidden {
-						overflow: hidden;
-					}
-
-					.overflow-x-hidden {
-						overflow-x: hidden;
-					}
-
-					.rounded-2xl {
-						border-radius: 1rem;
-					}
-
-					.rounded-sm {
-						border-radius: 0.125rem;
-					}
-
-					.border {
-						border-width: 1px;
-					}
-
-					.border-t-\[1px\] {
-						border-top-width: 1px;
-					}
-
-					.border-solid {
-						border-style: solid;
-					}
-
-					.border-\[\#5f0080\] {
-						--tw-border-opacity: 1;
-						border-color: rgb(95 0 128 / var(--tw-border-opacity));
-					}
-
-					.border-\[color\:var\(--gray-300\2c \#A6A6A6\)\] {
-						border-color: var(--gray-300, #a6a6a6);
-					}
-
-					.bg-white {
-						--tw-bg-opacity: 1;
-						background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-					}
-
-					.p-2 {
-						padding: 0.5rem;
-					}
-
-					.bg-\[url\(\/client\/assets\/images\/cart\/ic-checked-false\.svg\)\] {
-						background-image: url(/client/assets/images/cart/ic-checked-false.svg);
-					}
-
-					.bg-\[url\(\/assets\/images\/cart\/ic-checked-false\.svg\)\] {
-						background-image: url(/assets/images/cart/ic-checked-false.svg);
-						.px-3 {
-							padding-left: 0.75rem;
-							padding-right: 0.75rem;
-						}
-
-						.px-5 {
-							padding-left: 1.25rem;
-							padding-right: 1.25rem;
-						}
-
-						.px-\[4px\] {
-							padding-left: 4px;
-							padding-right: 4px;
-						}
-
-						.py-20 {
-							padding-top: 5rem;
-							padding-bottom: 5rem;
-							.py-1 {
-								padding-top: 0.25rem;
-								padding-bottom: 0.25rem;
-							}
-
-							.py-4 {
-								padding-top: 1rem;
-								padding-bottom: 1rem;
-							}
-
-							.text-center {
-								text-align: center;
-							}
-
-							.text-lg {
-								font-size: 1.3329999446868896rem;
-							}
-
-							.pb-2 {
-								padding-bottom: 0.5rem;
-							}
-
-							.pb-4 {
-								padding-bottom: 1rem;
-							}
-
-							.pb-\[32px\] {
-								padding-bottom: 32px;
-							}
-
-							.font-semibold {
-								font-weight: 600;
-								.pt-10 {
-									padding-top: 2.5rem;
-								}
-
-								.pt-3 {
-									padding-top: 0.75rem;
-								}
-
-								.pt-\[20px\] {
-									padding-top: 20px;
-								}
-
-								.pt-\[24px\] {
-									padding-top: 24px;
-								}
-
-								.pt-\[28px\] {
-									padding-top: 28px;
-								}
-
-								.text-center {
-									text-align: center;
-								}
-
-								.align-middle {
-									vertical-align: middle;
-								}
-
-								.text-2xl {
-									font-size: 1.5rem;
-									line-height: 2rem;
-								}
-
-								.text-\[10px\] {
-									font-size: 10px;
-								}
-
-								.text-lg {
-									font-size: 1.125rem;
-									line-height: 1.75rem;
-								}
-
-								.text-sm {
-									font-size: 0.875rem;
-									line-height: 1.25rem;
-								}
-
-								.text-xl {
-									font-size: 1.25rem;
-									line-height: 1.75rem;
-								}
-
-								.text-xs {
-									font-size: 0.75rem;
-									line-height: 1rem;
-								}
-
-								.font-bold {
-									font-weight: 700;
-								}
-
-								.font-normal {
-									font-weight: 400;
-								}
-
-								.font-semibold {
-									font-weight: 600;
-								}
-
-								.leading-6 {
-									line-height: 1.5rem;
-								}
-
-								.text-gray-400 {
-									--tw-text-opacity: 1;
-									color: rgb(156 163 175 / var(--tw-text-opacity));
-								}
-
-								.text-white {
-									--tw-text-opacity: 1;
-									color: rgb(255 255 255 / var(--tw-text-opacity));
-								}
-
-								/* #숨기기 with JS : 상단배너 */
-
-								.top-banner-hidden {
-									transition: 1s;
-									transform: translateY(-100px);
-									display: none;
-								}
-
-								/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
-								/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역 */
-
-								.divisionLine {
-									width: 1px;
-									height: 13px;
-									background: #d9d9d9;
-								}
-
-								.test {
-									background-image: url(/client/assets/images/cart/ic-checked-false.svg);
-								}
-							}
-
-							/* #뷰티칼리 new마크 */
-
-							.beautyLink::after {
-								content: url('/assets/images/header/new.svg');
-								position: relative;
-								top: -18px;
-								left: 5px;
-							}
-
-							/* #검색 디폴트 ver */
-
-							.SearchForm {
-								position: absolute;
-								left: 330px;
-								top: -11px;
-								height: 60px;
-								border: 1px solid #5f0080;
-								border-radius: 4px;
-							}
-
-							.searchFormInput {
-								/* margin-right: 7rem; */
-								width: 290px;
-								font-size: 21.328px;
-							}
-
-							/* #검색 스크롤 ver */
-
-							.searchFormInputScroll {
-								font-size: 12.003px;
-								margin-right: 0px;
-							}
-
-							/* #nav */
-
-							nav {
-								box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0.3);
-							}
-
-							/* #header, nav 호버 효과 */
-
-							.headerPrivate img:hover,
-							.navList a:hover,
-							.categoryButton:hover {
-								filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-							}
-
-							.navList a:hover {
-								filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-								text-decoration-line: underline;
-								text-underline-offset: 3px;
-							}
-
-							/*# 화면자체의 최대크기 설정 */
-
-							.fullWidth {
-								max-width: 1920px;
-							}
-
-							/*# 메인페이지의 중요 섹션들을 위한 최대크기 설정 */
-
-							.innerWidth {
-								max-width: 1050px;
-							}
-
-							/*# 메인페이지 상품명 */
-
-							.itemName {
-								font-weight: 400;
-								font-size: 1rem;
-								color: #333;
-							}
-
-							/*# 섹션 위아래 간격주기 */
-
-							.interval {
-								margin-top: 40px;
-								margin-bottom: 40px;
-								position: relative;
-							}
-
-							/*# 메인페이지 가격 */
-
-							.itemPrice {
-								font-size: 1.332rem;
-								font-weight: 600;
-							}
-
-							/*# 최근 본 상품 (스크롤바) */
-
-							.recentlyItem {
-								position: absolute;
-								right: 39px;
-								top: 193px;
-								box-sizing: content-box;
-								height: 207px;
-								width: 60px;
-								border: 1px solid #c4c4c4;
-								padding: 2px;
-								transition: top 0.3s ease;
-							}
-
-							.swiper-button-prev,
-							.swiper-button-next {
-								background-color: #fff;
-								opacity: 0.5;
-								padding: 15px 5px;
-								border-radius: 20px;
-								color: black !important;
-							}
-
-							.overflow-x-hidden .swiper-button-prev,
-							.overflow-x-hidden .swiper-button-next {
-								background-color: #fff;
-								opacity: 0.5;
-								padding: 15px 5px;
-								border-radius: 20px;
-								color: black !important;
-								top: 35%;
-							}
-
-							.swiper-button-prev:after,
-							.swiper-button-next:after {
-								font-size: 1.1rem !important;
-								font-weight: 600 !important;
-							}
-
-							.swiper-button-prev:hover,
-							.swiper-button-next:hover {
-								background-color: #c270c7;
-							}
-
-							.focus\:outline-none:focus {
-								outline: 2px solid transparent;
-								outline-offset: 2px;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mb-11 {
+  margin-bottom: 2.75rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-\[130px\] {
+  margin-left: 130px;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-\[115px\] {
+  height: 115px;
+}
+
+.h-\[18px\] {
+  height: 18px;
+}
+
+.h-\[216px\] {
+  height: 216px;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[34px\] {
+  height: 34px;
+}
+
+.h-\[36px\] {
+  height: 36px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[430px\] {
+  height: 430px;
+}
+
+.h-\[44px\] {
+  height: 44px;
+}
+
+.h-\[5\.6px\] {
+  height: 5.6px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[54px\] {
+  height: 54px;
+}
+
+.h-\[79px\] {
+  height: 79px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[102px\] {
+  width: 102px;
+}
+
+.w-\[1050px\] {
+  width: 1050px;
+}
+
+.w-\[131px\] {
+  width: 131px;
+}
+
+.w-\[140px\] {
+  width: 140px;
+}
+
+.w-\[143px\] {
+  width: 143px;
+}
+
+.w-\[160px\] {
+  width: 160px;
+}
+
+.w-\[175px\] {
+  width: 175px;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-\[18px\] {
+  width: 18px;
+}
+
+.w-\[241px\] {
+  width: 241px;
+}
+
+.w-\[244px\] {
+  width: 244px;
+}
+
+.w-\[247px\] {
+  width: 247px;
+}
+
+.w-\[25px\] {
+  width: 25px;
+}
+
+.w-\[284px\] {
+  width: 284px;
+}
+
+.w-\[30px\] {
+  width: 30px;
+}
+
+.w-\[333px\] {
+  width: 333px;
+}
+
+.w-\[340px\] {
+  width: 340px;
+}
+
+.w-\[34px\] {
+  width: 34px;
+}
+
+.w-\[37px\] {
+  width: 37px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[450px\] {
+  width: 450px;
+}
+
+.w-\[480px\] {
+  width: 480px;
+}
+
+.w-\[580px\] {
+  width: 580px;
+}
+
+.w-\[600px\] {
+  width: 600px;
+}
+
+.w-\[640px\] {
+  width: 640px;
+}
+
+.w-\[742px\] {
+  width: 742px;
+}
+
+.w-\[80px\] {
+  width: 80px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[1920\] {
+  max-width: 1920;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-\[16px\] {
+  gap: 16px;
+}
+
+.gap-\[20px\] {
+  gap: 20px;
+}
+
+.gap-\[28px\] {
+  gap: 28px;
+}
+
+.gap-\[8px\] {
+  gap: 8px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-sm {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
+.border-t-\[1px\] {
+  border-top-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-\[\#5f0080\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(95 0 128 / var(--tw-border-opacity));
+}
+
+.border-\[color\:var\(--gray-300\2c \#A6A6A6\)\] {
+  border-color: var(--gray-300,#A6A6A6);
+}
+
+.border-gray\/100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(225 225 225 / var(--tw-border-opacity));
+}
+
+.border-gray\/200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(196 196 196 / var(--tw-border-opacity));
+}
+
+.border-gray\/300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(166 166 166 / var(--tw-border-opacity));
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(95 0 128 / var(--tw-border-opacity));
+}
+
+.bg-accent\/yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 98 47 / var(--tw-bg-opacity));
+}
+
+.bg-gray\/50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(95 0 128 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\/assets\/images\/cart\/Location\.svg\)\] {
+  background-image: url(/assets/images/cart/Location.svg);
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-\[4px\] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
+.pb-\[32px\] {
+  padding-bottom: 32px;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-\[20px\] {
+  padding-top: 20px;
+}
+
+.pt-\[24px\] {
+  padding-top: 24px;
+}
+
+.pt-\[28px\] {
+  padding-top: 28px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.text-2xl {
+  font-size: 2.3685624599456787rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-lg {
+  font-size: 1.3329999446868896rem;
+}
+
+.text-sm {
+  font-size: 0.7501875162124634rem;
+}
+
+.text-xl {
+  font-size: 1.7768750190734863rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
+}
+
+.leading-\[18px\] {
+  line-height: 18px;
+}
+
+.leading-\[25px\] {
+  line-height: 25px;
+}
+
+.leading-\[36px\] {
+  line-height: 36px;
+}
+
+.leading-\[48px\] {
+  line-height: 48px;
+}
+
+.text-\[\#F03F40\] {
+  --tw-text-opacity: 1;
+  color: rgb(240 63 64 / var(--tw-text-opacity));
+}
+
+.text-accent\/yellow {
+  --tw-text-opacity: 1;
+  color: rgb(250 98 47 / var(--tw-text-opacity));
+}
+
+.text-content {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-gray\/300 {
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
+}
+
+.text-gray\/400 {
+  --tw-text-opacity: 1;
+  color: rgb(137 137 137 / var(--tw-text-opacity));
+}
+
+.text-gray\/500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 107 107 / var(--tw-text-opacity));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(95 0 128 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.line-through {
+  text-decoration-line: line-through;
+}
+
+/* #숨기기 with JS : 상단배너 */
+
+.top-banner-hidden {
+  transition: 1s;
+  transform: translateY(-100px);
+  display: none;
+}
+
+/* #세로 구분선 : 헤더 로그인 영역, 헤더 메인 로고 영역, 장바구니 전체선택 영역 */
+
+.divisionLine {
+  width: 1px;
+  height: 13px;
+  background: #d9d9d9;
+}
+
+/* #Cart 페이지 전체 영역 그리드 레이아웃 */
+
+.cart {
+  display: grid;
+  grid-template-areas:
+		'title title'
+		'list order';
+  justify-content: space-between;
+}
+
+.cartTitle {
+  grid-area: title;
+}
+
+.cartList {
+  grid-area: list;
+}
+
+.cartOrder {
+  grid-area: order;
+}
+
+/* #Cart 전체선택 체크 박스 */
+
+.cartCheckAll {
+  position: relative;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.cartChecAllkbox,
+.cartCheckboxList {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.cartCheckBoxlable {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartCheckBoxlable .checkIcon {
+  background: url(/assets/images/cart/ic-checked-false.svg) no-repeat 0 0 / 100%;
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+.cartChecAllkbox:checked + .cartCheckBoxlable .checkIcon,
+.cartCheckboxList:checked + .cartCheckBoxlable .checkIcon {
+  background-image: url(/assets/images/cart/ic-checked-true.svg);
+}
+
+/* #Cart에 냉장, 냉동, 상온 식품 구분 CSS */
+
+.cartCategoryWrapper {
+  width: 742px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--black, #000);
+  font-weight: 600;
+  padding: 16px 0;
+}
+
+.cartCategory {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* #Cart 냉장, 냉동, 상온 목록 토글 버튼 */
+
+.cartListbutton {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/images/common/ic-vector-bottom.svg) no-repeat;
+  background-position: 50%;
+}
+
+.cartListbutton .isClicked {
+  background: url(/assets/images/common/ic-vector-top.svg) no-repeat;
+  background-position: 50%;
+}
+
+/* #Cart 상품별 Grid 레이아웃 */
+
+.cartItemList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45px 0.7fr 3fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+.cartItemName {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+.cartItemImageWrapper {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  justify-self: start;
+}
+
+.cartCheck {
+  grid-column: 1 / 2;
+  grid-row: 1 /3;
+  justify-self: start;
+}
+
+.cartItemCount {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  justify-self: center;
+}
+
+.cartItemPrice {
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+  justify-self: end;
+  margin-top: 50px;
+}
+
+.cartItemDiscount {
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+  justify-self: end;
+}
+
+/* #Cart 금액 영역 Grid 레이아웃 / 폰트 weight / input 디자인 */
+
+.cartPriceList {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 42px 42px 50px 64px;
+  font-weight: 400;
+}
+
+.cartPriceList dd {
+  justify-self: end;
+}
+
+.cartPriceList dt:nth-child(7) {
+  place-self: center start;
+}
+
+.cartPayment {
+  place-self: center end;
+}
+
+.cartPoint {
+  grid-column: 1 / -1;
+}
+
+.cartTotalPrice {
+  background: transparent;
+}
+
+/* #Cart 수량 input(숫자 타입) 버튼 없애기 */
+
+/* Chrome, Safari, Edge, Opera */
+
+#cartItemCountInput::-webkit-outer-spin-button,
+#cartItemCountInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+
+#cartItemCountInput {
+  -moz-appearance: textfield;
+}
+
+/* #Cart 결제 예상금액 포커스 아웃라인 제거 */
+
+.cartTotalPrice:focus {
+  outline: none;
+}
+
+/* #뷰티칼리 new마크 */
+
+.beautyLink::after {
+  content: url('/assets/images/header/new.svg');
+  position: relative;
+  top: -18px;
+  left: 5px;
+}
+
+/* #검색 디폴트 ver */
+
+.SearchForm {
+  position: absolute;
+  left: 330px;
+  top: -11px;
+  height: 60px;
+  border: 1px solid #5f0080;
+  border-radius: 4px;
+}
+
+.searchFormInput {
+  /* margin-right: 7rem; */
+  width: 290px;
+  font-size: 21.328px;
+}
+
+/* #검색 스크롤 ver */
+
+.searchFormInputScroll {
+  font-size: 12.003px;
+  margin-right: 0px;
+}
+
+/* #nav */
+
+nav,
+.navScroll {
+  position: relative;
+  box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0);
+}
+
+/* # nav 호버 메뉴 sprite*/
+
+.navHoverList {
+  height: 450px;
+  overflow-y: scroll;
+  border: 1px rgb(234, 234, 234) solid;
+}
+
+.navHoverItem {
+  background: url(/assets/images/header/ic-menuIcon.svg) no-repeat;
+  background-size: 38px;
+  padding: 5px 0px 5px 44px;
+  margin: 8px 0px;
+}
+
+.navGift {
+  background-position: 2px 0px;
+}
+
+.navVegitable {
+  background-position: 2px -279px;
+}
+
+.navFruit {
+  background-position: 2px -494px;
+}
+
+.navFish {
+  background-position: 2px -648px;
+}
+
+.navMeat {
+  background-position: 2px -92px;
+}
+
+.navMainFood {
+  background-position: 2px -217px;
+}
+
+.navSalad {
+  background-position: 2px -432px;
+}
+
+.navSauce {
+  background-position: 2px -310px;
+}
+
+.navDrink {
+  background-position: 2px -157px;
+}
+
+.navSnack {
+  background-position: 2px -372px;
+}
+
+.navBakery {
+  background-position: 2px -64px;
+}
+
+.navHealth {
+  background-position: 2px -618px;
+}
+
+.navWine {
+  background-position: 2px -556px;
+}
+
+.navTraditional {
+  background-position: 2px -32px;
+}
+
+.navLiving {
+  background-position: 2px -125px;
+}
+
+.navSkin {
+  background-position: 2px -187px;
+}
+
+.navHair {
+  background-position: 2px -525px;
+}
+
+.navKitchen {
+  background-position: 2px -247px;
+}
+
+.navElectronic {
+  background-position: 2px -340px;
+}
+
+.navPet {
+  background-position: 2px -402px;
+}
+
+.navBaby {
+  background-position: 2px -462px;
+}
+
+.navTravel {
+  background-position: 2px -587px;
+}
+
+/* #header, nav 호버 효과 */
+
+.headerPrivate img:hover,
+.navList a:hover,
+.categoryButton:hover,
+.navHoverItem span:hover {
+  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
+}
+
+.navList a:hover,
+.navHoverItem span:hover {
+  filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+}
+
+/*# 화면자체의 최대크기 설정 */
+
+.fullWidth {
+  max-width: 1920px;
+}
+
+/*# 메인페이지의 중요 섹션들을 위한 최대크기 설정 */
+
+.innerWidth {
+  max-width: 1050px;
+}
+
+/*# 메인페이지 상품명 */
+
+.itemName {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+}
+
+/*# 섹션 위아래 간격주기 */
+
+.interval {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/*# 메인페이지 가격 */
+
+.itemPrice {
+  font-size: 1.332rem;
+  font-weight: 600;
+}
+
+/*# 최근 본 상품 (스크롤바) */
+
+.recentlyItem {
+  position: absolute;
+  right: 39px;
+  top: 193px;
+  box-sizing: content-box;
+  height: 207px;
+  width: 60px;
+  border: 1px solid #c4c4c4;
+  padding: 2px;
+  transition: top 0.3s ease;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+}
+
+.overflow-x-hidden .swiper-button-prev,
+.overflow-x-hidden .swiper-button-next {
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+  top: 35%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #c270c7;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
