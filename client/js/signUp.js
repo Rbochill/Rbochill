@@ -166,7 +166,6 @@ function handlesignUp(e) {
 	const {localStorage: storage} = globalThis;
 	e.preventDefault();
 
-	// 필수 입력 항목들을 가져옵니다.
 	const inputIdValue = inputId.value.trim();
 	const inputPw1Value = inputPw1.value.trim();
 	const inputPw2Value = inputPw2.value.trim();
@@ -174,7 +173,7 @@ function handlesignUp(e) {
 	const inputEmailValue = inputEmail.value.trim();
 	const inputPhoneValue = inputPhone.value.trim();
 
-	// 필수 항목이 모두 입력되었는지 확인합니다.
+	// 필수 항목이 모두 입력되었는지 확인
 	if (
 		inputIdValue !== '' &&
 		inputPw1Value !== '' &&
@@ -182,24 +181,23 @@ function handlesignUp(e) {
 		inputNameValue !== '' &&
 		inputEmailValue !== '' &&
 		inputPhoneValue !== '' &&
-		emailReg(inputIdValue) && // 아이디가 유효한 이메일 형식인지 확인
-		pwReg(inputPw1Value) && // 비밀번호가 조건에 맞는지 확인
+		emailReg(inputIdValue) &&
+		pwReg(inputPw1Value) &&
 		emailReg(inputEmailValue) &&
-		inputPw1Value === inputPw2Value // 비밀번호와 비밀번호 확인이 일치하는지 확인
+		inputPw1Value === inputPw2Value
 	) {
-		// 모든 조건을 만족하면 가입 처리를 합니다.
+		// uniqudId 생성
 		const uniqueId = Math.random().toString(36).substring(2, 11);
-		const birthday = `${inputYear.value}-${inputMonth.value}-${inputDay.value}`;
 
+		// 로컬 스토리지에 저장
+		const birthday = `${inputYear.value}-${inputMonth.value}-${inputDay.value}`;
 		storage.setItem('userId', inputIdValue);
 		storage.setItem('password', inputPw1Value);
 		storage.setItem('uniqueId', uniqueId);
 		storage.setItem('name', inputNameValue);
 		storage.setItem('phoneNum', inputPhoneValue);
 		storage.setItem('gender', inputGender.value);
-		storage.setItem('birthDate', [birthday]);
-
-		window.location.href = '/pages/login.html';
+		storage.setItem('birthDate', birthday);
 
 		// 유저 정보 전송
 		tiger.post('http://localhost:3000/users', {
@@ -210,10 +208,12 @@ function handlesignUp(e) {
 			name: inputNameValue,
 			phoneNum: inputPhoneValue,
 			gender: inputGender.value,
-			birthDate: ['', '', ''],
+			birthDate: birthday,
 		});
+
+		// 로그인 페이지로 이동
+		window.location.href = '/pages/login.html';
 	} else {
-		// 필수 입력 항목이 모두 만족되지 않으면 알림창을 띄웁니다.
 		alert('필수입력사항을 기입해주세요.');
 	}
 }
