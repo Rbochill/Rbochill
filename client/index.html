@@ -155,19 +155,15 @@
 			</div>
 
 			<!--& 최근 본 상품 -->
-			<div class="recentlyItem z-[123] flex flex-col">
-				<button class="mx-auto h-[18px] w-[18px]">
-					<img src="/assets/images/product-list/ic-arrow-up.svg" alt="최근 본 상품 위로 올리기" class="w-[100%]" />
-				</button>
-				<span class="text-xs font-semibold">최근 본 상품</span>
-				<div class="flex flex-col">
-					<a href="" class="mx-auto">첫번째</a>
-					<a href="" class="mx-auto">두번째</a>
-					<a href="" class="mx-auto">세번째</a>
-				</div>
-				<button class="mx-auto h-[18px] w-[18px]">
-					<img src="/assets/images/product-list/ic-arrow-down.svg" alt="최근 본 상품 아래로 내리기" class="w-[100%]" />
-				</button>
+			<div class="recently-swiper recentlyItem z-[10] flex w-[74px] flex-col items-center gap-[8px] p-[8px]">
+				<!-- <button class="h-[18px] w-[18px]">
+					<img src="/assets/images/product-list/ic-arrow-up.svg" alt="최근 본 상품 위로 올리기" class="recently-swiper-button-prev w-[100%]" />
+				</button> -->
+				<span class="text-sm font-semibold">최근 본 상품</span>
+				<ul class="recentlyItemRender recently-swiper-wrapper flex w-[45px] flex-col gap-[4px]"></ul>
+				<!-- <button class="h-[18px] w-[18px]">
+					<img src="/assets/images/product-list/ic-arrow-down.svg" alt="최근 본 상품 아래로 내리기" class="recently-swiper-button-next w-[100%]" />
+				</button> -->
 			</div>
 		</main>
 

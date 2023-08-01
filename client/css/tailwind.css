@@ -263,11 +263,10 @@ nav {
 	right: 39px;
 	top: 193px;
 	box-sizing: content-box;
-	height: 207px;
-	width: 60px;
 	border: 1px solid #c4c4c4;
-	padding: 2px;
+	padding: 8px;
 	transition: top 0.3s ease;
+	background-color: #fff;
 }
 
 .swiper-button-prev,
@@ -463,4 +462,8 @@ nav {
 .thumbnailImg {
 	width: 400px;
 	height: 514px;
+}
+
+.recentlyList:hover {
+	transform: scale(1.2);
 }

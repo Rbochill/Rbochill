@@ -8,26 +8,20 @@ const productDetail = $('.productDetail');
 const productReview = $('.productReview');
 const productQna = $('.productQna');
 
-const Url = 'http://localhost:3000/';
-
 const productCartButton = $('#productCartButton');
 // const moveInfo = $('#moveInfo');
 
 // # 페이지 렌더링 함수
 async function renderProductPage() {
 	try {
-		await delayP();
+		const Url = 'http://localhost:3000/';
+
+		const productId = localStorage.getItem('clickProduct');
+		console.log(productId);
 
 		const responseData = await tiger.get(Url + 'products');
 		const productData = responseData.data;
-
-		console.log(productData);
-
-		const responseId = await tiger.get(Url + 'users');
-		const productId = responseId.data[0].recently;
-		console.log(productId[productId.length - 1]);
-
-		const targetIndex = productData.findIndex((item) => item.id === productId[productId.length - 1]);
+		const targetIndex = productData.findIndex((item) => item.id === productId);
 
 		renderDataProductPage(productDetail, 'detail', productData[targetIndex]);
 		renderDataProductPage(productInfo, 'info', productData[targetIndex]);
