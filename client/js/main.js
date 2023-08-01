@@ -60,8 +60,8 @@ async function movePage(e) {
 	const response = await tiger.get('http://localhost:3000/users');
 	const users = response.data;
 
-	const firstUser = users[users.length - 1];
-	const id = users[users.length - 1].id;
+	const firstUser = users[users.length - users.length];
+	const id = users[users.length - users.length].id;
 
 	if (firstUser) {
 		// 배열에서 중복 값을 찾기

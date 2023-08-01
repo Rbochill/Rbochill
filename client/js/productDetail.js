@@ -11,7 +11,7 @@ async function renderProductPage() {
 		const Url = 'http://localhost:3000/';
 
 		const productId = localStorage.getItem('clickProduct');
-		console.log(productId);
+		// console.log(productId);
 
 		const responseData = await tiger.get(Url + 'products');
 		const productData = responseData.data;
