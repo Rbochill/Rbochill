@@ -3,14 +3,14 @@ import {attr, getNode, tiger} from '../lib/index.js';
 import {renderDiscountProduct, renderRecomandProduct} from './mainPage/index.js';
 
 const recomandList = getNode('.recomandItem');
-const discountItem = getNode('.discountItem');
+const discountList = getNode('.discountItem');
 
 async function renderProductList() {
 	try {
 		const response = await tiger.get('http://localhost:3000/products');
 		const productData = response.data;
 		productData.forEach((item) => renderRecomandProduct(recomandList, item));
-		productData.reverse().forEach((item) => renderDiscountProduct(discountItem, item));
+		productData.reverse().forEach((item) => renderDiscountProduct(discountList, item));
 	} catch (error) {
 		console.log(error);
 	}
@@ -46,4 +46,4 @@ async function movePage(e) {
 }
 
 recomandList.addEventListener('click', movePage);
-discountItem.addEventListener('click', movePage);
+discountList.addEventListener('click', movePage);

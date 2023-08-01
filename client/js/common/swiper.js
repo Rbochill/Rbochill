@@ -68,3 +68,5 @@ const scroll = function () {
 
 // # 최근 본 상품 스크롤 처리
 window.addEventListener('scroll', scroll);
+
+// # 최근 본 상품(수직)
