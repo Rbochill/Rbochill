@@ -225,6 +225,11 @@
 	top: 0;
 }
 
+/* # nav 하단 그림자 */
+nav {
+	box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* # nav 호버 메뉴 sprite*/
 .navHoverList {
 	height: 450px;
