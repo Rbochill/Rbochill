@@ -20,7 +20,7 @@ async function renderProductList() {
 renderProductList();
 
 function movePage(e) {
-	// e.preventDefault();
+	e.preventDefault();
 
 	const list = e.target.closest('li');
 
@@ -29,7 +29,7 @@ function movePage(e) {
 	}
 
 	const id = attr(list, 'data-id');
-	console.log(id); // 이거 지우고 사용하시면 될듯
+	// console.log(id); // 이거 지우고 사용하시면 될듯
 	// & 동혁님함수(id);
 }
 

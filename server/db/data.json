@@ -296,9 +296,10 @@
 
 	"users": [
 		{
-			"id": "",
+			"id": "아디입니다.",
 			"userId": "abocill@gmail.com",
 			"password": "123456789!",
+			"uniqueId": "유니크아이디입니다.",
 			"name": "알보칠",
 			"phoneNum": "010123456",
 			"address": "서울특별시 종로구 종로3길 17 D타워, 16-17층",
