@@ -85,7 +85,6 @@
 			},
 			"stock": 13
 		},
-
 		{
 			"id": "h3kiqisd",
 			"type": "frozen",
@@ -154,7 +153,6 @@
 			},
 			"stock": 14
 		},
-
 		{
 			"id": "kxwg0rtj",
 			"type": "refriger",
@@ -223,7 +221,6 @@
 			},
 			"stock": 25
 		},
-
 		{
 			"id": "pnodg8r6",
 			"type": "ambient",
@@ -293,10 +290,9 @@
 			"stock": 6
 		}
 	],
-
 	"users": [
 		{
-			"id": "",
+			"id": "0",
 			"userId": "abocill@gmail.com",
 			"password": "123456789!",
 			"uniqueId": "640b0d0d44",

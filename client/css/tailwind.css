@@ -348,9 +348,19 @@
 	font-weight: 600;
 }
 
+.cancelPrice {
+	color: gray;
+}
+
+.modalCancelPrice {
+	color: gray;
+	line-height: 2rem;
+	padding-left: 5px;
+}
+
 /*# 최근 본 상품 (스크롤바) */
 .recentlyItem {
-	position: absolute;
+	position: absolute !important;
 	right: 39px;
 	top: 193px;
 	box-sizing: content-box;
@@ -388,4 +398,222 @@
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
 	background-color: #c270c7;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#modal.modal-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgba(50, 50, 50, 0.45);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(1.5px);
+	-webkit-backdrop-filter: blur(1.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	z-index: 333;
+}
+
+#modal .modal-window {
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 8px 32px 0 rgba(78, 27, 82, 0.37);
+	backdrop-filter: blur(13.5px);
+	-webkit-backdrop-filter: blur(13.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 400px;
+	height: 300px;
+	position: relative;
+	top: -100px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+#cartItemCountInput {
+	background: rgba(255, 255, 255, 0.9);
+	width: 50px;
+}
+
+.cartCountUp {
+	width: 30px;
+}
+
+.cartCountDown {
+	width: 30px;
+}
+
+.modal-window {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 30px 1fr 20px 50px 60px;
+	gap: 10px;
+}
+
+.modalName {
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+	place-self: center left;
+}
+
+.modalPrice {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	place-self: center left;
+}
+
+.modalCount {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	place-self: center right;
+}
+
+.modalTotal {
+	grid-column: 1 / 3;
+	grid-row: 3 / 5;
+}
+
+.modalEvent {
+	grid-column: 1 / 3;
+	grid-row: 3 / 5;
+	justify-content: end;
+}
+
+.modalCancel {
+	grid-column: 1 / 2;
+	grid-row: 5 / 6;
+}
+
+.modalCart {
+	grid-column: 2 / 3;
+	grid-row: 5 / 6;
+}
+
+/* # 페이지 이동버튼 상단 고정 */
+.sticky {
+	position: -webkit-sticky;
+	top: 0;
+	background: #8a4baf;
+}
+
+.moveButtonGroup {
+	position: sticky;
+	top: 0;
+	color: white;
+	background-color: white;
+	cursor: pointer;
+	z-index: 100;
+}
+
+/* # 네비게이션 색상 변경 */
+.poductNavButton {
+	font-size: 16px;
+	display: inline-block;
+	width: 100%;
+	border: solid 1px #a6a6a6;
+	padding: 14px 0;
+	text-align: center;
+	font-weight: 700;
+	color: #333;
+	/* font-base inline-block w-full border-[1px] border-solid border-gray/300 py-[14px] text-center font-semibold text-content */
+}
+
+/* # 프로덕트페이지 상품 div */
+.poductSimpleDiv {
+	display: flex;
+	border-bottom: solid 1px #e1e1e1;
+	padding: 16px 0;
+}
+
+/* # 프로덕트페이지 상품 간단 정보 타이틀 */
+.poductSimpleTitle {
+	font-size: '0.7501875162124634rem';
+	font-weight: 600;
+	color: #6b6b6b;
+	width: 128px;
+}
+
+/* # 프로덕트페이지 상품 간단 정보 */
+.poductSimpleInfo {
+	font-size: '0.7501875162124634rem';
+	font-weight: 600;
+	color: #6b6b6b;
+	flex-grow: 1;
+}
+
+/* # 플렉스 col */
+.flexFlexCol {
+	display: flex;
+	flex-direction: column;
+}
+
+/* # 플렉스 row */
+.flexFlexrow {
+	display: flex;
+	flex-direction: row;
+}
+
+.thumbnailImg {
+	width: 400px;
+	height: 514px;
+}
+
+/* # 로그인 */
+.loginSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.loginInput {
+	height: 50px;
+	width: 340px;
+	border-radius: 4px;
+	border: 1px solid #a6a6a6;
+	padding-left: 20px;
+}
+
+.loginButton {
+	height: 54px;
+	width: 340px;
+	border-radius: 4px;
+	border: 1px solid #5f0080;
+}
+
+/* # 회원가입 */
+.informList {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 16px;
+}
+
+.agreeList {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 12px;
+}
+
+.agreeListInner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+
+.agreeListDocs {
+	display: flex;
+	display: row;
+	align-items: center;
+	font-size: 12px;
 }
