@@ -1,15 +1,6 @@
 import {} from '/js/common/index.js';
 
-import {
-	// attr,
-	tiger,
-	delayP,
-	getNode as $,
-	// changeColor,
-	// clearContents,
-	renderDataProductPage,
-	renderEmptyProductPage,
-} from '../lib/index.js';
+import {tiger, delayP, getNode as $, renderDataProductPage, renderEmptyProductPage} from '../lib/index.js';
 
 const productBase = $('.productBase');
 const productInfo = $('.productInfo');
@@ -35,10 +26,6 @@ async function renderProductPage() {
 		const responseId = await tiger.get(Url + 'users');
 		const productId = responseId.data[0].recently;
 		console.log(productId[productId.length - 1]);
-		// const responseId = await tiger.get(Url + 'users');
-		// const productId = Object.values(responseId.data[0].recently);
-		// console.log(productId);
-		// console.log(productId);
 
 		const targetIndex = productData.findIndex((item) => item.id === productId[productId.length - 1]);
 
@@ -66,10 +53,60 @@ productCartButton.addEventListener('click', () => {
 // # scrollPage 네비게이션 고정
 window.addEventListener('scroll', () => {
 	const moveButtonGroup = $('.moveButtonGroup');
-
+	changeButtonColor();
 	if (window.pageYOffset > moveButtonGroup.offsetTop) {
 		moveButtonGroup.classList.add('sticky');
 	} else {
 		moveButtonGroup.classList.remove('sticky');
 	}
 });
+
+//# 네비게이션 색 바꾸기
+function changeButtonColor() {
+	const scrollPosition = window.scrollY;
+
+	const productInfo = $('#toProductInfo');
+	const productDetail = $('#toProductDetail');
+	const productReview = $('#toProductReview');
+	const productQna = $('#toProductQna');
+
+	const targetInfo = productInfo.getBoundingClientRect().top + window.scrollY;
+	const targetDetail = productDetail.getBoundingClientRect().top + window.scrollY;
+	const targetReview = productReview.getBoundingClientRect().top + window.scrollY;
+	const targetQna = productQna.getBoundingClientRect().top + window.scrollY;
+
+	const buttonInfo = $('#GoProductInfo');
+	const buttonDetail = $('#GoProductDetail');
+	const buttonReview = $('#GoProductReview');
+	const buttonQna = $('#GoProductQna');
+
+	if (scrollPosition >= targetInfo && scrollPosition < targetDetail) {
+		baseSetNav();
+		buttonInfo.style.backgroundColor = '#5f0080';
+		buttonInfo.style.color = '#ffffff';
+	} else if (scrollPosition >= targetDetail && scrollPosition < targetReview) {
+		baseSetNav();
+		buttonDetail.style.backgroundColor = '#5f0080';
+		buttonDetail.style.color = '#ffffff';
+	} else if (scrollPosition >= targetReview && scrollPosition < targetQna) {
+		baseSetNav();
+		buttonReview.style.backgroundColor = '#5f0080';
+		buttonReview.style.color = '#ffffff';
+	} else if (scrollPosition >= targetQna) {
+		baseSetNav();
+		buttonQna.style.backgroundColor = '#5f0080';
+		buttonQna.style.color = '#ffffff';
+	} else {
+		baseSetNav();
+	}
+	function baseSetNav(terget) {
+		buttonInfo.style.backgroundColor = '#ffffff';
+		buttonInfo.style.color = '#000000';
+		buttonDetail.style.backgroundColor = '#ffffff';
+		buttonDetail.style.color = '#000000';
+		buttonReview.style.backgroundColor = '#ffffff';
+		buttonReview.style.color = '#000000';
+		buttonQna.style.backgroundColor = '#ffffff';
+		buttonQna.style.color = '#000000';
+	}
+}

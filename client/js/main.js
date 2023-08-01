@@ -45,7 +45,5 @@ async function movePage(e) {
 	window.location.href = `http://localhost:5500/pages/productDetail.html`;
 }
 
-// tiger.post('http://localhost:3000/pageNow/', {productId: productId});
-
 recomandList.addEventListener('click', movePage);
 discountItem.addEventListener('click', movePage);
