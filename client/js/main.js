@@ -47,9 +47,12 @@ async function movePage(e) {
 	e.preventDefault();
 
 	const list = e.target.closest('li');
-	if (!list) {
+	const button = e.target.closest('.cartMain');
+
+	if (button || !list) {
 		return;
 	}
+
 	const productId = attr(list, 'data-id');
 
 	localStorage.setItem('clickProduct', productId);

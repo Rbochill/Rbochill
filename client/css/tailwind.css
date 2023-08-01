@@ -373,10 +373,9 @@
 .swiper-button-prev,
 .swiper-button-next {
 	background-color: #fff;
-	opacity: 0.5;
+	opacity: 0.9 !important;
 	padding: 15px 5px;
 	border-radius: 20px;
-	color: black !important;
 }
 
 .overflow-x-hidden .swiper-button-prev,
@@ -391,7 +390,8 @@
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-	font-size: 1.1rem !important;
+	color: black;
+	font-size: 1.4rem !important;
 	font-weight: 600 !important;
 }
 .swiper-button-prev:hover,
@@ -399,12 +399,29 @@
 	background-color: #c270c7;
 }
 
+.swiper-slide:hover {
+	transform: scale(1.04);
+	transition-duration: 0.3;
+}
+
+.swiper-slide {
+	transition: transform 0.3s;
+}
+
+.cartMain {
+	transition: transform 0.5s;
+}
+
+.cartMain:hover {
+	transform: scale(1.2);
+}
+
 /* -------------------------------------------------------------------------- */
 
 #modal.modal-overlay {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	display: flex;
@@ -437,16 +454,16 @@
 	padding-top: 10px;
 }
 
-#cartItemCountInput {
+#modalCartItemCountInput {
 	background: rgba(255, 255, 255, 0.9);
 	width: 50px;
 }
 
-.cartCountUp {
+.modalCartCountUp {
 	width: 30px;
 }
 
-.cartCountDown {
+.modalCartCountDown {
 	width: 30px;
 }
 
@@ -537,6 +554,7 @@
 	font-size: '0.7501875162124634rem';
 	font-weight: 600;
 	color: #6b6b6b;
+	/* margin-right: 50px; */
 	min-width: 128px;
 }
 
