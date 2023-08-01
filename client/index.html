@@ -96,7 +96,22 @@
 					<h2 class="mb-7 p-2 text-center text-xl font-bold">이 상품 어때요?</h2>
 
 					<div class="itemSwiper h-full w-full overflow-hidden">
-						<ul class="swiper-wrapper recomandItem"></ul>
+						<ul class="swiper-wrapper recomandItem">
+							<!-- <li class='swiper-slide' data-id='${id}'>
+							<a href="">
+								<figure class="relative">
+									<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" />
+									<img src="/assets/images/main/ic-add-cart.svg" alt="장바구니에 상품 추가" class="absolute bottom-[33px] right-[15px] cartMain" />
+								</figure>
+								<dl>
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName mb-2">${name}</dd>
+									<dt class="sr-only">가격</dt>
+									<dd class="itemPrice">${price.toLocaleString()} 원</dd>
+								</dl>
+							</a>
+							</li> -->
+						</ul>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
@@ -111,7 +126,28 @@
 				<section class="interval pb-2">
 					<h2 class="mb-7 p-2 text-center text-xl font-bold">놓치면 후회할 가격</h2>
 					<div class="itemSwiper relative h-[430px] w-full overflow-x-hidden">
-						<ul class="swiper-wrapper discountItem"></ul>
+						<ul class="swiper-wrapper discountItem">
+							<!-- <li class="swiper-slide" data-id='${id}'>
+							<a href="localhost:5500/pages/productDetail.html">
+								<figure class="relative">
+									<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" /><img
+										src="/assets/images/main/ic-add-cart.svg"
+										alt="장바구니에 상품 추가"
+										class="absolute bottom-[33px] right-[15px]"/>
+								</figure>
+								<dl class="relative">
+									<dt class="sr-only">상품명</dt>
+									<dd class="itemName">${name}</dd>
+									<dt class="sr-only">정상가격</dt>
+									<dd class="absolute -bottom-6 text-gray-400"><s>${price.toLocaleString()} 원</s></dd>
+									<dt class="sr-only">할인율</dt>
+									<dd class="text-accent/yellow inline text-lg">${saleRatio * 100}%</dd>
+									<dt class="sr-only">할인가격</dt>
+									<dd class="itemPrice ml-2 inline">${Math.floor(price * (1 - saleRatio)).toLocaleString()} 원</dd>
+								</dl>
+							</a>
+						</li> -->
+						</ul>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
@@ -135,7 +171,41 @@
 			</div>
 		</main>
 
-		<div class="modal"></div>
+		<!--& 상품 클릭 모달창  -->
+		<div class="modalWrapper">
+			<!-- <div class="modal">
+				<div id="modal" class="modal-overlay">
+					<div class="modal-window">
+						<dl class="modalName">
+							<dt class="sr-only">상품명</dt>
+							<dd>${name}</dd>
+						</dl>
+						<dl class="modalPrice flex">
+							<dt class="sr-only">정상가격</dt>
+							<dd class="text-lg font-medium">${price.toLocaleString()} 원</dd>
+						</dl>
+						<dl class="modalCount">
+							<dt class="sr-only">상품 수량</dt>
+							<dd class="cartItemCount flex rounded-sm border border-gray/100">
+								<button type="button" aria-label="수량 내리기" class="cartCountDown text-center">–</button>
+								<label for="cartItemCountInput" class="sr-only">상품 수량을 좌우 버튼을 통해 조정해주세요</label>
+								<input type="number" id="cartItemCountInput" name="cartItemCountInput" value="1" readonly class="text-center" />
+								<button type="button" aria-label="수량 올리기" class="cartCountUp">+</button>
+							</dd>
+						</dl>
+						<dl class="modalTotal flex flex-col">
+							<div class="flex items-center justify-between">
+								<dt class="text-[1.2rem] font-medium">합계</dt>
+								<dd class="text-xl font-bold">${price.toLocaleString()} 원</dd>
+							</div>
+							<p class="modalEvent flex text-sm"><span class="block w-10 rounded-2xl bg-[orange] text-center text-white">적립</span>로그인 후, 적립 혜택 제공</p>
+						</dl>
+						<button class="modalCancel rounded-default border border-gray/200 text-lg">취소</button>
+						<button class="modalCart rounded-default border border-gray/200 bg-[#a03edd] text-lg text-white">장바구니 담기</button>
+					</div>
+				</div>
+			</div> -->
+		</div>
 
 		<footer></footer>
 	</body>

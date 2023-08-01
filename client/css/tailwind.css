@@ -247,6 +247,16 @@ nav {
 	font-weight: 600;
 }
 
+.cancelPrice {
+	color: gray;
+}
+
+.modalCancelPrice {
+	color: gray;
+	line-height: 2rem;
+	padding-left: 5px;
+}
+
 /*# 최근 본 상품 (스크롤바) */
 .recentlyItem {
 	position: absolute !important;
@@ -336,7 +346,7 @@ nav {
 	width: 30px;
 }
 
-.cartCount {
+.cartCountDown {
 	width: 30px;
 }
 

@@ -3,7 +3,7 @@ import {attr, getNode, tiger} from '../lib/index.js';
 import {renderDiscountProduct, renderRecomandProduct} from './mainPage/index.js';
 
 const recomandList = getNode('.recomandItem');
-const discountItem = getNode('.discountItem');
+const discountList = getNode('.discountItem');
 
 async function renderProductList() {
 	try {
@@ -11,7 +11,7 @@ async function renderProductList() {
 		const productData = response.data;
 
 		productData.forEach((item) => renderRecomandProduct(recomandList, item));
-		productData.reverse().forEach((item) => renderDiscountProduct(discountItem, item));
+		productData.reverse().forEach((item) => renderDiscountProduct(discountList, item));
 	} catch (error) {
 		console.log(error);
 	}
@@ -34,4 +34,4 @@ function movePage(e) {
 }
 
 recomandList.addEventListener('click', movePage);
-discountItem.addEventListener('click', movePage);
+discountList.addEventListener('click', movePage);
