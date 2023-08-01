@@ -364,11 +364,10 @@
 	right: 39px;
 	top: 193px;
 	box-sizing: content-box;
-	height: 207px;
-	width: 60px;
 	border: 1px solid #c4c4c4;
-	padding: 2px;
+	padding: 8px;
 	transition: top 0.3s ease;
+	background-color: #fff;
 }
 
 .swiper-button-prev,
@@ -498,11 +497,11 @@
 }
 
 /* # 페이지 이동버튼 상단 고정 */
-.sticky {
+/* .sticky {
 	position: -webkit-sticky;
 	top: 0;
 	background: #8a4baf;
-}
+} */
 
 .moveButtonGroup {
 	position: sticky;
@@ -538,7 +537,7 @@
 	font-size: '0.7501875162124634rem';
 	font-weight: 600;
 	color: #6b6b6b;
-	width: 128px;
+	min-width: 128px;
 }
 
 /* # 프로덕트페이지 상품 간단 정보 */
