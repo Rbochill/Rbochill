@@ -30,7 +30,7 @@
 							<div class="informList">
 								<!-- 이메일 조건 : 최소 @, . 포함 -->
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="id">아이디<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputId m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" required />
+								<input class="inputId inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="id" id="id" placeholder="아이디를 입력해주세요" required />
 								<button class="buttonId h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
 							<p class="errorMessage1 text-center text-Info/Error" hidden>이메일 형식으로 입력해주세요</p>
@@ -39,7 +39,14 @@
 							<div class="informList">
 								<!-- 비밀번호 조건 : 특수문자 포함 최소 6자 - 최대 16자 -->
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password1">비밀번호<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPw1 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="password" name="password" id="password1" placeholder="비밀번호를 입력해주세요" required />
+								<input
+									class="inputPw1 inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="password"
+									name="password"
+									id="password1"
+									placeholder="비밀번호를 입력해주세요"
+									required
+								/>
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 							<p class="errorMessage2 text-center text-Info/Error" hidden>특수 문자와 숫자 포함 6~16 글자로 작성해주세요</p>
@@ -48,7 +55,7 @@
 							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="password2">비밀번호 확인<sup class="text-[#F03F40]">*</sup></label>
 								<input
-									class="inputPw2 m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									class="inputPw2 inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
 									type="password"
 									name="password"
 									id="password2"
@@ -62,21 +69,28 @@
 							<!-- 이름 -->
 							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="name">이름<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputName m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" required />
+								<input class="inputName inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="name" id="name" placeholder="이름을 입력해주세요" required />
 								<span class="inline-block h-[44px] w-[143px] rounded-sm"></span>
 							</div>
 
 							<!-- 이메일 -->
 							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="email">이메일<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputEmail m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="email" id="email" placeholder="예) marketkarly@karly.com" required />
+								<input
+									class="inputEmail inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5"
+									type="text"
+									name="email"
+									id="email"
+									placeholder="예) marketkarly@karly.com"
+									required
+								/>
 								<button class="buttonEmail h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">중복확인</button>
 							</div>
 
 							<!-- 휴대폰 -->
 							<div class="informList">
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content" for="phone">휴대폰<sup class="text-[#F03F40]">*</sup></label>
-								<input class="inputPhone m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." required />
+								<input class="inputPhone inputFocus m-0 h-[44px] w-[333px] rounded-sm border border-gray/300 px-5" type="text" name="phone" id="phone" placeholder="숫자만 입력해주세요." required />
 								<button class="buttonPhone h-[44px] w-[143px] rounded-sm border border-primary text-primary" type="button">인증번호 받기</button>
 							</div>
 							<!-- 주소 -->
@@ -116,13 +130,13 @@
 								<label class="h-[44px] w-[140px] items-center p-1 align-middle leading-[36px] text-content">생년월일</label>
 								<div class="m-0 flex h-[44px] w-[333px] items-center justify-center rounded-sm border border-gray/300 px-5">
 									<label for="year"></label>
-									<input class="inputYear w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
+									<input class="inputYear inputFocus w-[80px] text-center" type="text" id="year" placeholder="YYYY" />
 									<span class="px-1">/</span>
 									<label for="month"></label>
-									<input class="inputMonth w-[80px] text-center" type="text" id="month" placeholder="MM" />
+									<input class="inputMonth inputFocus w-[80px] text-center" type="text" id="month" placeholder="MM" />
 									<span class="px-1">/</span>
 									<label for="day"></label>
-									<input class="inputDay w-[80px] text-center" type="text" id="day" placeholder="DD" />
+									<input class="inputDay inputFocus w-[80px] text-center" type="text" id="day" placeholder="DD" />
 								</div>
 							</div>
 
