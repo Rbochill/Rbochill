@@ -16,16 +16,10 @@ async function renderProductList() {
 	}
 }
 
-renderProductList();
+fetch('/pages/common/nav.html')
+	.then((res) => res.text())
+	.then((data) => (nav.innerHTML = data));
 
-async function movePage(e) {
-	e.preventDefault();
-
-	const list = e.target.closest('li');
-	if (!list) {
-		return;
-	}
-	const productId = attr(list, 'data-id');
 
 	// # 클릭된 아이템 유저데이터에 추가
 
