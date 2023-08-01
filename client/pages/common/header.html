@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 	<body>
-		<aside class="top-banner h-[50px] max-w-[1920] bg-primary py-1 text-white">
+		<aside class="topBanner top-0 z-[999] mx-auto h-[50px] min-w-full bg-primary py-1 text-white">
 			<a href="#" class="top-banner-wrapper mx-auto flex w-[1050px] items-center">
 				<p class="w-full text-center" href="#">지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</p>
 				<button type="button" class="top-banner-button float-left">
@@ -9,16 +9,21 @@
 				</button>
 			</a>
 		</aside>
-
+		<!-- 네비게이션 skip 버튼 -->
+		<aside id="navSkip" class="sr-only">
+			<a href="#loginLink" class="navSkipLink">로그인 바로가기</a>
+			<a href="#headerWrapper" class="navSkipLink">메뉴 바로가기</a>
+			<a href="#main" class="navSkipLink">본문 바로가기</a>
+		</aside>
 		<header>
-			<div class="headerWrapper mx-auto flex w-[1050px] flex-col flex-nowrap bg-white text-content">
+			<div class="headerWrapper mx-auto flex w-[1050px] flex-col flex-nowrap bg-white text-content" id="headerWrapper">
 				<!-- 헤더 가운데 -->
 				<div class="headerMain relative mt-8 flex justify-between">
 					<!-- 헤더 로고 영역 -->
 					<div class="headerTitles relative flex items-center gap-3">
 						<h1><a href="index.html" class="karlyLink text-lg font-semibold text-primary">마켓칼리</a></h1>
 						<div class="divisionLine"></div>
-						<a href="#" class="order-first"><img src="/assets/images/header/logo-kurly.svg" alt="컬리" /></a>
+						<img src="/assets/images/header/logo-kurly.svg" alt="컬리" class="order-first" />
 						<a href="#" class="beautyLink text-lg font-semibold text-gray/400">뷰티칼리</a>
 					</div>
 					<!-- 헤더 검색폼 영역 -->
@@ -45,7 +50,7 @@
 				<ul class="memberOnly order-first flex items-center justify-end gap-3 pt-3 text-sm">
 					<li><a href="/pages/common/signUp.html" class="joinLink text-primary">회원가입</a></li>
 					<div class="divisionLine"></div>
-					<li><a href="/pages/commom/login.html" class="loginLink">로그인</a></li>
+					<li><a href="/pages/commom/login.html" class="loginLink" id="loginLink">로그인</a></li>
 					<div class="divisionLine"></div>
 					<li>
 						<a href="#" class="serviceLink">고객센터</a>

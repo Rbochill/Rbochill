@@ -1,40 +1,44 @@
 import {} from '/js/common/index.js';
+import {getNode} from '../../lib/dom/index.js';
 
-// # 스크롤에 따른 네비게이션 변화 구현
 window.onload = function findNavOrigin() {
 	const navOrigin = document.querySelector('.navOrigin');
 	const navScroll = document.querySelector('.navScroll');
+	const navSkip = document.querySelector('#navSkip');
+	const navSkipLink = document.querySelectorAll('.navSkipLink');
+	const topBanner = document.querySelector('.topBanner');
+	const topBannerButton = document.querySelector('.topBanner button');
 
-	window.onscroll = () => {
-		if (window.scrollY >= 168) {
-			navOrigin.classList.add('hidden');
-			navScroll.classList.remove('hidden');
-		} else {
-			navOrigin.classList.remove('hidden');
-			navScroll.classList.add('hidden');
-		}
-	};
+	navSkipLink.forEach((node) => {
+		node.addEventListener('focus', () => navSkip.classList.remove('sr-only'));
+		node.addEventListener('focusout', () => navSkip.classList.add('sr-only'));
+	});
+
 	activeNavHover();
+
+	topBannerButton.addEventListener('click', () => {
+		topBanner.classList.add('hidden');
+	});
+
+	window.addEventListener('scroll', () => {
+		changeNavigation(navOrigin, navScroll);
+	});
 };
 
-// function changeNavigation() {
-// 	const scrollPosition = window.scrollY;
-// 	const productInfoPos = $('#toProductInfo');
-// 	const targetH2Position = productInfoPos.getBoundingClientRect().top + window.scrollY;
-// 	const button = $('#GoProductInfoPos');
+// # 스크롤에 따른 네비게이션 변화 구현
+function changeNavigation(navOrigin, navScroll) {
+	const scrollPosition = window.scrollY;
+	const headerWrapper = getNode('.headerWrapper');
+	const targetHeaderPosition = headerWrapper.getBoundingClientRect().bottom + window.scrollY;
 
-// 	if (scrollPosition >= targetH2Position) {
-// 		button.style.backgroundColor = '#5f0080';
-// 		button.style.color = '#ffffff';
-// 	} else {
-// 		button.style.backgroundColor = '#ffffff';
-// 		button.style.color = '#000000';
-// 	}
-// }
-
-// window.addEventListener('scroll', () => {
-// 	changeButtonColor();
-// });
+	if (scrollPosition >= targetHeaderPosition) {
+		navOrigin.classList.add('hidden');
+		navScroll.classList.remove('hidden');
+	} else {
+		navOrigin.classList.remove('hidden');
+		navScroll.classList.add('hidden');
+	}
+}
 
 // # 카테고리 hover시 메뉴 나타남
 function activeNavHover() {

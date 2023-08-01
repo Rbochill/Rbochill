@@ -200,11 +200,29 @@
 	margin-right: 0px;
 }
 
-/* #nav */
-nav,
-.navScroll {
-	position: relative;
-	box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0);
+/* #nav skip 버튼*/
+#navSkip {
+	position: fixed;
+	top: 0px;
+	flex-direction: column;
+	gap: 5px;
+	z-index: 1000;
+}
+#navSkip a {
+	width: 120px;
+	background: white;
+	border: 1px solid #5f0080;
+	border-radius: 4px;
+	text-align: center;
+	padding: 2px 6px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 26px;
+	color: #5f0080;
+	white-space: nowrap;
+}
+#navSkip a:focus {
+	top: 0;
 }
 
 /* # nav 호버 메뉴 sprite*/
