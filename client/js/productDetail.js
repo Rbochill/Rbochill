@@ -61,7 +61,7 @@ window.addEventListener('scroll', () => {
 	}
 });
 
-//# 네비게이션 색 바꾸기
+// # 네비게이션 색 바꾸기
 function changeButtonColor() {
 	const scrollPosition = window.scrollY;
 
@@ -70,10 +70,10 @@ function changeButtonColor() {
 	const productReview = $('#toProductReview');
 	const productQna = $('#toProductQna');
 
-	const targetInfo = productInfo.getBoundingClientRect().top + window.scrollY;
-	const targetDetail = productDetail.getBoundingClientRect().top + window.scrollY;
-	const targetReview = productReview.getBoundingClientRect().top + window.scrollY;
-	const targetQna = productQna.getBoundingClientRect().top + window.scrollY;
+	const targetInfo = productInfo.getBoundingClientRect().top + window.scrollY - 50;
+	const targetDetail = productDetail.getBoundingClientRect().top + window.scrollY - 50;
+	const targetReview = productReview.getBoundingClientRect().top + window.scrollY - 50;
+	const targetQna = productQna.getBoundingClientRect().top + window.scrollY - 50;
 
 	const buttonInfo = $('#GoProductInfo');
 	const buttonDetail = $('#GoProductDetail');
@@ -99,7 +99,7 @@ function changeButtonColor() {
 	} else {
 		baseSetNav();
 	}
-	function baseSetNav(terget) {
+	function baseSetNav() {
 		buttonInfo.style.backgroundColor = '#ffffff';
 		buttonInfo.style.color = '#000000';
 		buttonDetail.style.backgroundColor = '#ffffff';
