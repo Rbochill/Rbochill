@@ -9,7 +9,6 @@ async function renderProductList() {
 	try {
 		const response = await tiger.get('http://localhost:3000/products');
 		const productData = response.data;
-
 		productData.forEach((item) => renderRecomandProduct(recomandList, item));
 		productData.reverse().forEach((item) => renderDiscountProduct(discountItem, item));
 	} catch (error) {
@@ -19,18 +18,31 @@ async function renderProductList() {
 
 renderProductList();
 
-function movePage(e) {
-	// e.preventDefault();
+async function movePage(e) {
+	e.preventDefault();
 
 	const list = e.target.closest('li');
-
 	if (!list) {
 		return;
 	}
+	const productId = attr(list, 'data-id');
 
-	const id = attr(list, 'data-id');
-	console.log(id); // 이거 지우고 사용하시면 될듯
-	// & 동혁님함수(id);
+	// # 클릭된 아이템 유저데이터에 추가
+
+	const response = await tiger.get('http://localhost:3000/users');
+	const users = response.data;
+
+	const firstUser = users[0];
+	const id = firstUser.id;
+
+	firstUser.recently.push(productId);
+
+	// # data.json users 업데이트
+
+	await tiger.delete(`http://localhost:3000/users/${id}`).then(() => {
+		tiger.post('http://localhost:3000/users', firstUser);
+	});
+	window.location.href = `http://localhost:5500/pages/productDetail.html`;
 }
 
 recomandList.addEventListener('click', movePage);

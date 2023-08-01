@@ -4,9 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
 		<link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
 		<link rel="stylesheet" href="./../css/main.css" />
-		<script src="/js/main.js" type="module"></script>
+		<!-- <script src="/js/main.js" type="module"></script> -->
+
 		<script src="/js/productDetail.js" type="module"></script>
 		<title>project</title>
 	</head>
@@ -14,6 +16,9 @@
 		<header></header>
 		<!-- 메인 -->
 		<main>
+			<div
+				class="font-base font-sm font-semiboldpy-[12px] pxl-[12px] flexFlexColabsolute absolute relative bottom-[12px] right-[12px] hidden h-[18px] h-[30px] h-[44px] h-[56px] h-[58px] w-[100px] w-[155px] w-[30px] w-[560px] w-[56px] w-[84px] w-full gap-[16px] gap-[16px] gap-[20px] gap-[4px] gap-[82px] gap-[8px] gap-[8px] rounded-xs border-[1px] border-[1px] border-solid border-gray/100 bg-secondary px-[8px] py-[12px] py-[12px] py-[28px] py-[28px] py-[4px] py-[4px] pl-[16px] pr-[12px] text-center text-center text-sm text-sm font-bold font-semibold font-semibold text-primary text-white"
+			></div>
 			<!-- 가운데 레퍼 -->
 			<div class="mx-auto w-[1050px]">
 				<!-- 상품 기본 정보 -->
@@ -21,7 +26,7 @@
 
 				<!-- 장바구니 버튼 -->
 				<div class="ml-auto flex w-[560px] flex-row gap-[12px]">
-					<button class="h-[56px] w-[56px] place-content-center rounded-sm border-[1px] border-solid border-gray/100" type="button" aria-label="관심품목">
+					<button id="to" class="h-[56px] w-[56px] place-content-center rounded-sm border-[1px] border-solid border-gray/100" type="button" aria-label="관심품목">
 						<img
 							alt="관심품목"
 							class="mx-auto"
@@ -39,40 +44,31 @@
 				</div>
 
 				<!-- 네비게이션 -->
-				<div class="moveButtonGroup mx-auto mt-[48px] flex w-[1050px] justify-between">
+				<div class="moveButtonGroup mx-auto mt-[48px] flex h-[54px] w-[1050px] justify-between">
 					<div class="w-full">
-						<button
-							id="moveInfo"
-							class="font-base h-[54px] w-full content-center border-x-[1px] border-t-[1px] border-solid border-gray/100 font-semibold text-primary"
-							type="button"
-							aria-label="상품설명"
-						>
-							상품설명
-						</button>
+						<a id="GoProductInfo" href="#toProductInfo" class="poductNavButton" aria-label="상품설명"> 상품설명 </a>
 					</div>
 					<div class="w-full">
-						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="상세정보">상세정보</button>
+						<a id="GoProductDetail" href="#toProductDetail" class="poductNavButton" aria-label="상세정보">상세정보</a>
 					</div>
 					<div class="w-full">
-						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="후기">
-							후기 <span class="text-sm">(1,000)</span>
-						</button>
+						<a id="GoProductReview" href="#toProductReview" class="poductNavButton" aria-label="후기"> 후기 <span class="text-sm">(1,000)</span> </a>
 					</div>
 					<div class="w-full">
-						<button class="font-base h-[54px] w-full border-[1px] border-solid border-gray/300 font-semibold text-content" type="button" aria-label="문의">문의</button>
+						<a id="GoProductQna" href="#toProductQna" class="poductNavButton" aria-label="문의">문의</a>
 					</div>
 				</div>
 
 				<!-- 상품설명 -->
-				<h2 class="sr-only">상품설명</h2>
+				<h2 id="toProductInfo" class="sr-only">상품설명</h2>
 				<section class="productDetail flex flex-col gap-[96px] pb-[96px] pt-[40px]"></section>
 
 				<!-- 상세정보 -->
-				<h2 class="sr-only">상세정보</h2>
+				<h2 id="toProductDetail" class="sr-only">상세정보</h2>
 				<section class="productInfo"></section>
 
 				<!-- 후기 -->
-				<h2 class="sr-only">상품후기</h2>
+				<h2 id="toProductReview" class="sr-only">상품후기</h2>
 				<section class="productReview flex flex-col gap-[56px]">
 					<!-- 상품 후기 &버튼 -->
 
@@ -102,7 +98,7 @@
 				</section>
 
 				<!-- 문의 -->
-				<h2 class="sr-only">상품문의</h2>
+				<h2 id="toProductQna" class="sr-only">상품문의</h2>
 				<section class="productQna flex flex-col gap-[56px]"></section>
 			</div>
 		</main>
