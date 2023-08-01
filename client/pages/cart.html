@@ -5,21 +5,21 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
-		<link rel="stylesheet" href="./../css/main.css" />
+		<link rel="stylesheet" href="/css/main.css" />
 		<script src="/js/cart.js" type="module"></script>
-		<script src="/js/main.js" type="module"></script>
 
 		<title>project</title>
 	</head>
 	<body>
 		<header></header>
+		<nav></nav>
 
 		<main>
 			<div class="cart mx-auto grid w-[1050px] py-20 text-content">
 				<h2 class="cartTitle mb-11 text-center text-lg font-semibold">장바구니</h2>
 
 				<!-- Cart 상품 리스트 -->
-				<section class="cartList h-[500px] w-[742px]">
+				<section class="cartList w-[742px]">
 					<h3 class="sr-only">장바구니 상품 목록</h3>
 
 					<!-- 전체선택 체크박스 영역 Top-->
@@ -33,48 +33,25 @@
 					</div>
 
 					<!-- 상품 목록 영역 -->
-					<div class="cartCategoryWrapper">
-						<h4 class="cartCategory"><img src="/assets/images/cart/ic-cold.svg" aria-hidden="true" alt="" />냉장 식품</h4>
-						<button class="cartListbutton"></button>
+					<div class="refrigerCart">
+						<div class="cartCategoryWrapper">
+							<h4 class="cartCategory"><img src="/assets/images/cart/ic-cold.svg" aria-hidden="true" alt="" />냉장 식품</h4>
+							<button class="cartListbutton"></button>
+						</div>
 					</div>
 
-					<!-- 상품 리스트 -->
-					<ul>
-						<li class="flex h-[115px] justify-between border-b-2 border-gray/100">
-							<dl class="cartItemList">
-								<dt class="cartItemName">초코 케이크</dt>
-								<dd class="cartItemImageWrapper"><img src="/assets/images/product/Cake/thumbnail.jpg" alt="초코케이크" class="cartItemImage h-[79px] w-16" /></dd>
-								<dt class="sr-only">삭제할 아이템 선택</dt>
-								<dd class="cartCheck flex items-center">
-									<div class="cartCheckAll">
-										<input type="checkbox" class="cartChecAllkbox" id="cartCheckboxList" name="cartCheckboxList" />
-										<label for="cartCheckboxList" class="cartCheckBoxlable"> <span class="checkIcon"></span></label>
-									</div>
-								</dd>
-								<dt class="sr-only">상품 수량</dt>
-								<dd class="cartItemCount rounded-sm border border-gray/100">
-									<button type="button" aria-label="수량 내리기" class="cartCountDown w-[25px] text-center">–</button>
-									<label for="cartItemCountInput" class="sr-only">상품 수량을 좌우 버튼을 통해 조정해주세요</label>
-									<input type="number" id="cartItemCountInput" name="cartItemCountInput" value="1" readonly class="w-[25px] text-center" />
-									<button type="button" aria-label="수량 올리기" class="cartCountUp w-[25px] leading-[25px]">+</button>
-								</dd>
-								<dt class="sr-only">가격</dt>
-								<dd class="cartItemPrice text-sm text-gray/300 line-through">7,300원</dd>
-								<dt class="sr-only">할인가격</dt>
-								<dd class="cartItemDiscount font-semibold">5,000원</dd>
-							</dl>
-							<button type="button" class="ml-2"><img src="/assets/images/cart/ic-cancel.svg" alt="상품삭제" /></button>
-						</li>
-					</ul>
-
-					<div class="cartCategoryWrapper">
-						<h4 class="cartCategory"><img src="/assets/images/cart/ic-frozen.svg" aria-hidden="true" alt="" />냉동 식품</h4>
-						<button class="cartListbutton"></button>
+					<div class="frozenCart">
+						<div class="cartCategoryWrapper">
+							<h4 class="cartCategory"><img src="/assets/images/cart/ic-frozen.svg" aria-hidden="true" alt="" />냉동 식품</h4>
+							<button class="cartListbutton"></button>
+						</div>
 					</div>
 
-					<div class="cartCategoryWrapper">
-						<h4 class="cartCategory"><img src="/assets/images/cart/ic-temperature.svg" aria-hidden="true" alt="" />상온 식품</h4>
-						<button class="cartListbutton"></button>
+					<div class="ambientCart">
+						<div class="cartCategoryWrapper">
+							<h4 class="cartCategory"><img src="/assets/images/cart/ic-temperature.svg" aria-hidden="true" alt="" />상온 식품</h4>
+							<button class="cartListbutton"></button>
+						</div>
 					</div>
 				</section>
 
@@ -84,18 +61,18 @@
 					<!-- 배송지 -->
 					<dl class="flex flex-col gap-3 border border-gray/100 bg-white p-5 font-semibold">
 						<dt class="text h-[36px] bg-[url(/assets/images/cart/Location.svg)] bg-no-repeat pl-9 leading-9">배송지</dt>
-						<dd>서울 중랑구 면목로 42길 11 (행운빌딩) 603호</dd>
-						<dt class="sr-only">배송방법</dt>
-						<dd class="text-sm text-primary">샛별배송</dd>
+						<dd class="cartLocation"></dd>
+						<dt class="shipTitle sr-only">배송방법</dt>
+						<dd class="shipping text-sm text-primary">샛별배송</dd>
 						<dt class="sr-only">배송지 변경</dt>
-						<dd><button type="button" class="h-[44px] w-[244px] rounded-sm border-2 border-primary text-primary">배송지 변경</button></dd>
+						<dd><button type="button" class="shipchange h-[44px] w-[244px] rounded-sm border-2 border-primary text-primary">배송지 변경</button></dd>
 					</dl>
 					<!-- 주문금액 -->
 					<dl class="cartPriceList border border-gray/100 bg-gray/50 p-5">
 						<dt>상품금액</dt>
 						<dd class="cartNomalPrice">40,680원</dd>
 						<dt>상품할인금액</dt>
-						<dd class="cartDescountPrice">-4,651원</dd>
+						<dd class="cartDiscountPrice">-4,651원</dd>
 						<dt>배송비</dt>
 						<dd class="cartDeliveryPrice">+3000원</dd>
 						<dt>결제예정금액</dt>

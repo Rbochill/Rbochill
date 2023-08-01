@@ -200,18 +200,119 @@
 	margin-right: 0px;
 }
 
-/* #nav */
-nav {
-	box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0.3);
+/* #nav skip 버튼*/
+#navSkip {
+	position: fixed;
+	top: 0px;
+	flex-direction: column;
+	gap: 5px;
+	z-index: 1000;
+}
+#navSkip a {
+	width: 120px;
+	background: white;
+	border: 1px solid #5f0080;
+	border-radius: 4px;
+	text-align: center;
+	padding: 2px 6px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 26px;
+	color: #5f0080;
+	white-space: nowrap;
+}
+#navSkip a:focus {
+	top: 0;
+}
+
+/* # nav 호버 메뉴 sprite*/
+.navHoverList {
+	height: 450px;
+	overflow-y: scroll;
+	border: 1px rgb(234, 234, 234) solid;
+}
+.navHoverItem {
+	background: url(/assets/images/header/ic-menuIcon.svg) no-repeat;
+	background-size: 38px;
+	padding: 5px 0px 5px 44px;
+	margin: 8px 0px;
+}
+.navGift {
+	background-position: 2px 0px;
+}
+.navVegitable {
+	background-position: 2px -279px;
+}
+.navFruit {
+	background-position: 2px -494px;
+}
+.navFish {
+	background-position: 2px -648px;
+}
+.navMeat {
+	background-position: 2px -92px;
+}
+.navMainFood {
+	background-position: 2px -217px;
+}
+.navSalad {
+	background-position: 2px -432px;
+}
+.navSauce {
+	background-position: 2px -310px;
+}
+.navDrink {
+	background-position: 2px -157px;
+}
+.navSnack {
+	background-position: 2px -372px;
+}
+.navBakery {
+	background-position: 2px -64px;
+}
+.navHealth {
+	background-position: 2px -618px;
+}
+.navWine {
+	background-position: 2px -556px;
+}
+.navTraditional {
+	background-position: 2px -32px;
+}
+.navLiving {
+	background-position: 2px -125px;
+}
+.navSkin {
+	background-position: 2px -187px;
+}
+.navHair {
+	background-position: 2px -525px;
+}
+.navKitchen {
+	background-position: 2px -247px;
+}
+.navElectronic {
+	background-position: 2px -340px;
+}
+.navPet {
+	background-position: 2px -402px;
+}
+.navBaby {
+	background-position: 2px -462px;
+}
+.navTravel {
+	background-position: 2px -587px;
 }
 
 /* #header, nav 호버 효과 */
 .headerPrivate img:hover,
 .navList a:hover,
-.categoryButton:hover {
+.categoryButton:hover,
+.navHoverItem span:hover {
 	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
 }
-.navList a:hover {
+.navList a:hover,
+.navHoverItem span:hover {
 	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
 	text-decoration-line: underline;
 	text-underline-offset: 3px;
