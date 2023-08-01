@@ -2,7 +2,7 @@
 <html lang="ko">
 	<body>
 		<!-- 네비게이션 오리지널 ver -->
-		<div class="navOrigin mx-auto mt-5 flex w-[1050px] items-center justify-between font-semibold text-content">
+		<div class="navOrigin relative mx-auto mt-5 flex w-[1050px] items-center justify-between font-semibold text-content">
 			<!-- 카테고리 -->
 			<button type="button" class="categoryButton flex items-center gap-3 py-4"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" />카테고리</button>
 			<!-- 네비게이션 리스트 -->
@@ -16,12 +16,85 @@
 			<a href="#" class="deliveryLink rounded-2xl border border-solid border-[color:var(--gray-300,#A6A6A6)] px-3 py-1 text-center align-middle text-sm font-normal leading-6 text-gray/500"
 				><span class="text-primary">샛별·낮</span> 배송안내</a
 			>
+			<!-- 네비게이션 호버 메뉴 -->
+			<article class="navHover absolute left-[-3px] top-[56px] z-[999] hidden">
+				<h3 class="sr-only">카테고리 메뉴</h3>
+				<ul class="navHoverList w-[247px] bg-white">
+					<li class="navHoverItem navGift">
+						<a href="#"><span class="navHoverText">선물하기</span></a>
+					</li>
+					<li class="navHoverItem navVegitable">
+						<a href="#"><span class="navHoverText">채소</span></a>
+					</li>
+					<li class="navHoverItem navFruit">
+						<a href="#"><span class="navHoverText">과일 · 견과 · 쌀</span></a>
+					</li>
+					<li class="navHoverItem navFish">
+						<a href="#"><span class="navHoverText">수산 · 해산 · 건어물</span></a>
+					</li>
+					<li class="navHoverItem navMeat">
+						<a href="#"><span class="navHoverText">정육 · 계란</span></a>
+					</li>
+					<li class="navHoverItem navMainFood">
+						<a href="#"><span class="navHoverText">국 · 반찬 · 메인요리</span></a>
+					</li>
+					<li class="navHoverItem navSalad">
+						<a href="#"><span class="navHoverText">샐러드 · 간편식</span></a>
+					</li>
+					<li class="navHoverItem navSauce">
+						<a href="#"><span class="navHoverText">면 · 양념 · 오일</span></a>
+					</li>
+					<li class="navHoverItem navDrink">
+						<a href="#"><span class="navHoverText">생수 · 음료 · 우유 · 커피</span></a>
+					</li>
+					<li class="navHoverItem navSnack">
+						<a href="#"><span class="navHoverText">간식 · 과자 · 떡</span></a>
+					</li>
+					<li class="navHoverItem navBakery">
+						<a href="#"><span class="navHoverText">베이커리 · 치즈 · 델리</span></a>
+					</li>
+					<li class="navHoverItem navHealth">
+						<a href="#"><span class="navHoverText">건강식품</span></a>
+					</li>
+					<li class="navHoverItem navWine">
+						<a href="#"><span class="navHoverText">와인</span></a>
+					</li>
+					<li class="navHoverItem navTraditional">
+						<a href="#"><span class="navHoverText">전통주</span></a>
+					</li>
+					<li class="navHoverItem navLiving">
+						<a href="#"><span class="navHoverText">생활용품 · 리빙 · 캠핑</span></a>
+					</li>
+					<li class="navHoverItem navSkin">
+						<a href="#"><span class="navHoverText">스킨케어 · 메이크업</span></a>
+					</li>
+					<li class="navHoverItem navHair">
+						<a href="#"><span class="navHoverText">헤어 · 바디 · 구강</span></a>
+					</li>
+					<li class="navHoverItem navKitchen">
+						<a href="#"><span class="navHoverText">주방용품</span></a>
+					</li>
+					<li class="navHoverItem navElectronic">
+						<a href="#"><span class="navHoverText">가전제품</span></a>
+					</li>
+					<li class="navHoverItem navPet">
+						<a href="#"><span class="navHoverText">반려동물</span></a>
+					</li>
+					<li class="navHoverItem navBaby">
+						<a href="#"><span class="navHoverText">베이비 · 키즈 · 완구</span></a>
+					</li>
+					<li class="navHoverItem navTravel">
+						<a href="#"><span class="navHoverText">여행 · 티켓</span></a>
+					</li>
+				</ul>
+			</article>
 		</div>
+
 		<!-- 네비게이션 스크롤 ver -->
 		<div class="navScroll fixed top-0 z-[100] hidden w-full bg-white">
-			<div class="navWrapperinner mx-auto flex w-[1050px] justify-evenly bg-white py-4 font-semibold text-content">
+			<div class="navWrapperinner relative mx-auto flex w-[1050px] justify-evenly bg-white py-4 font-semibold text-content">
 				<!-- 카테고리 -->
-				<button type="button" class="categoryButton flex items-center"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" /><span class="ml-3">카테고리</span></button>
+				<button type="button" class="categoryButton categoryButtonHover flex items-center"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" /><span class="ml-3">카테고리</span></button>
 				<!-- 네비게이션 리스트 -->
 				<ul class="navList flex w-[580px] items-center justify-evenly pl-7">
 					<li><a href="#">신상품</a></li>
@@ -48,79 +121,79 @@
 					<a href="#"><img src="/assets/images/header/Heart.svg" alt="찜한 상품" /></a>
 					<a href="#"><img src="/assets/images/header/Cart.svg" alt="장바구니" /></a>
 				</div>
+				<!-- 네비게이션 호버 메뉴(스크롤 ver)-->
+				<article class="navHover navHoverScroll absolute left-[-1px] top-[71px] z-[999] hidden">
+					<h3 class="sr-only">카테고리 메뉴</h3>
+					<ul class="navHoverList w-[247px] bg-white">
+						<li class="navHoverItem navGift">
+							<a href="#"><span class="navHoverText">선물하기</span></a>
+						</li>
+						<li class="navHoverItem navVegitable">
+							<a href="#"><span class="navHoverText">채소</span></a>
+						</li>
+						<li class="navHoverItem navFruit">
+							<a href="#"><span class="navHoverText">과일 · 견과 · 쌀</span></a>
+						</li>
+						<li class="navHoverItem navFish">
+							<a href="#"><span class="navHoverText">수산 · 해산 · 건어물</span></a>
+						</li>
+						<li class="navHoverItem navMeat">
+							<a href="#"><span class="navHoverText">정육 · 계란</span></a>
+						</li>
+						<li class="navHoverItem navMainFood">
+							<a href="#"><span class="navHoverText">국 · 반찬 · 메인요리</span></a>
+						</li>
+						<li class="navHoverItem navSalad">
+							<a href="#"><span class="navHoverText">샐러드 · 간편식</span></a>
+						</li>
+						<li class="navHoverItem navSauce">
+							<a href="#"><span class="navHoverText">면 · 양념 · 오일</span></a>
+						</li>
+						<li class="navHoverItem navDrink">
+							<a href="#"><span class="navHoverText">생수 · 음료 · 우유 · 커피</span></a>
+						</li>
+						<li class="navHoverItem navSnack">
+							<a href="#"><span class="navHoverText">간식 · 과자 · 떡</span></a>
+						</li>
+						<li class="navHoverItem navBakery">
+							<a href="#"><span class="navHoverText">베이커리 · 치즈 · 델리</span></a>
+						</li>
+						<li class="navHoverItem navHealth">
+							<a href="#"><span class="navHoverText">건강식품</span></a>
+						</li>
+						<li class="navHoverItem navWine">
+							<a href="#"><span class="navHoverText">와인</span></a>
+						</li>
+						<li class="navHoverItem navTraditional">
+							<a href="#"><span class="navHoverText">전통주</span></a>
+						</li>
+						<li class="navHoverItem navLiving">
+							<a href="#"><span class="navHoverText">생활용품 · 리빙 · 캠핑</span></a>
+						</li>
+						<li class="navHoverItem navSkin">
+							<a href="#"><span class="navHoverText">스킨케어 · 메이크업</span></a>
+						</li>
+						<li class="navHoverItem navHair">
+							<a href="#"><span class="navHoverText">헤어 · 바디 · 구강</span></a>
+						</li>
+						<li class="navHoverItem navKitchen">
+							<a href="#"><span class="navHoverText">주방용품</span></a>
+						</li>
+						<li class="navHoverItem navElectronic">
+							<a href="#"><span class="navHoverText">가전제품</span></a>
+						</li>
+						<li class="navHoverItem navPet">
+							<a href="#"><span class="navHoverText">반려동물</span></a>
+						</li>
+						<li class="navHoverItem navBaby">
+							<a href="#"><span class="navHoverText">베이비 · 키즈 · 완구</span></a>
+						</li>
+						<li class="navHoverItem navTravel">
+							<a href="#"><span class="navHoverText">여행 · 티켓</span></a>
+						</li>
+					</ul>
+				</article>
 			</div>
 		</div>
-		<!-- 네비게이션 호버 메뉴 -->
-		<article class="navHover absolute z-[999] ml-[130px] hidden">
-			<h3 class="sr-only">카테고리 메뉴</h3>
-			<ul class="navHoverList w-[247px] bg-white">
-				<li class="navHoverItem navGift">
-					<a href="#"><span class="navHoverText">선물하기</span></a>
-				</li>
-				<li class="navHoverItem navVegitable">
-					<a href="#"><span class="navHoverText">채소</span></a>
-				</li>
-				<li class="navHoverItem navFruit">
-					<a href="#"><span class="navHoverText">과일 · 견과 · 쌀</span></a>
-				</li>
-				<li class="navHoverItem navFish">
-					<a href="#"><span class="navHoverText">수산 · 해산 · 건어물</span></a>
-				</li>
-				<li class="navHoverItem navMeat">
-					<a href="#"><span class="navHoverText">정육 · 계란</span></a>
-				</li>
-				<li class="navHoverItem navMainFood">
-					<a href="#"><span class="navHoverText">국 · 반찬 · 메인요리</span></a>
-				</li>
-				<li class="navHoverItem navSalad">
-					<a href="#"><span class="navHoverText">샐러드 · 간편식</span></a>
-				</li>
-				<li class="navHoverItem navSauce">
-					<a href="#"><span class="navHoverText">면 · 양념 · 오일</span></a>
-				</li>
-				<li class="navHoverItem navDrink">
-					<a href="#"><span class="navHoverText">생수 · 음료 · 우유 · 커피</span></a>
-				</li>
-				<li class="navHoverItem navSnack">
-					<a href="#"><span class="navHoverText">간식 · 과자 · 떡</span></a>
-				</li>
-				<li class="navHoverItem navBakery">
-					<a href="#"><span class="navHoverText">베이커리 · 치즈 · 델리</span></a>
-				</li>
-				<li class="navHoverItem navHealth">
-					<a href="#"><span class="navHoverText">건강식품</span></a>
-				</li>
-				<li class="navHoverItem navWine">
-					<a href="#"><span class="navHoverText">와인</span></a>
-				</li>
-				<li class="navHoverItem navTraditional">
-					<a href="#"><span class="navHoverText">전통주</span></a>
-				</li>
-				<li class="navHoverItem navLiving">
-					<a href="#"><span class="navHoverText">생활용품 · 리빙 · 캠핑</span></a>
-				</li>
-				<li class="navHoverItem navSkin">
-					<a href="#"><span class="navHoverText">스킨케어 · 메이크업</span></a>
-				</li>
-				<li class="navHoverItem navHair">
-					<a href="#"><span class="navHoverText">헤어 · 바디 · 구강</span></a>
-				</li>
-				<li class="navHoverItem navKitchen">
-					<a href="#"><span class="navHoverText">주방용품</span></a>
-				</li>
-				<li class="navHoverItem navElectronic">
-					<a href="#"><span class="navHoverText">가전제품</span></a>
-				</li>
-				<li class="navHoverItem navPet">
-					<a href="#"><span class="navHoverText">반려동물</span></a>
-				</li>
-				<li class="navHoverItem navBaby">
-					<a href="#"><span class="navHoverText">베이비 · 키즈 · 완구</span></a>
-				</li>
-				<li class="navHoverItem navTravel">
-					<a href="#"><span class="navHoverText">여행 · 티켓</span></a>
-				</li>
-			</ul>
-		</article>
 	</body>
 </html>

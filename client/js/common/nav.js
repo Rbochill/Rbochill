@@ -43,19 +43,31 @@ function changeNavigation(navOrigin, navScroll) {
 // # 카테고리 hover시 메뉴 나타남
 function activeNavHover() {
 	const categoryButton = document.querySelector('.categoryButton');
+	const categoryButtonHover = document.querySelector('.categoryButtonHover');
 	const navHover = document.querySelector('.navHover');
+	const navHoverScroll = document.querySelector('.navHoverScroll');
 	function removeClass() {
 		navHover.classList.remove('hidden');
+		navHoverScroll.classList.remove('hidden');
 	}
 	function addClass() {
 		navHover.classList.add('hidden');
+		navHoverScroll.classList.add('hidden');
 	}
 	categoryButton.addEventListener('focus', removeClass);
 	categoryButton.addEventListener('mouseover', removeClass);
 	categoryButton.addEventListener('focusout', addClass);
 	categoryButton.addEventListener('mouseout', addClass);
+	categoryButtonHover.addEventListener('focus', removeClass);
+	categoryButtonHover.addEventListener('mouseover', removeClass);
+	categoryButtonHover.addEventListener('focusout', addClass);
+	categoryButtonHover.addEventListener('mouseout', addClass);
 	navHover.addEventListener('focus', removeClass);
 	navHover.addEventListener('mouseover', removeClass);
 	navHover.addEventListener('focusout', addClass);
 	navHover.addEventListener('mouseout', addClass);
+	navHoverScroll.addEventListener('focus', removeClass);
+	navHoverScroll.addEventListener('mouseover', removeClass);
+	navHoverScroll.addEventListener('focusout', addClass);
+	navHoverScroll.addEventListener('mouseout', addClass);
 }
