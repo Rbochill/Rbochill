@@ -598,110 +598,6 @@ video {
   left: 110px;
 }
 
-.left-\[8\%\] {
-  left: 8%;
-}
-
-.left-\[20\%\] {
-  left: 20%;
-}
-
-.left-\[23\%\] {
-  left: 23%;
-}
-
-.left-\[22\%\] {
-  left: 22%;
-}
-
-.top-\[250px\] {
-  top: 250px;
-}
-
-.top-\[125pxpx\] {
-  top: 125pxpx;
-}
-
-.top-\[125px\] {
-  top: 125px;
-}
-
-.top-\[80px\] {
-  top: 80px;
-}
-
-.top-\[50px\] {
-  top: 50px;
-}
-
-.top-\[55px\] {
-  top: 55px;
-}
-
-.top-\[56px\] {
-  top: 56px;
-}
-
-.right-\[1px\] {
-  right: 1px;
-}
-
-.left-\[1px\] {
-  left: 1px;
-}
-
-.left-\[2px\] {
-  left: 2px;
-}
-
-.left-\[-2px\] {
-  left: -2px;
-}
-
-.left-\[-3px\] {
-  left: -3px;
-}
-
-.left-\[\] {
-  left: ;
-}
-
-.top-\[58px\] {
-  top: 58px;
-}
-
-.top-\[60px\] {
-  top: 60px;
-}
-
-.top-\[65px\] {
-  top: 65px;
-}
-
-.top-\[75px\] {
-  top: 75px;
-}
-
-.top-\[70px\] {
-  top: 70px;
-}
-
-.top-\[72px\] {
-  top: 72px;
-}
-
-.top-\[7px\] {
-  top: 7px;
-}
-
-.top-\[71px\] {
-  top: 71px;
-}
-
-.left-\[-1px\] {
-  left: -1px;
-}
-
 .z-\[100\] {
   z-index: 100;
 }
@@ -964,10 +860,6 @@ video {
 
 .min-w-full {
   min-width: 100%;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-row {
