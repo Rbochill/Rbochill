@@ -225,6 +225,11 @@
 	top: 0;
 }
 
+/* # nav 하단 그림자 */
+nav {
+	box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* # nav 호버 메뉴 sprite*/
 .navHoverList {
 	height: 450px;
@@ -364,20 +369,18 @@
 	right: 39px;
 	top: 193px;
 	box-sizing: content-box;
-	height: 207px;
-	width: 60px;
 	border: 1px solid #c4c4c4;
-	padding: 2px;
+	padding: 8px;
 	transition: top 0.3s ease;
+	background-color: #fff;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
 	background-color: #fff;
-	opacity: 0.5;
+	opacity: 0.9 !important;
 	padding: 15px 5px;
 	border-radius: 20px;
-	color: black !important;
 }
 
 .overflow-x-hidden .swiper-button-prev,
@@ -392,7 +395,8 @@
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-	font-size: 1.1rem !important;
+	color: black;
+	font-size: 1.4rem !important;
 	font-weight: 600 !important;
 }
 .swiper-button-prev:hover,
@@ -400,12 +404,29 @@
 	background-color: #c270c7;
 }
 
+.swiper-slide:hover {
+	transform: scale(1.04);
+	transition-duration: 0.3;
+}
+
+.swiper-slide {
+	transition: transform 0.3s;
+}
+
+.cartMain {
+	transition: transform 0.5s;
+}
+
+.cartMain:hover {
+	transform: scale(1.2);
+}
+
 /* -------------------------------------------------------------------------- */
 
 #modal.modal-overlay {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	display: flex;
@@ -438,16 +459,16 @@
 	padding-top: 10px;
 }
 
-#cartItemCountInput {
+#modalCartItemCountInput {
 	background: rgba(255, 255, 255, 0.9);
 	width: 50px;
 }
 
-.cartCountUp {
+.modalCartCountUp {
 	width: 30px;
 }
 
-.cartCountDown {
+.modalCartCountDown {
 	width: 30px;
 }
 
@@ -498,11 +519,11 @@
 }
 
 /* # 페이지 이동버튼 상단 고정 */
-.sticky {
+/* .sticky {
 	position: -webkit-sticky;
 	top: 0;
 	background: #8a4baf;
-}
+} */
 
 .moveButtonGroup {
 	position: sticky;
@@ -538,7 +559,8 @@
 	font-size: '0.7501875162124634rem';
 	font-weight: 600;
 	color: #6b6b6b;
-	width: 128px;
+	/* margin-right: 50px; */
+	min-width: 128px;
 }
 
 /* # 프로덕트페이지 상품 간단 정보 */
