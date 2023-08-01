@@ -36,40 +36,55 @@ function handleCheckPw() {
 }
 
 // # 로그인
-let user = {};
 
-let response = await fetch('http://localhost:3000/users');
-user = await response.json();
-// 서버에서 가져온 데이터
-console.log('id :', user[0].userId);
-console.log(('pw :', user[0].password));
-
-function handleLogin(e) {
+async function handleLogin(e) {
 	const {localStorage: storage} = globalThis;
 	e.preventDefault();
+
+	let response = await fetch('http://localhost:3000/users');
+	let users = await response.json();
+	// 서버에서 가져온 데이터 (data.json에 있는 users는 배열이다. -> find를 이용해 배열 안을 찾는다.)
+	const usersInform = users.find((item) => {
+		// console.log(item); // 객체가 나옴
+		// console.log(item.userId); // 아이디가 나옴
+		return item.userId === inputId.value;
+	});
+
+	console.log(usersInform); // 사용자가 입력한 정보가 객체로 나타남
+
 	//  사용자가 입력한 데이터
 	const id = inputId.value;
 	const pw = inputPw.value;
-	//  서버에서 가져온 데이터
-	let getUserId = user[0].userId;
-	let getUserPw = user[0].password;
 
-	if (id === getUserId && pw === getUserPw) {
-		// 서버의 데이터를 로컬 스토리지에 저장
-		const serverUniqueId = user[0].uniqueId;
-		storage.setItem('uniqueId', serverUniqueId);
-
-		// 로컬 스토리지의 데이터 유니크 아이디 가져오기
-		const localUniqueId = storage.getItem('uniqueId');
-		console.log('localUniqueId :', localUniqueId);
-		console.log('uniqueId :', user[0].uniqueId);
-
-		if (serverUniqueId === localUniqueId) {
-			alert('성공');
-			window.location.href = '/index.html';
-		}
+	if (usersInform === undefined) {
+		// 사용자 정보를 찾지 못한 경우
+		alert('해당 아이디로 등록된 사용자가 없습니다. 정확한 아이디를 입력해 주세요.');
 	} else {
-		alert('정확한 아이디와 비밀번호를 입력해 주세요.');
+		//  서버에서 가져온 데이터
+		let getUserId = usersInform.userId; // 객체니까 userInform.userId 이렇게 찾기
+		let getUserPw = usersInform.password;
+
+		if (id === getUserId && pw === getUserPw) {
+			// 서버의 데이터를 로컬 스토리지에 저장
+			storage.setItem('userId', usersInform.userId);
+			storage.setItem('password', usersInform.password);
+			storage.setItem('uniqueId', usersInform.uniqueId);
+			storage.setItem('name', usersInform.name);
+			storage.setItem('phoneNum', usersInform.phoneNum);
+			storage.setItem('gender', usersInform.gender);
+			storage.setItem('birthDate', usersInform.birthDate);
+
+			// 로컬 스토리지의 유니크 아이디 가져오기
+			const localUniqueId = storage.getItem('uniqueId');
+
+			if (usersInform.uniqueId === localUniqueId) {
+				window.location.href = '/index.html';
+			} else if (localUniqueId === undefined) {
+				alert('실패');
+			}
+		} else {
+			alert('정확한 아이디와 비밀번호를 입력해 주세요.');
+		}
 	}
 }
 

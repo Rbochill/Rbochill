@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "y7jn2m4j",
-      "type": "product",
+      "type": "frozen",
       "name": "[대구 반할만떡] 유부호만두",
       "description": "유부로 속을 든든히 채운 군만두",
       "price": 6900,
@@ -19,7 +19,7 @@
     },
     {
       "id": "x1vr95eb",
-      "type": "product",
+      "type": "ambient",
       "name": "[풀무원] 탱탱쫄면 (4개입)",
       "description": "튀기지 않아 부드럽고 매콤한",
       "price": 4980,
@@ -36,7 +36,7 @@
     },
     {
       "id": "xnfr8rsb",
-      "type": "product",
+      "type": "frozen",
       "name": "[홍대주꾸미] 주꾸미 볶음 300g (냉동)",
       "description": "매콤달콤한 마력의 밥도둑",
       "price": 7900,
@@ -53,7 +53,7 @@
     },
     {
       "id": "zowlun35",
-      "type": "product",
+      "type": "frozen",
       "name": "[강남면옥] 소갈비찜",
       "description": "보는 맛과 먹는 맛 모두 푸짐",
       "price": 29800,
@@ -70,7 +70,7 @@
     },
     {
       "id": "0y7s3sjv",
-      "type": "product",
+      "type": "refriger",
       "name": "[Kalry's] 한돈 삼겹 베이컨",
       "description": "무항생제 한돈 삼겹살의 고소한 풍미 그대로",
       "price": 4500,
@@ -311,22 +311,9 @@
       },
       "recently": [
         "zowlun35",
-        "y7jn2m4j",
-        "xnfr8rsb",
-        "x1vr95eb"
-      ]
-    },
-    {
-      "id": "HSOtj3f",
-      "userId": "abcd@gmail.com",
-      "password": "!1abcd",
-      "uniqueId": "g0kaced6y",
-      "name": "김다인",
-      "phoneNum": "01012345678",
-      "birthDate": [
-        "",
-        "",
-        ""
+        "x1vr95eb",
+        "acoe5jor",
+        "xnfr8rsb"
       ]
     }
   ]
