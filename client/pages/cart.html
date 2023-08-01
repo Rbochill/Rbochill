@@ -14,7 +14,7 @@
 		<header></header>
 		<nav></nav>
 
-		<main>
+		<main id="main">
 			<div class="cart mx-auto grid w-[1050px] py-20 text-content">
 				<h2 class="cartTitle mb-11 text-center text-lg font-semibold">장바구니</h2>
 
@@ -39,6 +39,34 @@
 							<button class="cartListbutton"></button>
 						</div>
 					</div>
+					<!-- List -->
+					<!-- <ul>
+						<li class="flex h-[115px] justify-between border-b-2 border-gray/100">
+							<dl class="cartItemList">
+								<dt class="cartItemName">${name}</dt>
+								<dd class="cartItemImageWrapper"><img src="/assets/images/product/${thumbnail}" alt="${name}" class="cartItemImage h-[79px] w-16" /></dd>
+								<dt class="sr-only">삭제할 아이템 선택</dt>
+								<dd class="cartCheck flex items-center">
+									<div class="cartCheckAll">
+										<input type="checkbox" class="cartChecAllkbox" id="${name}Cart" name="${name}Cart" />
+										<label for="${name}Cart" class="cartCheckBoxlable"> <span class="checkIcon"></span></label>
+									</div>
+								</dd>
+								<dt class="sr-only">상품 수량</dt>
+								<dd class="cartItemCount rounded-sm border border-gray/100">
+									<button type="button" aria-label="수량 내리기" class="cartCountDown w-[25px] text-center">–</button>
+									<label for="cartItemCountInput" class="sr-only">상품 수량을 좌우 버튼을 통해 조정해주세요</label>
+									<input type="number" id="cartItemCountInput" name="cartItemCountInput" value="${firstCount}" readonly class="w-[25px] text-center" data-id="${id}" />
+									<button type="button" aria-label="수량 올리기" class="cartCountUp w-[25px] leading-[25px]">+</button>
+								</dd>
+								<dt class="sr-only">가격</dt>
+								<dd class="cartItemPrice cartPlusPrice bigPrice text-sm text-gray/300 line-through">${textNomalPrice}원</dd>
+								<dt class="sr-only">할인가격</dt>
+								<dd class="cartItemDiscount cartMinusPrice smallPrice font-semibold">${textSalePrice}원</dd>
+							</dl>
+							<button type="button" class="ml-2"><img src="/assets/images/cart/ic-cancel.svg" alt="상품삭제" /></button>
+						</li>
+					</ul> -->
 
 					<div class="frozenCart">
 						<div class="cartCategoryWrapper">
@@ -111,5 +139,67 @@
 		</main>
 
 		<footer></footer>
+		<!-- Code injected by live-server -->
+		<script type="text/javascript">
+			// <![CDATA[  <-- For SVG support
+			if ('WebSocket' in window) {
+				(function () {
+					function refreshCSS() {
+						var sheets = [].slice.call(document.getElementsByTagName('link'));
+						var head = document.getElementsByTagName('head')[0];
+						for (var i = 0; i < sheets.length; ++i) {
+							var elem = sheets[i];
+							head.removeChild(elem);
+							var rel = elem.rel;
+							if ((elem.href && typeof rel != 'string') || rel.length == 0 || rel.toLowerCase() == 'stylesheet') {
+								var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+								elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + new Date().valueOf();
+							}
+							head.appendChild(elem);
+						}
+					}
+					var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+					var address = protocol + window.location.host + window.location.pathname + '/ws';
+					var socket = new WebSocket(address);
+					socket.onmessage = function (msg) {
+						if (msg.data == 'reload') window.location.reload();
+						else if (msg.data == 'refreshcss') refreshCSS();
+					};
+					console.log('Live reload enabled.');
+				})();
+			}
+			// ]]>
+		</script>
+		<!-- Code injected by live-server -->
+		<script type="text/javascript">
+			// <![CDATA[  <-- For SVG support
+			if ('WebSocket' in window) {
+				(function () {
+					function refreshCSS() {
+						var sheets = [].slice.call(document.getElementsByTagName('link'));
+						var head = document.getElementsByTagName('head')[0];
+						for (var i = 0; i < sheets.length; ++i) {
+							var elem = sheets[i];
+							head.removeChild(elem);
+							var rel = elem.rel;
+							if ((elem.href && typeof rel != 'string') || rel.length == 0 || rel.toLowerCase() == 'stylesheet') {
+								var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+								elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + new Date().valueOf();
+							}
+							head.appendChild(elem);
+						}
+					}
+					var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+					var address = protocol + window.location.host + window.location.pathname + '/ws';
+					var socket = new WebSocket(address);
+					socket.onmessage = function (msg) {
+						if (msg.data == 'reload') window.location.reload();
+						else if (msg.data == 'refreshcss') refreshCSS();
+					};
+					console.log('Live reload enabled.');
+				})();
+			}
+			// ]]>
+		</script>
 	</body>
 </html>

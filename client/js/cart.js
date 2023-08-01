@@ -250,15 +250,16 @@ function renderCartPrice() {
 
 	// # '정상가 + 할인가' 구하기
 	const totalPriceHtml = document.querySelector('#totalPrice');
-	const totalPrice = sumPrices - minusPrices;
-	totalPriceHtml.value = `${changePriceLocale(totalPrice)}원`;
+	const totalPrice = sumPrices - balancePrice;
 
 	// # 배송비
 	const cartDeliveryPrice = document.querySelector('.cartDeliveryPrice');
 	if (totalPrice <= 50000) {
 		cartDeliveryPrice.innerText = '+3000원';
+		totalPriceHtml.value = `${changePriceLocale(totalPrice + 3000)}원`;
 	} else {
 		cartDeliveryPrice.innerText = '0원';
+		totalPriceHtml.value = `${changePriceLocale(totalPrice)}원`;
 	}
 }
 renderCartPrice();

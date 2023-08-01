@@ -438,19 +438,6 @@
 	padding-top: 10px;
 }
 
-#cartItemCountInput {
-	background: rgba(255, 255, 255, 0.9);
-	width: 50px;
-}
-
-.cartCountUp {
-	width: 30px;
-}
-
-.cartCountDown {
-	width: 30px;
-}
-
 .modal-window {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -498,11 +485,6 @@
 }
 
 /* # 페이지 이동버튼 상단 고정 */
-.sticky {
-	position: -webkit-sticky;
-	top: 0;
-	background: #8a4baf;
-}
 
 .moveButtonGroup {
 	position: sticky;

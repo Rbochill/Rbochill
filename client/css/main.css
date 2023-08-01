@@ -738,6 +738,10 @@ video {
   display: none;
 }
 
+.h-\[115px\] {
+  height: 115px;
+}
+
 .h-\[18px\] {
   height: 18px;
 }
@@ -790,12 +794,20 @@ video {
   height: 58px;
 }
 
+.h-\[79px\] {
+  height: 79px;
+}
+
 .h-full {
   height: 100%;
 }
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-2 {
@@ -860,6 +872,10 @@ video {
 
 .w-\[247px\] {
   width: 247px;
+}
+
+.w-\[25px\] {
+  width: 25px;
 }
 
 .w-\[284px\] {
@@ -1084,6 +1100,10 @@ video {
 
 .border-y-2 {
   border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.border-b-2 {
   border-bottom-width: 2px;
 }
 
@@ -1379,6 +1399,10 @@ video {
   line-height: 18px;
 }
 
+.leading-\[25px\] {
+  line-height: 25px;
+}
+
 .leading-\[36px\] {
   line-height: 36px;
 }
@@ -1430,6 +1454,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 /* #숨기기 with JS : 상단배너 */
@@ -1943,19 +1971,6 @@ video {
   padding-top: 10px;
 }
 
-#cartItemCountInput {
-  background: rgba(255, 255, 255, 0.9);
-  width: 50px;
-}
-
-.cartCountUp {
-  width: 30px;
-}
-
-.cartCountDown {
-  width: 30px;
-}
-
 .modal-window {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2003,12 +2018,6 @@ video {
 }
 
 /* # 페이지 이동버튼 상단 고정 */
-
-.sticky {
-  position: -webkit-sticky;
-  top: 0;
-  background: #8a4baf;
-}
 
 .moveButtonGroup {
   position: sticky;
