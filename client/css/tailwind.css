@@ -201,7 +201,8 @@
 }
 
 /* #nav */
-nav {
+nav,
+.navScroll {
 	box-shadow: 1px 15px 24px -4px rgba(186, 186, 186, 0.3);
 }
 
@@ -209,12 +210,12 @@ nav {
 .headerPrivate img:hover,
 .navList a:hover,
 .categoryButton:hover {
-	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
+	/* filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%); */
 }
 .navList a:hover {
-	filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%);
-	text-decoration-line: underline;
-	text-underline-offset: 3px;
+	/* filter: invert(14%) sepia(52%) saturate(7471%) hue-rotate(282deg) brightness(61%) contrast(113%); */
+	/* text-decoration-line: underline;
+	text-underline-offset: 3px; */
 }
 
 /*# 화면자체의 최대크기 설정 */

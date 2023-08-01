@@ -13,60 +13,10 @@
 	</head>
 	<body>
 		<header></header>
-		<!-- 네비게이션 오리지널 ver -->
-		<nav class="sticky top-0 z-[100] bg-white">
-			<div class="navWrapper text-content mx-auto mt-5 flex w-[1050px] items-center justify-between py-4 font-semibold">
-				<!-- 카테고리 -->
-				<button type="button" class="categoryButton flex items-center gap-3"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" />카테고리</button>
-				<!-- 네비게이션 리스트 -->
-				<ul class="navList flex w-[600px] justify-around">
-					<li><a href="#">신상품</a></li>
-					<li><a href="#">베스트</a></li>
-					<li><a href="#">알뜰쇼핑</a></li>
-					<li><a href="#">특가/혜택</a></li>
-				</ul>
-				<!-- 배송안내 -->
-				<a href="#" class="deliveryLink text-gray/500 rounded-2xl border border-solid border-[color:var(--gray-300,#A6A6A6)] px-3 py-1 text-center align-middle text-sm font-normal leading-6"
-					><span class="text-primary">샛별·낮</span> 배송안내</a
-				>
-			</div>
-		</nav>
-		<!-- 네비게이션 스크롤 ver -->
-		<nav class="sticky top-0 z-[100] hidden bg-white">
-			<div class="navWrapper text-content mx-auto mt-5 flex w-[1050px] justify-between py-4 font-semibold">
-				<!-- 카테고리 -->
-				<button type="button" class="categoryButton flex items-center gap-3"><img src="/assets/images/header/Hamburger.svg" alt="매뉴" />카테고리</button>
-				<!-- 네비게이션 리스트 -->
-				<ul class="navList flex w-[600px] items-center justify-around">
-					<li><a href="#">신상품</a></li>
-					<li><a href="#">베스트</a></li>
-					<li><a href="#">알뜰쇼핑</a></li>
-					<li><a href="#">특가/혜택</a></li>
-				</ul>
-				<!-- nav 검색폼 영역 -->
-				<form action="#">
-					<div class="SearchFormScroll flex items-center rounded-sm border border-solid border-[#5f0080] font-normal">
-						<fieldset>
-							<legend class="sr-only">검색</legend>
-							<div class="searchInputGroup flex w-full items-center px-5">
-								<label for="search" class="sr-only">검색어</label>
-								<input type="search" required placeholder="검색어를 입력해주세요" name="search" id="search" class="searchFormInputScroll focus:outline-none" />
-								<button type="submit" class="searchFormButton"><img src="/assets/images/header/Search.svg" alt="검색" /></button>
-							</div>
-						</fieldset>
-					</div>
-				</form>
-				<!-- nav 카트 영역 -->
-				<div class="headerPrivate ml-2 flex items-center gap-5">
-					<button type="button" class="headerAddressButton"><img src="/assets/images/header/Location.svg" alt="배송지 변경" /></button>
-					<a href="#"><img src="/assets/images/header/Heart.svg" alt="찜한 상품" /></a>
-					<a href="#"><img src="/assets/images/header/Cart.svg" alt="장바구니" /></a>
-				</div>
-			</div>
-		</nav>
+		<nav></nav>
 
 		<!--& 메인 광고 슬라이더 -->
-		<article class="fullWidth text-content mx-auto font-bold">
+		<article class="fullWidth mx-auto font-bold text-content">
 			<div class="swiper">
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
@@ -245,9 +195,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[스윗밸런스] 오늘의 샐러드 6종</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>5,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>5,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">98%</dd>
+										<dd class="inline text-lg text-accent/yellow">98%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">100 원</dd>
 									</dl>
@@ -266,9 +216,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[농심] 메밀소바 5입</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>10,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>10,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">99%</dd>
+										<dd class="inline text-lg text-accent/yellow">99%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">100 원</dd>
 									</dl>
@@ -287,9 +237,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[창화당] 통통 왕군만두</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>100,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>100,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">99%</dd>
+										<dd class="inline text-lg text-accent/yellow">99%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">1,000 원</dd>
 									</dl>
@@ -308,9 +258,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[대림바스] 멀티필터 샤워기 (5개입)</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>500,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>500,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">20%</dd>
+										<dd class="inline text-lg text-accent/yellow">20%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">400,000 원</dd>
 									</dl>
@@ -329,9 +279,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[스윗밸런스] 오늘의 샐러드 6종</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>5,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>5,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">98%</dd>
+										<dd class="inline text-lg text-accent/yellow">98%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">100 원</dd>
 									</dl>
@@ -350,9 +300,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[농심] 메밀소바 5입</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>10,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>10,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">99%</dd>
+										<dd class="inline text-lg text-accent/yellow">99%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">100 원</dd>
 									</dl>
@@ -371,9 +321,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[창화당] 통통 왕군만두</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>100,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>100,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">99%</dd>
+										<dd class="inline text-lg text-accent/yellow">99%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">1,000 원</dd>
 									</dl>
@@ -392,9 +342,9 @@
 										<dt class="sr-only">상품명</dt>
 										<dd class="itemName">[대림바스] 멀티필터 샤워기 (5개입)</dd>
 										<dt class="sr-only">정상가격</dt>
-										<dd class="absolute -bottom-6 text-gray-400"><s>500,000 원</s></dd>
+										<dd class="text-gray-400 absolute -bottom-6"><s>500,000 원</s></dd>
 										<dt class="sr-only">할인율</dt>
-										<dd class="text-accent/yellow inline text-lg">20%</dd>
+										<dd class="inline text-lg text-accent/yellow">20%</dd>
 										<dt class="sr-only">할인가격</dt>
 										<dd class="itemPrice ml-2 inline">400,000 원</dd>
 									</dl>
