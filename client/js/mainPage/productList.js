@@ -7,7 +7,7 @@ function createRecomandProduct({id = '', name = '', price = '', image = ''}) {
 		<a href="http://localhost:5500/pages/productDetail.html">
 			<figure class="relative">
 				<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" />
-				<img src="/assets/images/main/ic-add-cart.svg" alt="장바구니에 상품 추가" class="absolute bottom-[33px] right-[15px] cartMain" />
+				<img src="/assets/images/main/ic-add-cart.svg" alt="장바구니에 상품 추가" class="absolute bottom-[33px] right-[15px] cartMain" tabindex='0' />
 			</figure>
 			<dl>
 				<dt class="sr-only">상품명</dt>
@@ -38,7 +38,7 @@ function createDiscountProduct({id = '', name = '', price = '', image = '', sale
 					<img src='/assets/images/product/${image.thumbnail}' alt="${image.alt}" class="pb-4" /><img
 						src="/assets/images/main/ic-add-cart.svg"
 						alt="장바구니에 상품 추가"
-						class="absolute bottom-[33px] right-[15px] cartMain"/>
+						class="absolute bottom-[33px] right-[15px] cartMain" tabindex='0'/>
 				</figure>
 				<dl class="relative">
 					<dt class="sr-only">상품명</dt>
