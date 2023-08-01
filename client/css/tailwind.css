@@ -395,3 +395,72 @@ nav {
 	grid-column: 2 / 3;
 	grid-row: 5 / 6;
 }
+
+/* # 페이지 이동버튼 상단 고정 */
+.sticky {
+	position: -webkit-sticky;
+	top: 0;
+	background: #8a4baf;
+}
+
+.moveButtonGroup {
+	position: sticky;
+	top: 0;
+	color: white;
+	background-color: white;
+	cursor: pointer;
+	z-index: 100;
+}
+
+/* # 네비게이션 색상 변경 */
+.poductNavButton {
+	font-size: 16px;
+	display: inline-block;
+	width: 100%;
+	border: solid 1px #a6a6a6;
+	padding: 14px 0;
+	text-align: center;
+	font-weight: 700;
+	color: #333;
+	/* font-base inline-block w-full border-[1px] border-solid border-gray/300 py-[14px] text-center font-semibold text-content */
+}
+
+/* # 프로덕트페이지 상품 div */
+.poductSimpleDiv {
+	display: flex;
+	border-bottom: solid 1px #e1e1e1;
+	padding: 16px 0;
+}
+
+/* # 프로덕트페이지 상품 간단 정보 타이틀 */
+.poductSimpleTitle {
+	font-size: '0.7501875162124634rem';
+	font-weight: 600;
+	color: #6b6b6b;
+	width: 128px;
+}
+
+/* # 프로덕트페이지 상품 간단 정보 */
+.poductSimpleInfo {
+	font-size: '0.7501875162124634rem';
+	font-weight: 600;
+	color: #6b6b6b;
+	flex-grow: 1;
+}
+
+/* # 플렉스 col */
+.flexFlexCol {
+	display: flex;
+	flex-direction: column;
+}
+
+/* # 플렉스 row */
+.flexFlexrow {
+	display: flex;
+	flex-direction: row;
+}
+
+.thumbnailImg {
+	width: 400px;
+	height: 514px;
+}

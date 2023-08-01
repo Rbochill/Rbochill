@@ -57,6 +57,7 @@ const scroll = function () {
 	if (!quickMenu) {
 		return;
 	}
+
 	let windowHeight = window.innerHeight;
 	let maxTopValue = windowHeight - quickMenu.offsetHeight - 100; // 최대 상단 설정
 	let targetTop = 75 + window.scrollY; // 상단 여백 업데이트
