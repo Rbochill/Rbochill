@@ -9,6 +9,10 @@ fetch('/pages/common/footer.html')
 	.then((res) => res.text())
 	.then((data) => (footer.innerHTML = data));
 
+fetch('/pages/common/nav.html')
+	.then((res) => res.text())
+	.then((data) => (nav.innerHTML = data));
+
 // # swiper article
 const swiperMain = new Swiper('.swiper', {
 	// Optional parameters
