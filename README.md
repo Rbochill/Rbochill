@@ -534,10 +534,6 @@ function changeButtonColor() {
 - targetTop과 targetNextTop: 각각 해당 내비게이션 요소의 top 위치와 다음 내비게이션 요소의 top 위치를 계산합니다. 여기서 마지막 요소는 다음 요소가 없으므로, targetNextTop 값은 null로 처리됩니다.
 - if (scrollPosition >= targetTop && (targetNextTop === null || scrollPosition < targetNextTop)): 스크롤 위치가 현재 내비게이션 범위 내에 있으면, 특히 스크롤 위치가 현재 대상 이상(targetTop 이상)이고, 다음 대상 이상 (targetNextTop 이상)이거나, 다음 대상이 없는 경우(null) 버튼의 배경색과 글자색을 변경하게 됩니다.
 - resetNavButtons: 모든 내비게이션 버튼의 배경색과 글자색을 초기 상태로 변경하는 함수입니다. 만약 현재 내비게이션 요소가 아닌 다른 요소에 스크롤이 있을 때, 변경된 버튼의 색상을 원래대로 돌릴 필요가 있기 때문에 이 함수를 호출하여 초기화합니다.
-## 
-productDetail.js
-- renderProductPage(): 상품 상세 페이지를 렌더링합니다. 렌더링할 페이지의 컨텐츠를 정의한 pagesToRender 배열을 기반으로 Product Info, Product Detail, Product Review, Product Q&A 및 Base 정보를 렌더링합니다.
-- changeButtonColor(): scroll event 리스너가 실행될 때 호출되며, 해당 위치에 맞게 네비게이션 색상을 변경합니다.
 
 ## 코드리뷰 | footer
 
