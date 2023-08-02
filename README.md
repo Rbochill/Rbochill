@@ -142,6 +142,28 @@
 - 모달창에서 버튼에 따라 수량을 조절할 수 있습니다.
 - 장바구니 담기 버튼을 누르면 장바구니에 상품이 담깁니다.
 
+![최근본 상품](https://github.com/dongapple/EXAMPLE/assets/74224516/5db90790-a6fa-4547-9b85-13fb2232c632)
+```js
+if (firstUser) {
+// 배열에서 중복 값을 찾기
+const index = firstUser.recently.indexOf(productId);
+
+if (index > -1) {
+	// 기존 값이 있으면 제거
+	firstUser.recently.splice(index, 1);
+}
+//
+firstUser.recently.push(productId);
+if (firstUser.recently.length > 4) {
+	firstUser.recently.shift(); // 배열의 길이가 5를 초과하면 맨 앞 데이터 삭제
+}
+}
+```
+- 아이템이 클릭되서 상세상품으로 넘어갈때 클릭된 아이템의 id 값을 유저 recentlyitem 에 저장을 함
+- 저장된 값이 5개를 초과할 경우 맨 처음 들어온 값을 제거해줌
+- 저장할 값이 기존에 있는 경우 기존의 값을 지우고 새로 추가해줌
+
+
 ## 코드리뷰 | 헤더 ･ 네비게이션
 
 ### 기능 : 배너 닫힘
