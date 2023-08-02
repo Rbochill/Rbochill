@@ -50,7 +50,7 @@ async function handleLogin(e) {
 		return item.userId === inputId.value;
 	});
 
-	console.log(usersInform); // 사용자가 입력한 정보가 객체로 나타남
+	// console.log(usersInform); // 사용자가 입력한 정보가 객체로 나타남
 
 	//  사용자가 입력한 데이터
 	const id = inputId.value;
