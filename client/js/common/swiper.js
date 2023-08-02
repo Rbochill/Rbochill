@@ -40,6 +40,8 @@ const swiperItem = new Swiper('.itemSwiper', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	observer: true,
+	observeParents: true,
 	on: {
 		init: hideOnFirstSlide,
 		slideChange: function () {
