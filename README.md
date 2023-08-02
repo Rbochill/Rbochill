@@ -21,11 +21,12 @@
 - [👥 팀 소개 |   7조 알보7️⃣💊](#-팀-소개--7조-알보7️⃣)
 - [📆 개발 기간 | 2023년 7월 27일 ~ 8월 2일](#-개발-기간--2023년-7월-27일--8월-2일) - [2023년7월 27일](#2023년7월-27일) - [2023년 7월 28일](#2023년-7월-28일) - [2023년 7월 29일 ~ 8월 1일](#2023년-7월-29일--8월-1일) - [2023년 8월 2일](#2023년-8월-2일)
 - [🛠️ 기술 스택](#️-기술-스택) - [HTML](#html) - [CSS](#css) - [Package Manager](#package-manager) - [Git](#git) - [Tools](#tools)
-- [📖 How to](#-how-to)
+- [📖 How to ...](#-how-to-)
 - [🖥️ 코드리뷰 with 구현 페이지(고정형)](#️-코드리뷰-with-구현-페이지고정형)
   - [코드리뷰 | 메인 페이지](#코드리뷰--메인-페이지)
   - [코드리뷰 | 헤더 ･ 네비게이션](#코드리뷰--헤더--네비게이션)
     - [기능 : 배너 닫힘](#기능--배너-닫힘)
+    - [기능 : 네비게이션 skip](#기능--네비게이션-skip)
     - [기능: hover 메뉴](#기능-hover-메뉴)
     - [기능 : 스크롤 navigation](#기능--스크롤-navigation)
   - [코드리뷰 | 장바구니](#코드리뷰--장바구니)
@@ -113,7 +114,7 @@
 
 </br>
 
-# 📖 How to
+# 📖 How to ...
 
 - 코딩 컨벤션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98-Cording-Convention)
 - 커밋 컨밴션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
@@ -155,6 +156,13 @@ topBannerButton.addEventListener('click', () => {
 
 - 배너의 닫힘 버튼에 `addEventListener`로 `click`이벤트를 부여합니다.
 - 닫힘 버튼을 클릭 시 `hidden` 클래스를 추가하여 tailwindcss가 `display-none`이 되어 숨김 처리 하도록 합니다.
+
+### 기능 : 네비게이션 skip
+
+![헤더-네비게이션스킵](https://github.com/Rbochill/Rbochill/assets/105577805/093a9432-f183-4bb9-80b1-c67042c86a6d)
+
+- 키보드 탭으로 접근가능한 네비게이션 skip 버튼을 구현하였습니다.
+- skip 영역에 `focus`가 되거나 `focus`가 `out`됨에 따라 `'sr-only'` 속성을 추가하고 빼는 이벤트를 `addEventListener` 로 부여하였습니다.
 
 ### 기능: hover 메뉴
 
