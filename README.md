@@ -433,7 +433,7 @@ async function handleLogin(e) {
 
 ## 코드리뷰 | 상품 상세
 
-![image](https://github.com/dongapple/EXAMPLE/assets/74224516/a8d4bd97-098f-45e7-b3e4-3c117c4e313f)
+![상품렌더링](https://github.com/dongapple/EXAMPLE/assets/74224516/a8d4bd97-098f-45e7-b3e4-3c117c4e313f)
 
 ###  기능 : 상품 렌더링
 
@@ -536,6 +536,11 @@ function changeButtonColor() {
 - resetNavButtons: 모든 내비게이션 버튼의 배경색과 글자색을 초기 상태로 변경하는 함수입니다. 만약 현재 내비게이션 요소가 아닌 다른 요소에 스크롤이 있을 때, 변경된 버튼의 색상을 원래대로 돌릴 필요가 있기 때문에 이 함수를 호출하여 초기화합니다.
 
 ## 코드리뷰 | footer
+
+![푸터](https://github.com/dongapple/EXAMPLE/assets/74224516/e25d98a9-d6ef-4ee5-b437-a6056426e2af)
+
+- 기본적인 정보를 입력.
+- 페이스북, 블로그 등 버튼을 누르면 해당 페이지로 이동
 
 </br>
 
