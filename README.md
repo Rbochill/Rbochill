@@ -411,6 +411,112 @@ async function handleLogin(e) {
 
 ## 코드리뷰 | 상품 상세
 
+![image](https://github.com/dongapple/EXAMPLE/assets/74224516/a8d4bd97-098f-45e7-b3e4-3c117c4e313f)
+
+###  기능 : 상품 렌더링
+
+```js
+async function renderProductPage() {
+	try {
+		const Url = 'http://localhost:3000/';
+
+		const productId = localStorage.getItem('clickProduct');
+		// console.log(productId);
+``
+		const responseData = await tiger.get(Url + 'products');
+		const productData = responseData.data;
+		const targetIndex = productData.findIndex((item) => item.id === productId);
+
+		const productElements = {...};
+
+		const pagesToRender = [...];
+
+		pagesToRender.forEach((pageElem) => {
+			renderDataProductPage(pageElem.element, pageElem.type, productData[targetIndex]);
+		});
+	}
+}
+
+```
+- renderProductPage(): 상품 상세 페이지를 렌더링합니다. 렌더링할 페이지의 컨텐츠를 정의한 pagesToRender 배열을 기반으로 Product Info, Product Detail, Product Review, Product Q&A 및 Base 정보를 렌더링합니다.
+- Url: API 요청을 위한 기본 URL입니다. 상품 데이터를 가져오는 데 사용됩니다.
+- productId: 이전 페이지에서 클릭한 상품의 ID를 localStorage에서 가져옵니다. 이 정보를 사용하여 클릭한 상품의 정보를 가져옵니다.
+- responseData: API를 통해 상품 목록을 가져오는 것이 성공하면 응답 데이터를 저장합니다.
+- productData: 응답 데이터에서 상품 데이터만 추출합니다.
+- targetIndex: 클릭한 상품의 ID와 일치하는 상품 데이터의 인덱스를 찾습니다. 해당 인덱스를 사용하여 상품 상세 페이지에 필요한 데이터를 가져올 수 있습니다.
+- productElements: 상품 상세 페이지에 필요한 각 섹션에 해당하는 HTML 요소들을 구성합니다.
+- pagesToRender: 각 섹션에 대한 정보를 배열로 저장합니다. 각 요소에는 렌더링할 요소와 유형이 포함됩니다.
+- pagesToRender.forEach: pagesToRender의 각 요소에 대해 renderDataProductPage 함수를 호출하여 페이지를 렌더링합니다. 이렇게 하면 코드에서 요소의 순서를 변경하거나 새로운 요소를 추가할 때 코드를 쉽게 유지할 수 있습니다.
+
+
+
+
+###  기능 : 페이지 스크롤 이동 버튼
+```js
+
+// # scrollPage 네비게이션 고정
+window.addEventListener('scroll', () => {
+	const moveButtonGroup = $('.moveButtonGroup');
+	changeButtonColor();
+	if (window.pageYOffset > moveButtonGroup.offsetTop) {
+		moveButtonGroup.classList.add('sticky');
+	} else {
+		moveButtonGroup.classList.remove('sticky');
+	}
+});
+
+// # 네비게이션 색 바꾸기
+function changeButtonColor() {
+	const scrollPosition = window.scrollY;
+
+	const productNavInfo = [
+		{id: 'toProductInfo', buttonId: 'GoProductInfo'},
+		{id: 'toProductDetail', buttonId: 'GoProductDetail'},
+		{id: 'toProductReview', buttonId: 'GoProductReview'},
+		{id: 'toProductQna', buttonId: 'GoProductQna'},
+	];
+
+	productNavInfo.forEach((nav, index) => {
+		const targetElem = document.getElementById(nav.id);
+		const buttonElem = document.getElementById(nav.buttonId);
+
+		const targetTop = targetElem.getBoundingClientRect().top + window.scrollY - 50;
+		const targetNextTop =
+			productNavInfo.length !== index + 1 // 만약 마지막 요소가 아니면, 다음 요소의 탑 값을 얻고, 아니면 null.
+				? document.getElementById(productNavInfo[index + 1].id).getBoundingClientRect().top + window.scrollY - 50
+				: null;
+
+		if (scrollPosition >= targetTop && (targetNextTop === null || scrollPosition < targetNextTop)) {
+			resetNavButtons();
+			buttonElem.style.backgroundColor = '#5f0080';
+			buttonElem.style.color = '#ffffff';
+		}
+	});
+
+	function resetNavButtons() {
+		productNavInfo.forEach((nav) => {
+			const buttonElem = document.getElementById(nav.buttonId);
+			buttonElem.style.backgroundColor = '#ffffff';
+			buttonElem.style.color = '#000000';
+		});
+	}
+}
+
+```
+
+- changeButtonColor(): scroll event 리스너가 실행될 때 호출되며, 해당 위치에 맞게 네비게이션 색상을 변경합니다.
+- scrollPosition: 현재 화면의 스크롤 위치입니다(window.scrollY).
+- productNavInfo: 내비게이션 및 버튼 요소의 id 정보를 갖고 있는 객체 배열입니다.
+- productNavInfo.forEach: productNavInfo의 모든 객체를 반복하여 버튼 색상을 변경해야 하는지 확인하고, 필요한 경우 색상을 변경합니다.
+- targetElem과 buttonElem: 각각 내비게이션에 대한 요소와 버튼 요소를 가져옵니다.
+- targetTop과 targetNextTop: 각각 해당 내비게이션 요소의 top 위치와 다음 내비게이션 요소의 top 위치를 계산합니다. 여기서 마지막 요소는 다음 요소가 없으므로, targetNextTop 값은 null로 처리됩니다.
+- if (scrollPosition >= targetTop && (targetNextTop === null || scrollPosition < targetNextTop)): 스크롤 위치가 현재 내비게이션 범위 내에 있으면, 특히 스크롤 위치가 현재 대상 이상(targetTop 이상)이고, 다음 대상 이상 (targetNextTop 이상)이거나, 다음 대상이 없는 경우(null) 버튼의 배경색과 글자색을 변경하게 됩니다.
+- resetNavButtons: 모든 내비게이션 버튼의 배경색과 글자색을 초기 상태로 변경하는 함수입니다. 만약 현재 내비게이션 요소가 아닌 다른 요소에 스크롤이 있을 때, 변경된 버튼의 색상을 원래대로 돌릴 필요가 있기 때문에 이 함수를 호출하여 초기화합니다.
+## 
+productDetail.js
+- renderProductPage(): 상품 상세 페이지를 렌더링합니다. 렌더링할 페이지의 컨텐츠를 정의한 pagesToRender 배열을 기반으로 Product Info, Product Detail, Product Review, Product Q&A 및 Base 정보를 렌더링합니다.
+- changeButtonColor(): scroll event 리스너가 실행될 때 호출되며, 해당 위치에 맞게 네비게이션 색상을 변경합니다.
+
 ## 코드리뷰 | footer
 
 </br>
