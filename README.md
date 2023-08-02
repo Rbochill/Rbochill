@@ -436,14 +436,13 @@ async function handleLogin(e) {
 # 💻 크로스 브라우징
 
 각 모던 브라우저 Chrome, Firefox, Safari, Edge 환경에 맞춰 구현됨을 확인합니다.
-
-|   <img width="15" alt="browsers-chrome" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/5cde8ef4-6f95-4806-a289-b82b92da4ea6"> **Chrome**    | <img width="15" alt="browsers-firefox" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/b90bf217-6fe6-414b-a769-dd7e7339a4a4"> **FireFox** |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/ae8c171d-7f47-4efc-b433-c0144a1e7933" style="padding:0" /> |        <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/10575da2-ef74-4268-8507-e2e47e934fa0" />         |
+| <img width="15" alt="browsers-chrome" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/5cde8ef4-6f95-4806-a289-b82b92da4ea6"> **Chrome** | <img width="15" alt="browsers-firefox" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/b90bf217-6fe6-414b-a769-dd7e7339a4a4"> **FireFox** |
+|:-:|:-:|
+| <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/ae8c171d-7f47-4efc-b433-c0144a1e7933" style="padding:0" /> | <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/10575da2-ef74-4268-8507-e2e47e934fa0" /> |
 
 | <img width="15" alt="browsers-safari" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/ba710b63-897c-46fc-977f-21c63bb0c3db"> **Safari** | <img width="15" alt="browsers-edge" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/fa7338c3-a674-43c1-9e6b-767d2b336228"> **Edge** |
-| :------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-|       <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/b99adb33-f6da-48b6-8441-118ed0436ba9" />        |     <img width="150px" height="300px" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/c6a5f379-b585-42a2-af07-2b78defb3fad" />      | <img width="150px" height="300px" src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/0520d6c4-9bed-4965-acf1-9b3826b1c24c" style="padding:0" /> | <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/736ac39d-ff3e-4199-ad3a-06002ec0df35" /> |
+| :------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
+|       <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/b99adb33-f6da-48b6-8441-118ed0436ba9" />        |     <img width="150px" height="300px" src="https://github.com/Rbochill/Rbochill/assets/105577805/736ac39d-ff3e-4199-ad3a-06002ec0df35" />      |
 
 </br>
 
